@@ -10,13 +10,24 @@ export type AuthContext = {
   profile: Profile
 }
 
+export type RequireUserOptions = {
+  /**
+   * When true, validates the JWT with Supabase Auth (`getUser`).
+   * Use for mutations and role-gated admin/professor/student actions.
+   * Default false uses cookie session (`getSession`) for faster navigations.
+   */
+  verify?: boolean
+}
+
 async function redirectToLogin(): Promise<never> {
   const locale = await getLocale()
   redirect({ href: '/login', locale })
   throw new Error('Redirected to login')
 }
 
-export async function requireUser(): Promise<AuthContext> {
+export async function requireUser(
+  options: RequireUserOptions = {},
+): Promise<AuthContext> {
   if (!isSupabaseConfigured()) {
     throw new Error(
       'requireUser called without Supabase env. Guard callers with isSupabaseConfigured().',
@@ -24,9 +35,21 @@ export async function requireUser(): Promise<AuthContext> {
   }
 
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const verify = options.verify === true
+
+  let user: User | null = null
+
+  if (verify) {
+    const {
+      data: { user: verified },
+    } = await supabase.auth.getUser()
+    user = verified
+  } else {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession()
+    user = session?.user ?? null
+  }
 
   if (!user) {
     await redirectToLogin()

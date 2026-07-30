@@ -25,7 +25,10 @@ export async function updateSession(
     },
   })
 
-  await supabase.auth.getUser()
+  // Prefer getSession() for speed: reads/refreshes cookies without an Auth
+  // server round-trip on every navigation. Sensitive routes/actions call
+  // getUser() via requireUser({ verify: true }) / requireRole().
+  await supabase.auth.getSession()
 
   return response
 }
