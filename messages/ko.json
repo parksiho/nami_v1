@@ -1,0 +1,451 @@
+{
+  "app": {
+    "brand": "학적부",
+    "university": "남미연합신학교",
+    "semester": "{year}년 {semester}학기"
+  },
+  "nav": {
+    "home": "홈",
+    "profile": "프로필",
+    "enroll": "수강신청",
+    "grades": "내 성적",
+    "enrollment": "내 학적",
+    "teaching": "담당 강의",
+    "users": "사용자",
+    "courses": "강의",
+    "enrollmentsAdmin": "학적 관리",
+    "notices": "공지",
+    "changeLogs": "최근 변경",
+    "logout": "로그아웃",
+    "changePassword": "비밀번호 변경"
+  },
+  "auth": {
+    "login": "로그인",
+    "register": "회원가입",
+    "email": "이메일",
+    "password": "비밀번호",
+    "name": "이름",
+    "confirmPassword": "비밀번호 확인",
+    "newPassword": "새 비밀번호",
+    "changePassword": "비밀번호 변경",
+    "noAccount": "계정이 없으신가요?",
+    "hasAccount": "이미 계정이 있으신가요?",
+    "backToHome": "홈으로 돌아가기",
+    "errors": {
+      "notConfigured": "인증이 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
+      "required": "모든 항목을 입력해 주세요.",
+      "invalidCredentials": "이메일 또는 비밀번호가 올바르지 않습니다.",
+      "passwordMismatch": "비밀번호가 일치하지 않습니다.",
+      "generic": "문제가 발생했습니다. 다시 시도해 주세요."
+    },
+    "success": {
+      "registered": "계정이 생성되었습니다. 이메일 확인 후 로그인할 수 있습니다.",
+      "passwordUpdated": "비밀번호가 변경되었습니다."
+    }
+  },
+  "home": {
+    "welcomeStudent": "{name}님, 환영합니다",
+    "welcomeProfessor": "{name} 교수님, 환영합니다",
+    "welcomeAdmin": "{name}님, 관리자 홈입니다",
+    "welcomeAnonymous": "환영합니다",
+    "shortcuts": "바로가기",
+    "summaryTitle": "한눈에 보기",
+    "notAvailable": "정보 없음",
+    "emptyNotices": "등록된 공지가 없습니다.",
+    "viewNotices": "전체 공지 보기",
+    "emptyChanges": "기록된 변경 사항이 없습니다.",
+    "viewChanges": "전체 변경 이력 보기",
+    "student": {
+      "academicStatus": "현재 학적 상태",
+      "courseCount": "수강 중인 강의",
+      "cta": "내 학적 보기"
+    },
+    "professor": {
+      "courseCount": "담당 강의",
+      "pendingGrades": "성적 입력 필요",
+      "cta": "담당 강의 관리"
+    },
+    "admin": {
+      "users": "사용자",
+      "courses": "강의",
+      "enrollments": "학적 기록",
+      "cta": "사용자 관리"
+    },
+    "academicStatuses": {
+      "ADMISSION": "입학",
+      "ENROLLED": "재학",
+      "LEAVE": "휴학",
+      "EXPELLED": "제적",
+      "GRADUATED": "졸업"
+    }
+  },
+  "profile": {
+    "title": "프로필",
+    "description": "개인 정보와 교회 정보를 확인하고 수정하세요.",
+    "photo": "프로필 사진",
+    "avatarHelp": "JPG 또는 PNG, 최대 2MB",
+    "upload": "사진 업로드",
+    "uploading": "업로드 중…",
+    "save": "프로필 저장",
+    "saving": "저장 중…",
+    "addressPlaceholder": "주소를 입력하거나 키워드로 검색",
+    "addressHelp": "입력한 키워드와 일치하는 주소가 표시됩니다.",
+    "fields": {
+      "name": "이름",
+      "birthDate": "생년월일",
+      "occupation": "직업",
+      "mobile": "휴대전화",
+      "email": "이메일",
+      "nationality": "국적",
+      "address": "주소",
+      "gender": "성별",
+      "churchName": "교회명",
+      "churchPosition": "직분",
+      "preferredLanguage": "사용 언어"
+    },
+    "language": {
+      "none": "언어 선택",
+      "ko": "한국어",
+      "en": "영어",
+      "es": "스페인어"
+    },
+    "errors": {
+      "notConfigured": "프로필 저장소가 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
+      "nameRequired": "이름을 입력해 주세요.",
+      "unauthorized": "다시 로그인해 주세요.",
+      "saveFailed": "프로필을 저장하지 못했습니다.",
+      "avatarRequired": "업로드할 사진을 선택해 주세요.",
+      "avatarType": "JPG와 PNG 이미지만 업로드할 수 있습니다.",
+      "avatarSize": "사진은 2MB 이하여야 합니다.",
+      "avatarUploadFailed": "사진을 업로드하지 못했습니다."
+    },
+    "success": {
+      "saved": "프로필이 저장되었습니다.",
+      "avatarUploaded": "프로필 사진이 변경되었습니다."
+    }
+  },
+  "adminUsers": {
+    "title": "사용자 관리",
+    "description": "계정을 검색하고 프로필 정보와 접근 역할을 관리합니다.",
+    "search": "검색",
+    "searchPlaceholder": "이름으로 검색",
+    "notConfigured": "사용자 저장소가 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
+    "createTitle": "사용자 생성",
+    "create": "사용자 생성",
+    "creating": "생성 중…",
+    "createUnavailable": "SUPABASE_SERVICE_ROLE_KEY가 설정되지 않아 사용자 생성을 사용할 수 없습니다.",
+    "save": "변경사항 저장",
+    "saving": "저장 중…",
+    "unnamed": "이름 없는 사용자",
+    "noUsers": "사용자가 없습니다.",
+    "pagination": "사용자 목록 페이지",
+    "previous": "이전",
+    "next": "다음",
+    "pageOf": "{pages}페이지 중 {page}페이지",
+    "backToList": "사용자 목록으로",
+    "proxyEnroll": {
+      "title": "학생 대리 수강신청",
+      "description": "이 학생을 선택한 강의에 수강신청 처리합니다."
+    },
+    "contextLinks": {
+      "title": "관련 관리자 화면",
+      "studentEnrollments": "수강·성적 보기",
+      "studentEnrollmentsHint": "학생 ID {studentId}로 필터된 관리자 학적 목록으로 이동합니다.",
+      "professorCourses": "담당 강의 보기",
+      "professorCoursesHint": "교수 ID {professorId}로 필터된 관리자 강의 목록으로 이동합니다."
+    },
+    "fields": {
+      "name": "이름",
+      "email": "이메일",
+      "password": "임시 비밀번호",
+      "role": "역할",
+      "birth_date": "생년월일",
+      "occupation": "직업",
+      "mobile": "휴대전화",
+      "nationality": "국적",
+      "address": "주소",
+      "gender": "성별",
+      "church_name": "교회명",
+      "church_position": "직분",
+      "preferred_language": "사용 언어",
+      "updatedAt": "수정일"
+    },
+    "roles": {
+      "STUDENT": "학생",
+      "PROFESSOR": "교수",
+      "ADMIN": "관리자"
+    },
+    "languages": {
+      "none": "언어 선택",
+      "ko": "한국어",
+      "en": "영어",
+      "es": "스페인어"
+    },
+    "errors": {
+      "required": "이름, 이메일, 비밀번호를 모두 입력해 주세요.",
+      "nameRequired": "이름을 입력해 주세요.",
+      "invalidRole": "올바른 역할을 선택해 주세요.",
+      "saveFailed": "사용자를 저장하지 못했습니다.",
+      "createFailed": "사용자를 생성하지 못했습니다."
+    },
+    "success": {
+      "saved": "사용자 프로필이 저장되었습니다.",
+      "created": "사용자가 생성되었습니다."
+    }
+  },
+  "adminCourses": {
+    "title": "강의 관리",
+    "description": "강의를 검색하고 담당 교수와 학기 정보를 관리합니다.",
+    "editDescription": "강의 정보와 담당 교수를 수정합니다.",
+    "search": "검색",
+    "searchPlaceholder": "강의명으로 검색",
+    "notConfigured": "강의 저장소가 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
+    "createTitle": "강의 생성",
+    "create": "강의 생성",
+    "save": "변경사항 저장",
+    "saving": "저장 중…",
+    "edit": "수정",
+    "delete": "삭제",
+    "deleting": "삭제 중…",
+    "deleteConfirm": "이 강의를 삭제하시겠습니까?",
+    "noCourses": "강의가 없습니다.",
+    "noProfessors": "먼저 교수 역할의 사용자를 생성해 주세요.",
+    "selectProfessor": "담당 교수 선택",
+    "unnamedProfessor": "이름 없는 교수",
+    "pagination": "강의 목록 페이지",
+    "previous": "이전",
+    "next": "다음",
+    "pageOf": "{pages}페이지 중 {page}페이지",
+    "backToList": "강의 목록으로",
+    "professorFilter": "교수 ID {professorId}의 강의만 표시 중입니다.",
+    "clearFilter": "필터 해제",
+    "fields": {
+      "name": "강의명",
+      "professor": "담당 교수",
+      "year": "연도",
+      "semester": "학기",
+      "credit": "학점",
+      "actions": "관리"
+    },
+    "semesters": {
+      "1": "1학기",
+      "2": "2학기"
+    },
+    "errors": {
+      "notConfigured": "강의 저장소가 설정되지 않았습니다.",
+      "required": "모든 항목을 입력해 주세요.",
+      "invalidNumbers": "연도, 학기, 학점을 올바르게 입력해 주세요.",
+      "invalidProfessor": "교수 역할의 사용자를 선택해 주세요.",
+      "createFailed": "강의를 생성하지 못했습니다.",
+      "saveFailed": "강의를 저장하지 못했습니다.",
+      "deleteFailed": "강의를 삭제하지 못했습니다."
+    },
+    "success": {
+      "created": "강의가 생성되었습니다.",
+      "saved": "강의가 저장되었습니다.",
+      "deleted": "강의가 삭제되었습니다."
+    }
+  },
+  "courseEnrollment": {
+    "title": "수강신청",
+    "description": "개설된 강의를 확인하고 언제든 수강신청할 수 있습니다.",
+    "gradesTitle": "내 성적",
+    "gradesDescription": "수강 상태와 성적, 이수 여부를 확인하세요.",
+    "notConfigured": "강의 저장소가 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
+    "noCourses": "신청할 수 있는 강의가 없습니다.",
+    "noGrades": "수강 또는 성적 내역이 없습니다.",
+    "unnamedProfessor": "이름 없는 교수",
+    "term": "{year}년 {semester}학기",
+    "enroll": "수강신청",
+    "enrolling": "신청 중…",
+    "alreadyEnrolled": "신청 완료",
+    "notAvailable": "-",
+    "passed": "이수",
+    "notPassed": "미이수",
+    "fields": {
+      "course": "강의명",
+      "professor": "담당 교수",
+      "term": "학기",
+      "credit": "학점",
+      "action": "신청",
+      "status": "상태",
+      "score": "점수",
+      "pass": "이수 여부"
+    },
+    "statuses": {
+      "APPLIED": "신청",
+      "IN_PROGRESS": "수강 중",
+      "COMPLETED": "수료",
+      "FAILED": "미수료",
+      "CANCELLED": "취소"
+    },
+    "errors": {
+      "notConfigured": "강의 저장소가 설정되지 않았습니다.",
+      "courseRequired": "강의를 선택해 주세요.",
+      "alreadyEnrolled": "이미 신청한 강의입니다.",
+      "invalidStudent": "학생 사용자를 찾을 수 없습니다.",
+      "enrollFailed": "수강신청을 완료하지 못했습니다."
+    },
+    "success": {
+      "enrolled": "수강신청이 완료되었습니다."
+    },
+    "admin": {
+      "course": "강의",
+      "selectCourse": "강의 선택",
+      "courseOption": "{name} ({year}년 {semester}학기)",
+      "noCourses": "추가로 신청할 수 있는 강의가 없습니다.",
+      "enroll": "학생 수강신청",
+      "enrolling": "신청 중…"
+    }
+  },
+  "teaching": {
+    "title": "담당 강의",
+    "description": "담당 강의의 수강생과 성적을 관리합니다.",
+    "notConfigured": "강의 저장소가 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
+    "noCourses": "담당 강의가 없습니다.",
+    "noStudents": "이 강의의 수강생이 없습니다.",
+    "noAcademicRecords": "학적 기록이 없습니다.",
+    "unnamedStudent": "이름 없는 학생",
+    "notAvailable": "-",
+    "backToList": "담당 강의 목록으로",
+    "term": "{year}년 {semester}학기",
+    "courseSummary": "{year}년 {semester}학기 · {credit}학점",
+    "academicRecordTitle": "학적 기록",
+    "academicRecordDescription": "학생의 학적 기록을 확인합니다.",
+    "leavePeriod": "휴학 {start}–{end}",
+    "save": "저장",
+    "saving": "저장 중…",
+    "fields": {
+      "course": "강의명",
+      "term": "학기",
+      "credit": "학점",
+      "student": "학생",
+      "email": "이메일",
+      "gradeEntry": "성적·상태 입력",
+      "score": "점수",
+      "status": "수강 상태",
+      "pass": "이수",
+      "gradeYear": "학년",
+      "academicStatus": "학적 상태",
+      "details": "세부 사항"
+    },
+    "statuses": {
+      "APPLIED": "신청",
+      "IN_PROGRESS": "수강 중",
+      "COMPLETED": "수료",
+      "FAILED": "미수료",
+      "CANCELLED": "취소"
+    },
+    "academicStatuses": {
+      "ADMISSION": "입학",
+      "ENROLLED": "재학",
+      "LEAVE": "휴학",
+      "EXPELLED": "제적",
+      "GRADUATED": "졸업"
+    },
+    "errors": {
+      "notConfigured": "강의 저장소가 설정되지 않았습니다.",
+      "invalidScore": "점수는 0부터 100 사이의 정수여야 합니다.",
+      "invalidStatus": "올바른 수강 상태를 선택해 주세요.",
+      "saveFailed": "성적을 저장하지 못했습니다."
+    },
+    "success": {
+      "saved": "성적과 수강 상태가 저장되었습니다."
+    }
+  },
+  "enrollment": {
+    "studentTitle": "내 학적 기록",
+    "studentDescription": "학적 상태 변경 이력과 수강 강의를 확인합니다.",
+    "adminTitle": "학적 관리",
+    "adminDescription": "학생의 학적 기록을 생성하고 관리합니다.",
+    "detailDescription": "학적 기록을 관리하고 학생의 전체 이력을 확인합니다.",
+    "currentTitle": "현재 학적",
+    "createTitle": "학적 기록 생성",
+    "editTitle": "학적 기록 수정",
+    "timelineTitle": "학적 타임라인",
+    "coursesTitle": "수강 강의",
+    "notConfigured": "학적 저장소가 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
+    "noRecords": "학적 기록이 없습니다.",
+    "noHistory": "학적 변경 이력이 없습니다.",
+    "noCourses": "수강 강의가 없습니다.",
+    "noStudents": "먼저 학생 사용자를 생성해 주세요.",
+    "selectStudent": "학생 선택",
+    "unnamedStudent": "이름 없는 학생",
+    "unnamedProfessor": "이름 없는 교수",
+    "noAdvisor": "지도교수 없음",
+    "studentFilter": "학생 ID {studentId}의 기록만 표시 중입니다.",
+    "clearFilter": "필터 해제",
+    "backToList": "학적 목록으로",
+    "leavePeriod": "휴학 기간",
+    "create": "학적 생성",
+    "save": "변경사항 저장",
+    "saving": "저장 중…",
+    "delete": "삭제",
+    "deleting": "삭제 중…",
+    "fields": {
+      "student": "학생", "gradeYear": "학년", "year": "연도",
+      "semester": "학기", "term": "학기", "status": "학적 상태",
+      "entrance": "입학 정보", "graduate": "졸업 정보",
+      "changeReason": "변경 사유", "leaveStart": "휴학 시작일",
+      "leaveEnd": "휴학 종료일", "advisor": "지도교수", "actions": "관리"
+    },
+    "statuses": {
+      "ADMISSION": "입학", "ENROLLED": "재학", "LEAVE": "휴학",
+      "EXPELLED": "제적", "GRADUATED": "졸업"
+    },
+    "courseStatuses": {
+      "APPLIED": "신청", "IN_PROGRESS": "수강 중", "COMPLETED": "수료",
+      "FAILED": "미수료", "CANCELLED": "취소"
+    },
+    "errors": {
+      "notConfigured": "학적 저장소가 설정되지 않았습니다.", "required": "학생, 연도, 학기, 상태는 필수입니다.",
+      "invalid": "학적 정보를 올바르게 입력해 주세요.", "notFound": "학적 기록을 찾을 수 없습니다.",
+      "createFailed": "학적 기록을 생성하지 못했습니다.", "saveFailed": "학적 기록을 저장하지 못했습니다.",
+      "deleteFailed": "학적 기록을 삭제하지 못했습니다."
+    },
+    "success": { "created": "학적 기록이 생성되었습니다.", "saved": "학적 기록이 저장되었습니다.", "deleted": "학적 기록이 삭제되었습니다." }
+  },
+  "notices": {
+    "title": "공지사항",
+    "description": "학생, 교수, 관리자가 함께 확인하는 공지를 읽습니다.",
+    "notConfigured": "공지 저장소가 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
+    "empty": "등록된 공지가 없습니다.",
+    "createTitle": "공지 작성",
+    "editTitle": "공지 수정",
+    "backToList": "공지 목록으로",
+    "create": "공지 등록",
+    "save": "변경사항 저장",
+    "saving": "저장 중…",
+    "delete": "삭제",
+    "deleting": "삭제 중…",
+    "deleteConfirm": "이 공지를 삭제하시겠습니까?",
+    "fields": { "title": "제목", "body": "내용" },
+    "errors": {
+      "notConfigured": "공지 저장소가 설정되지 않았습니다.",
+      "required": "제목과 내용을 모두 입력해 주세요.",
+      "createFailed": "공지를 등록하지 못했습니다.",
+      "saveFailed": "공지를 저장하지 못했습니다.",
+      "deleteFailed": "공지를 삭제하지 못했습니다."
+    },
+    "success": { "created": "공지가 등록되었습니다.", "saved": "공지가 저장되었습니다.", "deleted": "공지가 삭제되었습니다." }
+  },
+  "changeLogs": {
+    "title": "최근 변경",
+    "description": "관리 및 학적 데이터의 주요 변경 사항을 확인합니다.",
+    "notConfigured": "변경 이력이 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
+    "empty": "기록된 변경 사항이 없습니다.",
+    "unknownActor": "알 수 없는 사용자",
+    "pagination": "변경 이력 페이지",
+    "previous": "이전",
+    "next": "다음",
+    "pageOf": "{pages}페이지 중 {page}페이지",
+    "fields": { "when": "일시", "actor": "사용자", "action": "작업", "target": "대상", "summary": "내용" }
+  },
+  "common": {
+    "save": "저장",
+    "cancel": "취소",
+    "search": "검색",
+    "noData": "데이터가 없습니다",
+    "back": "뒤로"
+  }
+}

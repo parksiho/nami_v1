@@ -1,0 +1,451 @@
+{
+  "app": {
+    "brand": "Registro académico",
+    "university": "Seminario Teológico Unión de Sudamérica",
+    "semester": "{year} · Semestre {semester}"
+  },
+  "nav": {
+    "home": "Inicio",
+    "profile": "Perfil",
+    "enroll": "Inscripción a cursos",
+    "grades": "Mis calificaciones",
+    "enrollment": "Mi matrícula",
+    "teaching": "Mis cursos",
+    "users": "Usuarios",
+    "courses": "Cursos",
+    "enrollmentsAdmin": "Gestión de matrículas",
+    "notices": "Avisos",
+    "changeLogs": "Cambios recientes",
+    "logout": "Cerrar sesión",
+    "changePassword": "Cambiar contraseña"
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "name": "Nombre",
+    "confirmPassword": "Confirmar contraseña",
+    "newPassword": "Nueva contraseña",
+    "changePassword": "Cambiar contraseña",
+    "noAccount": "¿No tiene una cuenta?",
+    "hasAccount": "¿Ya tiene una cuenta?",
+    "backToHome": "Volver al inicio",
+    "errors": {
+      "notConfigured": "La autenticación no está configurada. Configure las variables de Supabase.",
+      "required": "Complete todos los campos.",
+      "invalidCredentials": "Correo o contraseña incorrectos.",
+      "passwordMismatch": "Las contraseñas no coinciden.",
+      "generic": "Algo salió mal. Inténtelo de nuevo."
+    },
+    "success": {
+      "registered": "Cuenta creada. Puede iniciar sesión cuando confirme el correo.",
+      "passwordUpdated": "Contraseña actualizada correctamente."
+    }
+  },
+  "home": {
+    "welcomeStudent": "Bienvenido/a, {name}",
+    "welcomeProfessor": "Bienvenido/a, Prof. {name}",
+    "welcomeAdmin": "Bienvenido/a, {name} — inicio de administración",
+    "welcomeAnonymous": "Bienvenido/a",
+    "shortcuts": "Accesos rápidos",
+    "summaryTitle": "Resumen",
+    "notAvailable": "No disponible",
+    "emptyNotices": "No hay avisos publicados.",
+    "viewNotices": "Ver todos los avisos",
+    "emptyChanges": "No hay cambios registrados.",
+    "viewChanges": "Ver todos los cambios",
+    "student": {
+      "academicStatus": "Estado académico actual",
+      "courseCount": "Cursos inscritos",
+      "cta": "Ver mi matrícula"
+    },
+    "professor": {
+      "courseCount": "Cursos asignados",
+      "pendingGrades": "Calificaciones pendientes",
+      "cta": "Gestionar mis cursos"
+    },
+    "admin": {
+      "users": "Usuarios",
+      "courses": "Cursos",
+      "enrollments": "Registros académicos",
+      "cta": "Gestionar usuarios"
+    },
+    "academicStatuses": {
+      "ADMISSION": "Admisión",
+      "ENROLLED": "Matriculado",
+      "LEAVE": "Licencia",
+      "EXPELLED": "Expulsado",
+      "GRADUATED": "Graduado"
+    }
+  },
+  "profile": {
+    "title": "Perfil",
+    "description": "Revise y actualice su información personal y de la iglesia.",
+    "photo": "Foto de perfil",
+    "avatarHelp": "JPG o PNG, hasta 2 MB.",
+    "upload": "Subir foto",
+    "uploading": "Subiendo…",
+    "save": "Guardar perfil",
+    "saving": "Guardando…",
+    "addressPlaceholder": "Escriba una dirección o busque por palabra clave",
+    "addressHelp": "Las direcciones coincidentes aparecen mientras escribe.",
+    "fields": {
+      "name": "Nombre",
+      "birthDate": "Fecha de nacimiento",
+      "occupation": "Ocupación",
+      "mobile": "Móvil",
+      "email": "Correo electrónico",
+      "nationality": "Nacionalidad",
+      "address": "Dirección",
+      "gender": "Género",
+      "churchName": "Nombre de la iglesia",
+      "churchPosition": "Cargo en la iglesia",
+      "preferredLanguage": "Idioma preferido"
+    },
+    "language": {
+      "none": "Seleccione un idioma",
+      "ko": "Coreano",
+      "en": "Inglés",
+      "es": "Español"
+    },
+    "errors": {
+      "notConfigured": "El almacenamiento del perfil no está configurado. Configure las variables de Supabase.",
+      "nameRequired": "El nombre es obligatorio.",
+      "unauthorized": "Inicie sesión de nuevo.",
+      "saveFailed": "No se pudo guardar el perfil.",
+      "avatarRequired": "Seleccione una foto para subir.",
+      "avatarType": "Solo se permiten imágenes JPG y PNG.",
+      "avatarSize": "La foto debe tener 2 MB o menos.",
+      "avatarUploadFailed": "No se pudo subir la foto."
+    },
+    "success": {
+      "saved": "Perfil guardado.",
+      "avatarUploaded": "Foto de perfil actualizada."
+    }
+  },
+  "adminUsers": {
+    "title": "Gestión de usuarios",
+    "description": "Busque cuentas y administre los datos del perfil y los roles de acceso.",
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar por nombre",
+    "notConfigured": "El almacenamiento de usuarios no está configurado. Configure las variables de Supabase.",
+    "createTitle": "Crear usuario",
+    "create": "Crear usuario",
+    "creating": "Creando…",
+    "createUnavailable": "La creación de usuarios no está disponible porque SUPABASE_SERVICE_ROLE_KEY no está configurada.",
+    "save": "Guardar cambios",
+    "saving": "Guardando…",
+    "unnamed": "Usuario sin nombre",
+    "noUsers": "No se encontraron usuarios.",
+    "pagination": "Páginas de usuarios",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "pageOf": "Página {page} de {pages}",
+    "backToList": "Volver a usuarios",
+    "proxyEnroll": {
+      "title": "Inscribir estudiante",
+      "description": "Inscriba a este estudiante en el curso seleccionado."
+    },
+    "contextLinks": {
+      "title": "Vistas de administración relacionadas",
+      "studentEnrollments": "Ver matrículas y calificaciones",
+      "studentEnrollmentsHint": "Abre la lista de matrículas filtrada por el ID de estudiante {studentId}.",
+      "professorCourses": "Ver cursos impartidos",
+      "professorCoursesHint": "Abre la lista de cursos filtrada por el ID de profesor {professorId}."
+    },
+    "fields": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "password": "Contraseña temporal",
+      "role": "Rol",
+      "birth_date": "Fecha de nacimiento",
+      "occupation": "Ocupación",
+      "mobile": "Móvil",
+      "nationality": "Nacionalidad",
+      "address": "Dirección",
+      "gender": "Género",
+      "church_name": "Nombre de la iglesia",
+      "church_position": "Cargo en la iglesia",
+      "preferred_language": "Idioma preferido",
+      "updatedAt": "Actualizado"
+    },
+    "roles": {
+      "STUDENT": "Estudiante",
+      "PROFESSOR": "Profesor",
+      "ADMIN": "Administrador"
+    },
+    "languages": {
+      "none": "Seleccione un idioma",
+      "ko": "Coreano",
+      "en": "Inglés",
+      "es": "Español"
+    },
+    "errors": {
+      "required": "El nombre, correo y contraseña son obligatorios.",
+      "nameRequired": "El nombre es obligatorio.",
+      "invalidRole": "Seleccione un rol válido.",
+      "saveFailed": "No se pudo guardar el usuario.",
+      "createFailed": "No se pudo crear el usuario."
+    },
+    "success": {
+      "saved": "Perfil de usuario guardado.",
+      "created": "Usuario creado."
+    }
+  },
+  "adminCourses": {
+    "title": "Gestión de cursos",
+    "description": "Busque cursos y administre el profesor y el período asignados.",
+    "editDescription": "Actualice los datos del curso y el profesor asignado.",
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar por nombre del curso",
+    "notConfigured": "El almacenamiento de cursos no está configurado. Configure las variables de Supabase.",
+    "createTitle": "Crear curso",
+    "create": "Crear curso",
+    "save": "Guardar cambios",
+    "saving": "Guardando…",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "deleting": "Eliminando…",
+    "deleteConfirm": "¿Eliminar este curso?",
+    "noCourses": "No se encontraron cursos.",
+    "noProfessors": "Primero cree un usuario con el rol de profesor.",
+    "selectProfessor": "Seleccione un profesor",
+    "unnamedProfessor": "Profesor sin nombre",
+    "pagination": "Páginas de cursos",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "pageOf": "Página {page} de {pages}",
+    "backToList": "Volver a cursos",
+    "professorFilter": "Mostrando cursos del profesor con ID {professorId}.",
+    "clearFilter": "Quitar filtro",
+    "fields": {
+      "name": "Nombre del curso",
+      "professor": "Profesor",
+      "year": "Año",
+      "semester": "Semestre",
+      "credit": "Créditos",
+      "actions": "Acciones"
+    },
+    "semesters": {
+      "1": "Semestre 1",
+      "2": "Semestre 2"
+    },
+    "errors": {
+      "notConfigured": "El almacenamiento de cursos no está configurado.",
+      "required": "Complete todos los campos.",
+      "invalidNumbers": "Introduzca valores válidos para año, semestre y créditos.",
+      "invalidProfessor": "Seleccione un usuario con el rol de profesor.",
+      "createFailed": "No se pudo crear el curso.",
+      "saveFailed": "No se pudo guardar el curso.",
+      "deleteFailed": "No se pudo eliminar el curso."
+    },
+    "success": {
+      "created": "Curso creado.",
+      "saved": "Curso guardado.",
+      "deleted": "Curso eliminado."
+    }
+  },
+  "courseEnrollment": {
+    "title": "Inscripción a cursos",
+    "description": "Revise los cursos disponibles e inscríbase en cualquier momento.",
+    "gradesTitle": "Mis calificaciones",
+    "gradesDescription": "Revise el estado, la nota y el resultado de sus cursos.",
+    "notConfigured": "El almacenamiento de cursos no está configurado. Configure las variables de Supabase.",
+    "noCourses": "No hay cursos disponibles para inscripción.",
+    "noGrades": "No hay matrículas ni calificaciones.",
+    "unnamedProfessor": "Profesor sin nombre",
+    "term": "{year} · Semestre {semester}",
+    "enroll": "Inscribirse",
+    "enrolling": "Inscribiendo…",
+    "alreadyEnrolled": "Inscrito",
+    "notAvailable": "-",
+    "passed": "Aprobado",
+    "notPassed": "No aprobado",
+    "fields": {
+      "course": "Curso",
+      "professor": "Profesor",
+      "term": "Período",
+      "credit": "Créditos",
+      "action": "Inscripción",
+      "status": "Estado",
+      "score": "Nota",
+      "pass": "Resultado"
+    },
+    "statuses": {
+      "APPLIED": "Solicitado",
+      "IN_PROGRESS": "En curso",
+      "COMPLETED": "Completado",
+      "FAILED": "No aprobado",
+      "CANCELLED": "Cancelado"
+    },
+    "errors": {
+      "notConfigured": "El almacenamiento de cursos no está configurado.",
+      "courseRequired": "Seleccione un curso.",
+      "alreadyEnrolled": "Este curso ya está inscrito.",
+      "invalidStudent": "No se encontró al estudiante.",
+      "enrollFailed": "No se pudo completar la inscripción."
+    },
+    "success": {
+      "enrolled": "Inscripción completada."
+    },
+    "admin": {
+      "course": "Curso",
+      "selectCourse": "Seleccione un curso",
+      "courseOption": "{name} ({year} · Semestre {semester})",
+      "noCourses": "No hay cursos adicionales disponibles.",
+      "enroll": "Inscribir estudiante",
+      "enrolling": "Inscribiendo…"
+    }
+  },
+  "teaching": {
+    "title": "Mis cursos",
+    "description": "Gestione estudiantes, notas y estados de sus cursos.",
+    "notConfigured": "El almacenamiento de cursos no está configurado. Configure las variables de Supabase.",
+    "noCourses": "No tiene cursos asignados.",
+    "noStudents": "No hay estudiantes inscritos en este curso.",
+    "noAcademicRecords": "No se encontraron registros académicos.",
+    "unnamedStudent": "Estudiante sin nombre",
+    "notAvailable": "-",
+    "backToList": "Volver a mis cursos",
+    "term": "{year} · Semestre {semester}",
+    "courseSummary": "{year} · Semestre {semester} · {credit} créditos",
+    "academicRecordTitle": "Registro académico",
+    "academicRecordDescription": "Revise el registro académico del estudiante.",
+    "leavePeriod": "Licencia {start}–{end}",
+    "save": "Guardar",
+    "saving": "Guardando…",
+    "fields": {
+      "course": "Curso",
+      "term": "Período",
+      "credit": "Créditos",
+      "student": "Estudiante",
+      "email": "Correo electrónico",
+      "gradeEntry": "Nota y estado",
+      "score": "Nota",
+      "status": "Estado",
+      "pass": "Aprobado",
+      "gradeYear": "Año académico",
+      "academicStatus": "Estado académico",
+      "details": "Detalles"
+    },
+    "statuses": {
+      "APPLIED": "Solicitado",
+      "IN_PROGRESS": "En curso",
+      "COMPLETED": "Completado",
+      "FAILED": "No aprobado",
+      "CANCELLED": "Cancelado"
+    },
+    "academicStatuses": {
+      "ADMISSION": "Admisión",
+      "ENROLLED": "Matriculado",
+      "LEAVE": "Licencia",
+      "EXPELLED": "Expulsado",
+      "GRADUATED": "Graduado"
+    },
+    "errors": {
+      "notConfigured": "El almacenamiento de cursos no está configurado.",
+      "invalidScore": "La nota debe ser un número entero de 0 a 100.",
+      "invalidStatus": "Seleccione un estado de matrícula válido.",
+      "saveFailed": "No se pudo guardar la nota."
+    },
+    "success": {
+      "saved": "Nota y estado de matrícula guardados."
+    }
+  },
+  "enrollment": {
+    "studentTitle": "Mi registro académico",
+    "studentDescription": "Revise su historial académico y los cursos inscritos.",
+    "adminTitle": "Gestión de matrículas",
+    "adminDescription": "Cree y mantenga los registros académicos de estudiantes.",
+    "detailDescription": "Gestione este registro y revise el historial completo.",
+    "currentTitle": "Registro académico actual",
+    "createTitle": "Crear registro académico",
+    "editTitle": "Editar registro académico",
+    "timelineTitle": "Cronología académica",
+    "coursesTitle": "Cursos inscritos",
+    "notConfigured": "El almacenamiento académico no está configurado.",
+    "noRecords": "No hay registros académicos.",
+    "noHistory": "No hay historial académico.",
+    "noCourses": "No hay cursos inscritos.",
+    "noStudents": "Primero cree un usuario estudiante.",
+    "selectStudent": "Seleccione un estudiante",
+    "unnamedStudent": "Estudiante sin nombre",
+    "unnamedProfessor": "Profesor sin nombre",
+    "noAdvisor": "Sin asesor",
+    "studentFilter": "Mostrando registros del estudiante {studentId}.",
+    "clearFilter": "Quitar filtro",
+    "backToList": "Volver a registros",
+    "leavePeriod": "Período de licencia",
+    "create": "Crear registro",
+    "save": "Guardar cambios",
+    "saving": "Guardando…",
+    "delete": "Eliminar",
+    "deleting": "Eliminando…",
+    "fields": {
+      "student": "Estudiante", "gradeYear": "Año académico", "year": "Año",
+      "semester": "Semestre", "term": "Período", "status": "Estado",
+      "entrance": "Ingreso", "graduate": "Graduación",
+      "changeReason": "Motivo del cambio", "leaveStart": "Inicio de licencia",
+      "leaveEnd": "Fin de licencia", "advisor": "Asesor", "actions": "Acciones"
+    },
+    "statuses": {
+      "ADMISSION": "Admisión", "ENROLLED": "Matriculado", "LEAVE": "Licencia",
+      "EXPELLED": "Expulsado", "GRADUATED": "Graduado"
+    },
+    "courseStatuses": {
+      "APPLIED": "Solicitado", "IN_PROGRESS": "En curso", "COMPLETED": "Completado",
+      "FAILED": "No aprobado", "CANCELLED": "Cancelado"
+    },
+    "errors": {
+      "notConfigured": "El almacenamiento académico no está configurado.", "required": "Estudiante, año, semestre y estado son obligatorios.",
+      "invalid": "Introduzca valores académicos válidos.", "notFound": "No se encontró el registro.",
+      "createFailed": "No se pudo crear el registro.", "saveFailed": "No se pudo guardar el registro.",
+      "deleteFailed": "No se pudo eliminar el registro."
+    },
+    "success": { "created": "Registro creado.", "saved": "Registro guardado.", "deleted": "Registro eliminado." }
+  },
+  "notices": {
+    "title": "Avisos",
+    "description": "Lea los anuncios compartidos con estudiantes, profesores y administradores.",
+    "notConfigured": "El almacenamiento de avisos no está configurado.",
+    "empty": "No hay avisos publicados.",
+    "createTitle": "Crear aviso",
+    "editTitle": "Editar aviso",
+    "backToList": "Volver a avisos",
+    "create": "Crear aviso",
+    "save": "Guardar cambios",
+    "saving": "Guardando…",
+    "delete": "Eliminar",
+    "deleting": "Eliminando…",
+    "deleteConfirm": "¿Eliminar este aviso?",
+    "fields": { "title": "Título", "body": "Contenido" },
+    "errors": {
+      "notConfigured": "El almacenamiento de avisos no está configurado.",
+      "required": "Introduzca el título y el contenido.",
+      "createFailed": "No se pudo crear el aviso.",
+      "saveFailed": "No se pudo guardar el aviso.",
+      "deleteFailed": "No se pudo eliminar el aviso."
+    },
+    "success": { "created": "Aviso creado.", "saved": "Aviso guardado.", "deleted": "Aviso eliminado." }
+  },
+  "changeLogs": {
+    "title": "Cambios recientes",
+    "description": "Revise los cambios principales de administración y registros académicos.",
+    "notConfigured": "El historial de cambios no está configurado.",
+    "empty": "No hay cambios registrados.",
+    "unknownActor": "Usuario desconocido",
+    "pagination": "Páginas del historial",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "pageOf": "Página {page} de {pages}",
+    "fields": { "when": "Fecha", "actor": "Usuario", "action": "Acción", "target": "Objeto", "summary": "Resumen" }
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "search": "Buscar",
+    "noData": "No hay datos disponibles",
+    "back": "Volver"
+  }
+}

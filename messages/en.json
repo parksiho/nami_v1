@@ -1,0 +1,451 @@
+{
+  "app": {
+    "brand": "Registrar",
+    "university": "Union Theological Seminary of South America",
+    "semester": "{year} · Semester {semester}"
+  },
+  "nav": {
+    "home": "Home",
+    "profile": "Profile",
+    "enroll": "Course Registration",
+    "grades": "My Grades",
+    "enrollment": "My Enrollment",
+    "teaching": "My Courses",
+    "users": "Users",
+    "courses": "Courses",
+    "enrollmentsAdmin": "Enrollment Management",
+    "notices": "Notices",
+    "changeLogs": "Recent Changes",
+    "logout": "Log out",
+    "changePassword": "Change Password"
+  },
+  "auth": {
+    "login": "Log in",
+    "register": "Sign up",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "confirmPassword": "Confirm password",
+    "newPassword": "New password",
+    "changePassword": "Change password",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "backToHome": "Back to home",
+    "errors": {
+      "notConfigured": "Authentication is not configured. Set Supabase environment variables.",
+      "required": "Please fill in all fields.",
+      "invalidCredentials": "Invalid email or password.",
+      "passwordMismatch": "Passwords do not match.",
+      "generic": "Something went wrong. Please try again."
+    },
+    "success": {
+      "registered": "Account created. You can log in when email confirmation is complete.",
+      "passwordUpdated": "Password updated successfully."
+    }
+  },
+  "home": {
+    "welcomeStudent": "Welcome, {name}",
+    "welcomeProfessor": "Welcome, Professor {name}",
+    "welcomeAdmin": "Welcome, {name} — admin home",
+    "welcomeAnonymous": "Welcome",
+    "shortcuts": "Quick links",
+    "summaryTitle": "At a glance",
+    "notAvailable": "Not available",
+    "emptyNotices": "No notices have been posted.",
+    "viewNotices": "View all notices",
+    "emptyChanges": "No changes have been recorded.",
+    "viewChanges": "View all changes",
+    "student": {
+      "academicStatus": "Current academic status",
+      "courseCount": "Enrolled courses",
+      "cta": "View my enrollment"
+    },
+    "professor": {
+      "courseCount": "Assigned courses",
+      "pendingGrades": "Grades requiring entry",
+      "cta": "Manage my courses"
+    },
+    "admin": {
+      "users": "Users",
+      "courses": "Courses",
+      "enrollments": "Academic records",
+      "cta": "Manage users"
+    },
+    "academicStatuses": {
+      "ADMISSION": "Admission",
+      "ENROLLED": "Enrolled",
+      "LEAVE": "Leave",
+      "EXPELLED": "Expelled",
+      "GRADUATED": "Graduated"
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "description": "Review and update your personal and church information.",
+    "photo": "Profile photo",
+    "avatarHelp": "JPG or PNG, up to 2 MB.",
+    "upload": "Upload photo",
+    "uploading": "Uploading…",
+    "save": "Save profile",
+    "saving": "Saving…",
+    "addressPlaceholder": "Type an address or search by keyword",
+    "addressHelp": "Matching addresses appear as you type.",
+    "fields": {
+      "name": "Name",
+      "birthDate": "Date of birth",
+      "occupation": "Occupation",
+      "mobile": "Mobile",
+      "email": "Email",
+      "nationality": "Nationality",
+      "address": "Address",
+      "gender": "Gender",
+      "churchName": "Church name",
+      "churchPosition": "Church position",
+      "preferredLanguage": "Preferred language"
+    },
+    "language": {
+      "none": "Select a language",
+      "ko": "Korean",
+      "en": "English",
+      "es": "Spanish"
+    },
+    "errors": {
+      "notConfigured": "Profile storage is not configured. Set Supabase environment variables.",
+      "nameRequired": "Name is required.",
+      "unauthorized": "Please log in again.",
+      "saveFailed": "Could not save the profile.",
+      "avatarRequired": "Choose a photo to upload.",
+      "avatarType": "Only JPG and PNG images are allowed.",
+      "avatarSize": "The photo must be 2 MB or smaller.",
+      "avatarUploadFailed": "Could not upload the photo."
+    },
+    "success": {
+      "saved": "Profile saved.",
+      "avatarUploaded": "Profile photo updated."
+    }
+  },
+  "adminUsers": {
+    "title": "User management",
+    "description": "Search accounts and manage profile details and access roles.",
+    "search": "Search",
+    "searchPlaceholder": "Search by name",
+    "notConfigured": "User storage is not configured. Set the Supabase environment variables.",
+    "createTitle": "Create user",
+    "create": "Create user",
+    "creating": "Creating…",
+    "createUnavailable": "User creation is unavailable because SUPABASE_SERVICE_ROLE_KEY is not configured.",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "unnamed": "Unnamed user",
+    "noUsers": "No users found.",
+    "pagination": "User list pages",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {page} of {pages}",
+    "backToList": "Back to users",
+    "proxyEnroll": {
+      "title": "Enroll student",
+      "description": "Enroll this student in a selected course."
+    },
+    "contextLinks": {
+      "title": "Related admin views",
+      "studentEnrollments": "View enrollments and grades",
+      "studentEnrollmentsHint": "Opens the admin enrollment list filtered to student ID {studentId}.",
+      "professorCourses": "View taught courses",
+      "professorCoursesHint": "Opens the admin course list filtered to professor ID {professorId}."
+    },
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "password": "Temporary password",
+      "role": "Role",
+      "birth_date": "Date of birth",
+      "occupation": "Occupation",
+      "mobile": "Mobile",
+      "nationality": "Nationality",
+      "address": "Address",
+      "gender": "Gender",
+      "church_name": "Church name",
+      "church_position": "Church position",
+      "preferred_language": "Preferred language",
+      "updatedAt": "Updated"
+    },
+    "roles": {
+      "STUDENT": "Student",
+      "PROFESSOR": "Professor",
+      "ADMIN": "Administrator"
+    },
+    "languages": {
+      "none": "Select a language",
+      "ko": "Korean",
+      "en": "English",
+      "es": "Spanish"
+    },
+    "errors": {
+      "required": "Name, email, and password are required.",
+      "nameRequired": "Name is required.",
+      "invalidRole": "Select a valid role.",
+      "saveFailed": "Could not save the user.",
+      "createFailed": "Could not create the user."
+    },
+    "success": {
+      "saved": "User profile saved.",
+      "created": "User created."
+    }
+  },
+  "adminCourses": {
+    "title": "Course management",
+    "description": "Search courses and manage professor and term assignments.",
+    "editDescription": "Update course details and the assigned professor.",
+    "search": "Search",
+    "searchPlaceholder": "Search by course name",
+    "notConfigured": "Course storage is not configured. Set the Supabase environment variables.",
+    "createTitle": "Create course",
+    "create": "Create course",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleting": "Deleting…",
+    "deleteConfirm": "Delete this course?",
+    "noCourses": "No courses found.",
+    "noProfessors": "Create a user with the professor role first.",
+    "selectProfessor": "Select a professor",
+    "unnamedProfessor": "Unnamed professor",
+    "pagination": "Course list pages",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {page} of {pages}",
+    "backToList": "Back to courses",
+    "professorFilter": "Showing courses for professor ID {professorId}.",
+    "clearFilter": "Clear filter",
+    "fields": {
+      "name": "Course name",
+      "professor": "Professor",
+      "year": "Year",
+      "semester": "Semester",
+      "credit": "Credits",
+      "actions": "Actions"
+    },
+    "semesters": {
+      "1": "Semester 1",
+      "2": "Semester 2"
+    },
+    "errors": {
+      "notConfigured": "Course storage is not configured.",
+      "required": "Complete every field.",
+      "invalidNumbers": "Enter a valid year, semester, and credit value.",
+      "invalidProfessor": "Select a user with the professor role.",
+      "createFailed": "Could not create the course.",
+      "saveFailed": "Could not save the course.",
+      "deleteFailed": "Could not delete the course."
+    },
+    "success": {
+      "created": "Course created.",
+      "saved": "Course saved.",
+      "deleted": "Course deleted."
+    }
+  },
+  "courseEnrollment": {
+    "title": "Course registration",
+    "description": "Review available courses and enroll at any time.",
+    "gradesTitle": "My grades",
+    "gradesDescription": "Review your course status, score, and pass result.",
+    "notConfigured": "Course storage is not configured. Set the Supabase environment variables.",
+    "noCourses": "No courses are available for registration.",
+    "noGrades": "No enrollment or grade records found.",
+    "unnamedProfessor": "Unnamed professor",
+    "term": "{year} · Semester {semester}",
+    "enroll": "Enroll",
+    "enrolling": "Enrolling…",
+    "alreadyEnrolled": "Enrolled",
+    "notAvailable": "-",
+    "passed": "Passed",
+    "notPassed": "Not passed",
+    "fields": {
+      "course": "Course",
+      "professor": "Professor",
+      "term": "Term",
+      "credit": "Credits",
+      "action": "Registration",
+      "status": "Status",
+      "score": "Score",
+      "pass": "Result"
+    },
+    "statuses": {
+      "APPLIED": "Applied",
+      "IN_PROGRESS": "In progress",
+      "COMPLETED": "Completed",
+      "FAILED": "Failed",
+      "CANCELLED": "Cancelled"
+    },
+    "errors": {
+      "notConfigured": "Course storage is not configured.",
+      "courseRequired": "Select a course.",
+      "alreadyEnrolled": "This course is already enrolled.",
+      "invalidStudent": "The student could not be found.",
+      "enrollFailed": "Could not complete the enrollment."
+    },
+    "success": {
+      "enrolled": "Course enrollment completed."
+    },
+    "admin": {
+      "course": "Course",
+      "selectCourse": "Select a course",
+      "courseOption": "{name} ({year} · Semester {semester})",
+      "noCourses": "No additional courses are available.",
+      "enroll": "Enroll student",
+      "enrolling": "Enrolling…"
+    }
+  },
+  "teaching": {
+    "title": "My courses",
+    "description": "Manage students, grades, and statuses for your courses.",
+    "notConfigured": "Course storage is not configured. Set the Supabase environment variables.",
+    "noCourses": "You have no assigned courses.",
+    "noStudents": "No students are enrolled in this course.",
+    "noAcademicRecords": "No academic records found.",
+    "unnamedStudent": "Unnamed student",
+    "notAvailable": "-",
+    "backToList": "Back to my courses",
+    "term": "{year} · Semester {semester}",
+    "courseSummary": "{year} · Semester {semester} · {credit} credits",
+    "academicRecordTitle": "Academic record",
+    "academicRecordDescription": "Review this student's academic record.",
+    "leavePeriod": "Leave {start}–{end}",
+    "save": "Save",
+    "saving": "Saving…",
+    "fields": {
+      "course": "Course",
+      "term": "Term",
+      "credit": "Credits",
+      "student": "Student",
+      "email": "Email",
+      "gradeEntry": "Grade and status",
+      "score": "Score",
+      "status": "Status",
+      "pass": "Passed",
+      "gradeYear": "Year level",
+      "academicStatus": "Academic status",
+      "details": "Details"
+    },
+    "statuses": {
+      "APPLIED": "Applied",
+      "IN_PROGRESS": "In progress",
+      "COMPLETED": "Completed",
+      "FAILED": "Failed",
+      "CANCELLED": "Cancelled"
+    },
+    "academicStatuses": {
+      "ADMISSION": "Admission",
+      "ENROLLED": "Enrolled",
+      "LEAVE": "Leave",
+      "EXPELLED": "Expelled",
+      "GRADUATED": "Graduated"
+    },
+    "errors": {
+      "notConfigured": "Course storage is not configured.",
+      "invalidScore": "Score must be a whole number from 0 to 100.",
+      "invalidStatus": "Select a valid enrollment status.",
+      "saveFailed": "Could not save the grade."
+    },
+    "success": {
+      "saved": "Grade and enrollment status saved."
+    }
+  },
+  "enrollment": {
+    "studentTitle": "My enrollment record",
+    "studentDescription": "Review your academic status history and enrolled courses.",
+    "adminTitle": "Enrollment management",
+    "adminDescription": "Create and maintain student academic records.",
+    "detailDescription": "Manage this record and review the student's full timeline.",
+    "currentTitle": "Current academic record",
+    "createTitle": "Create academic record",
+    "editTitle": "Edit academic record",
+    "timelineTitle": "Academic timeline",
+    "coursesTitle": "Enrolled courses",
+    "notConfigured": "Enrollment storage is not configured. Set the Supabase environment variables.",
+    "noRecords": "No academic records found.",
+    "noHistory": "No academic history found.",
+    "noCourses": "No enrolled courses found.",
+    "noStudents": "Create a student user first.",
+    "selectStudent": "Select a student",
+    "unnamedStudent": "Unnamed student",
+    "unnamedProfessor": "Unnamed professor",
+    "noAdvisor": "No advisor",
+    "studentFilter": "Showing records for student ID {studentId}.",
+    "clearFilter": "Clear filter",
+    "backToList": "Back to enrollment records",
+    "leavePeriod": "Leave period",
+    "create": "Create record",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "delete": "Delete",
+    "deleting": "Deleting…",
+    "fields": {
+      "student": "Student", "gradeYear": "Year level", "year": "Year",
+      "semester": "Semester", "term": "Term", "status": "Status",
+      "entrance": "Entrance", "graduate": "Graduation",
+      "changeReason": "Change reason", "leaveStart": "Leave start",
+      "leaveEnd": "Leave end", "advisor": "Advisor", "actions": "Actions"
+    },
+    "statuses": {
+      "ADMISSION": "Admission", "ENROLLED": "Enrolled", "LEAVE": "Leave",
+      "EXPELLED": "Expelled", "GRADUATED": "Graduated"
+    },
+    "courseStatuses": {
+      "APPLIED": "Applied", "IN_PROGRESS": "In progress", "COMPLETED": "Completed",
+      "FAILED": "Failed", "CANCELLED": "Cancelled"
+    },
+    "errors": {
+      "notConfigured": "Enrollment storage is not configured.", "required": "Student, year, semester, and status are required.",
+      "invalid": "Enter valid academic record values.", "notFound": "Academic record not found.",
+      "createFailed": "Could not create the record.", "saveFailed": "Could not save the record.",
+      "deleteFailed": "Could not delete the record."
+    },
+    "success": { "created": "Academic record created.", "saved": "Academic record saved.", "deleted": "Academic record deleted." }
+  },
+  "notices": {
+    "title": "Notices",
+    "description": "Read announcements shared with all students, professors, and administrators.",
+    "notConfigured": "Notice storage is not configured. Set the Supabase environment variables.",
+    "empty": "No notices have been posted.",
+    "createTitle": "Create notice",
+    "editTitle": "Edit notice",
+    "backToList": "Back to notices",
+    "create": "Create notice",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "delete": "Delete",
+    "deleting": "Deleting…",
+    "deleteConfirm": "Delete this notice?",
+    "fields": { "title": "Title", "body": "Content" },
+    "errors": {
+      "notConfigured": "Notice storage is not configured.",
+      "required": "Enter both a title and content.",
+      "createFailed": "Could not create the notice.",
+      "saveFailed": "Could not save the notice.",
+      "deleteFailed": "Could not delete the notice."
+    },
+    "success": { "created": "Notice created.", "saved": "Notice saved.", "deleted": "Notice deleted." }
+  },
+  "changeLogs": {
+    "title": "Recent changes",
+    "description": "Review major changes across administration and academic records.",
+    "notConfigured": "Change history is not configured. Set the Supabase environment variables.",
+    "empty": "No changes have been recorded.",
+    "unknownActor": "Unknown user",
+    "pagination": "Change history pages",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {page} of {pages}",
+    "fields": { "when": "When", "actor": "User", "action": "Action", "target": "Target", "summary": "Summary" }
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "search": "Search",
+    "noData": "No data available",
+    "back": "Back"
+  }
+}
