@@ -104,6 +104,27 @@ export function EditAdminUserForm({ profile }: { profile: Profile }) {
           </label>
         ))}
         <label>
+          <span>{t('fields.student_number')}</span>
+          <input
+            name="student_number"
+            defaultValue={value(profile.student_number)}
+            autoComplete="off"
+          />
+        </label>
+        <label>
+          <span>{t('fields.enrolled_semester')}</span>
+          <input
+            name="enrolled_semester"
+            type="number"
+            step="1"
+            defaultValue={
+              profile.enrolled_semester === null
+                ? ''
+                : String(profile.enrolled_semester)
+            }
+          />
+        </label>
+        <label>
           <span>{t('fields.email')}</span>
           <input value={value(profile.email)} disabled readOnly />
         </label>

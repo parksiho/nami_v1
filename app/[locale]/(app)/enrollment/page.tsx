@@ -12,7 +12,7 @@ export default async function StudentEnrollmentPage({ params }: { params: Promis
   const t = await getTranslations('enrollment')
   if (!isSupabaseConfigured()) return <main className="page-main"><h1>{t('studentTitle')}</h1><p className="admin-notice">{t('notConfigured')}</p></main>
 
-  const { user } = await requireUser()
+  const { user, profile } = await requireUser()
   const supabase = await createClient()
   const [recordsResult, historyResult, coursesResult] = await Promise.all([
     supabase.from('enrollment_records').select('*').eq('student_id', user.id)
@@ -37,13 +37,18 @@ export default async function StudentEnrollmentPage({ params }: { params: Promis
   return <main className="page-main course-page">
     <header className="course-page__header"><h1>{t('studentTitle')}</h1><p>{t('studentDescription')}</p></header>
     <section className="admin-card"><h2>{t('currentTitle')}</h2>
-      {current ? <dl className="enrollment-summary">
-        <div><dt>{t('fields.status')}</dt><dd>{t(`statuses.${current.status}`)}</dd></div>
-        <div><dt>{t('fields.gradeYear')}</dt><dd>{current.grade_year ?? '–'}</dd></div>
-        <div><dt>{t('fields.term')}</dt><dd>{current.year} / {current.semester}</dd></div>
-        <div><dt>{t('fields.entrance')}</dt><dd>{current.entrance_info ?? '–'}</dd></div>
-        <div><dt>{t('fields.graduate')}</dt><dd>{current.graduate_info ?? '–'}</dd></div>
-      </dl> : <p>{t('noRecords')}</p>}
+      <dl className="enrollment-summary">
+        <div><dt>{t('fields.studentNumber')}</dt><dd>{profile.student_number ?? '–'}</dd></div>
+        <div><dt>{t('fields.enrolledSemester')}</dt><dd>{profile.enrolled_semester ?? '–'}</dd></div>
+        {current ? <>
+          <div><dt>{t('fields.status')}</dt><dd>{t(`statuses.${current.status}`)}</dd></div>
+          <div><dt>{t('fields.gradeYear')}</dt><dd>{current.grade_year ?? '–'}</dd></div>
+          <div><dt>{t('fields.term')}</dt><dd>{current.year} / {current.semester}</dd></div>
+          <div><dt>{t('fields.entrance')}</dt><dd>{current.entrance_info ?? '–'}</dd></div>
+          <div><dt>{t('fields.graduate')}</dt><dd>{current.graduate_info ?? '–'}</dd></div>
+        </> : null}
+      </dl>
+      {!current ? <p>{t('noRecords')}</p> : null}
     </section>
     <section className="admin-card"><h2>{t('timelineTitle')}</h2><EnrollmentTimeline
       items={histories}

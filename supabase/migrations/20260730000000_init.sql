@@ -34,9 +34,18 @@ create table public.profiles (
   church_position text,
   preferred_language text,
   avatar_path text,
+  student_number text,
+  enrolled_semester int,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+comment on column public.profiles.student_number is 'Student number / 학번';
+comment on column public.profiles.enrolled_semester is 'Enrolled semester count / 재학학기 (0 = graduated in legacy data)';
+
+create unique index if not exists profiles_student_number_unique
+  on public.profiles (student_number)
+  where student_number is not null;
 
 create trigger profiles_set_updated_at
   before update on public.profiles

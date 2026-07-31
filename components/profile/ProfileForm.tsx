@@ -65,6 +65,33 @@ export function ProfileForm({ profile, addressCorpus, avatarUrl }: Props) {
               defaultValue={value(profile.occupation)}
             />
           </div>
+          {profile.role === 'STUDENT' ? (
+            <>
+              <div className="profile-field">
+                <label htmlFor="student_number">{t('fields.studentNumber')}</label>
+                <input
+                  id="student_number"
+                  name="student_number"
+                  defaultValue={value(profile.student_number)}
+                  autoComplete="off"
+                />
+              </div>
+              <div className="profile-field">
+                <label htmlFor="enrolled_semester">{t('fields.enrolledSemester')}</label>
+                <input
+                  id="enrolled_semester"
+                  name="enrolled_semester"
+                  type="number"
+                  step="1"
+                  defaultValue={
+                    profile.enrolled_semester === null
+                      ? ''
+                      : String(profile.enrolled_semester)
+                  }
+                />
+              </div>
+            </>
+          ) : null}
           <div className="profile-field">
             <label htmlFor="mobile">{t('fields.mobile')}</label>
             <input

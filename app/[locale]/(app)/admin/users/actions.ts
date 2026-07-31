@@ -8,6 +8,10 @@ import { getServiceRoleEnv, isUserRole } from '@/lib/admin/users'
 import { writeChangeLog } from '@/lib/changelog/write'
 import { canEnroll } from '@/lib/courses/enroll'
 import { CourseEnrollmentStatus, UserRole } from '@/lib/domain/enums'
+import {
+  optionalFormValue,
+  parseStudentProfileFields,
+} from '@/lib/profile/form'
 import { isSupabaseConfigured } from '@/lib/supabase/env'
 import { createClient } from '@/lib/supabase/server'
 
@@ -29,11 +33,6 @@ const PROFILE_FIELDS = [
   'preferred_language',
 ] as const
 
-function optionalValue(formData: FormData, field: string): string | null {
-  const value = String(formData.get(field) ?? '').trim()
-  return value || null
-}
-
 export async function updateAdminUser(
   userId: string,
   _previousState: AdminUserActionState,
@@ -41,16 +40,20 @@ export async function updateAdminUser(
 ): Promise<AdminUserActionState> {
   const t = await getTranslations('adminUsers')
   const { user: actor } = await requireRole([UserRole.ADMIN])
-  const name = optionalValue(formData, 'name')
+  const name = optionalFormValue(formData, 'name')
   const role = String(formData.get('role') ?? '')
 
   if (!name) return { error: t('errors.nameRequired') }
   if (!isUserRole(role)) return { error: t('errors.invalidRole') }
 
+  const studentFields = parseStudentProfileFields(formData)
+  if (!studentFields.ok) return { error: t('errors.invalidSemester') }
+
   const updates = {
     ...Object.fromEntries(
-      PROFILE_FIELDS.map((field) => [field, optionalValue(formData, field)]),
+      PROFILE_FIELDS.map((field) => [field, optionalFormValue(formData, field)]),
     ),
+    ...studentFields.data,
     role,
   }
   const supabase = await createClient()
@@ -91,7 +94,7 @@ export async function createAdminUser(
 
   const email = String(formData.get('email') ?? '').trim()
   const password = String(formData.get('password') ?? '')
-  const name = optionalValue(formData, 'name')
+  const name = optionalFormValue(formData, 'name')
   const role = String(formData.get('role') ?? '')
 
   if (!email || !password || !name) return { error: t('errors.required') }

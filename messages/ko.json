@@ -101,7 +101,9 @@
       "gender": "성별",
       "churchName": "교회명",
       "churchPosition": "직분",
-      "preferredLanguage": "사용 언어"
+      "preferredLanguage": "사용 언어",
+      "studentNumber": "학번",
+      "enrolledSemester": "재학학기"
     },
     "language": {
       "none": "언어 선택",
@@ -112,6 +114,7 @@
     "errors": {
       "notConfigured": "프로필 저장소가 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
       "nameRequired": "이름을 입력해 주세요.",
+      "invalidSemester": "재학학기는 정수로 입력해 주세요.",
       "unauthorized": "다시 로그인해 주세요.",
       "saveFailed": "프로필을 저장하지 못했습니다.",
       "avatarRequired": "업로드할 사진을 선택해 주세요.",
@@ -168,6 +171,8 @@
       "church_name": "교회명",
       "church_position": "직분",
       "preferred_language": "사용 언어",
+      "student_number": "학번",
+      "enrolled_semester": "재학학기",
       "updatedAt": "수정일"
     },
     "roles": {
@@ -185,6 +190,7 @@
       "required": "이름, 이메일, 비밀번호를 모두 입력해 주세요.",
       "nameRequired": "이름을 입력해 주세요.",
       "invalidRole": "올바른 역할을 선택해 주세요.",
+      "invalidSemester": "재학학기는 정수로 입력해 주세요.",
       "saveFailed": "사용자를 저장하지 못했습니다.",
       "createFailed": "사용자를 생성하지 못했습니다."
     },
@@ -326,6 +332,8 @@
       "status": "수강 상태",
       "pass": "이수",
       "gradeYear": "학년",
+      "studentNumber": "학번",
+      "enrolledSemester": "재학학기",
       "academicStatus": "학적 상태",
       "details": "세부 사항"
     },
@@ -385,6 +393,7 @@
     "fields": {
       "student": "학생", "gradeYear": "학년", "year": "연도",
       "semester": "학기", "term": "학기", "status": "학적 상태",
+      "studentNumber": "학번", "enrolledSemester": "재학학기",
       "entrance": "입학 정보", "graduate": "졸업 정보",
       "changeReason": "변경 사유", "leaveStart": "휴학 시작일",
       "leaveEnd": "휴학 종료일", "advisor": "지도교수", "actions": "관리"

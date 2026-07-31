@@ -3,6 +3,10 @@
 import { revalidatePath } from 'next/cache'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { writeChangeLog } from '@/lib/changelog/write'
+import {
+  optionalFormValue,
+  parseStudentProfileFields,
+} from '@/lib/profile/form'
 import { isSupabaseConfigured } from '@/lib/supabase/env'
 import { createClient } from '@/lib/supabase/server'
 
@@ -24,11 +28,6 @@ const PROFILE_FIELDS = [
   'preferred_language',
 ] as const
 
-function optionalValue(formData: FormData, field: string): string | null {
-  const value = String(formData.get(field) ?? '').trim()
-  return value || null
-}
-
 export async function updateProfile(
   _previousState: ProfileActionState,
   formData: FormData,
@@ -39,12 +38,18 @@ export async function updateProfile(
     return { error: t('errors.notConfigured') }
   }
 
-  const name = optionalValue(formData, 'name')
+  const name = optionalFormValue(formData, 'name')
   if (!name) return { error: t('errors.nameRequired') }
 
-  const updates = Object.fromEntries(
-    PROFILE_FIELDS.map((field) => [field, optionalValue(formData, field)]),
-  )
+  const studentFields = parseStudentProfileFields(formData)
+  if (!studentFields.ok) return { error: t('errors.invalidSemester') }
+
+  const updates = {
+    ...Object.fromEntries(
+      PROFILE_FIELDS.map((field) => [field, optionalFormValue(formData, field)]),
+    ),
+    ...studentFields.data,
+  }
   const supabase = await createClient()
   const {
     data: { user },

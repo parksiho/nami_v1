@@ -69,7 +69,7 @@ export default async function TeachingStudentPage({ params }: Props) {
   const [studentResult, recordsResult] = await Promise.all([
     supabase
       .from('profiles')
-      .select('id, name, email')
+      .select('id, name, email, student_number, enrolled_semester')
       .eq('id', studentId)
       .maybeSingle(),
     supabase
@@ -92,14 +92,31 @@ export default async function TeachingStudentPage({ params }: Props) {
   ])
   const loadError = studentResult.error?.message ?? recordsResult.error?.message
   const records = (recordsResult.data ?? []) as EnrollmentRecord[]
+  const student = studentResult.data
 
   return (
     <main className="page-main course-page">
       <Link href="/teaching" className="admin-back">{t('backToList')}</Link>
       <header className="course-page__header">
-        <h1>{studentResult.data?.name || t('unnamedStudent')}</h1>
-        <p>{studentResult.data?.email || t('academicRecordDescription')}</p>
+        <h1>{student?.name || t('unnamedStudent')}</h1>
+        <p>{student?.email || t('academicRecordDescription')}</p>
       </header>
+      <section className="admin-card">
+        <dl className="enrollment-summary">
+          <div>
+            <dt>{t('fields.studentNumber')}</dt>
+            <dd>{student?.student_number ?? t('notAvailable')}</dd>
+          </div>
+          <div>
+            <dt>{t('fields.enrolledSemester')}</dt>
+            <dd>
+              {student?.enrolled_semester === null || student?.enrolled_semester === undefined
+                ? t('notAvailable')
+                : student.enrolled_semester}
+            </dd>
+          </div>
+        </dl>
+      </section>
       <h2 className="teaching-section-title">{t('academicRecordTitle')}</h2>
       {loadError ? (
         <p className="admin-message admin-message--error" role="alert">{loadError}</p>
