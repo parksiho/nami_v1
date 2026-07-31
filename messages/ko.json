@@ -158,6 +158,7 @@
       "professorCoursesHint": "교수 ID {professorId}로 필터된 관리자 강의 목록으로 이동합니다."
     },
     "fields": {
+      "photo": "사진",
       "name": "이름",
       "email": "이메일",
       "password": "임시 비밀번호",

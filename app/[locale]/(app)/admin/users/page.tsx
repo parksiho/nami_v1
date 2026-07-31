@@ -1,8 +1,10 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { CreateAdminUserForm } from '@/components/admin/AdminUserForms'
+import { ProfileAvatar } from '@/components/profile/ProfileAvatar'
 import { Link } from '@/i18n/navigation'
 import { getAdminUserListParams, getServiceRoleEnv } from '@/lib/admin/users'
 import type { Profile } from '@/lib/domain/profile'
+import { getAvatarPublicUrl } from '@/lib/profile/avatar'
 import { isSupabaseConfigured } from '@/lib/supabase/env'
 import { createClient } from '@/lib/supabase/server'
 
@@ -20,6 +22,7 @@ export default async function AdminUsersPage({ params, searchParams }: Props) {
   let profiles: Profile[] = []
   let count = 0
   let loadError: string | null = null
+  let avatarUrls = new Map<string, string | null>()
 
   if (isSupabaseConfigured()) {
     const supabase = await createClient()
@@ -35,6 +38,12 @@ export default async function AdminUsersPage({ params, searchParams }: Props) {
     profiles = (data ?? []) as Profile[]
     count = total ?? 0
     loadError = error?.message ?? null
+    avatarUrls = new Map(
+      profiles.map((profile) => [
+        profile.id,
+        getAvatarPublicUrl(supabase, profile.avatar_path),
+      ]),
+    )
   }
 
   const pageCount = Math.max(1, Math.ceil(count / list.pageSize))
@@ -71,6 +80,7 @@ export default async function AdminUsersPage({ params, searchParams }: Props) {
             <table className="admin-table">
               <thead>
                 <tr>
+                  <th>{t('fields.photo')}</th>
                   <th>{t('fields.name')}</th>
                   <th>{t('fields.email')}</th>
                   <th>{t('fields.role')}</th>
@@ -81,6 +91,13 @@ export default async function AdminUsersPage({ params, searchParams }: Props) {
                 {profiles.length ? profiles.map((profile) => (
                   <tr key={profile.id}>
                     <td>
+                      <ProfileAvatar
+                        name={profile.name}
+                        avatarUrl={avatarUrls.get(profile.id)}
+                        size="sm"
+                      />
+                    </td>
+                    <td>
                       <Link href={`/admin/users/${profile.id}`}>{profile.name || t('unnamed')}</Link>
                     </td>
                     <td>{profile.email || '—'}</td>
@@ -88,7 +105,7 @@ export default async function AdminUsersPage({ params, searchParams }: Props) {
                     <td>{new Intl.DateTimeFormat(locale).format(new Date(profile.updated_at))}</td>
                   </tr>
                 )) : (
-                  <tr><td colSpan={4}>{t('noUsers')}</td></tr>
+                  <tr><td colSpan={5}>{t('noUsers')}</td></tr>
                 )}
               </tbody>
             </table>
