@@ -42,6 +42,18 @@ describe('final review security regressions', () => {
     )
     expect(initSql).toMatch(/current_user in \('postgres', 'supabase_admin'\)/)
   })
+  it('adds student number and enrolled semester to profiles', () => {
+    expect(initSql).toContain('student_number text')
+    expect(initSql).toContain('enrolled_semester int')
+    expect(initSql).toContain('profiles_student_number_unique')
+
+    const migration = read(
+      'supabase/migrations/20260731000000_profile_student_number_semester.sql',
+    )
+    expect(migration).toContain('add column if not exists student_number text')
+    expect(migration).toContain('add column if not exists enrolled_semester int')
+    expect(migration).toContain('profiles_student_number_unique')
+  })
 })
 
 describe('locale root page', () => {

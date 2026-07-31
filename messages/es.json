@@ -101,7 +101,9 @@
       "gender": "Género",
       "churchName": "Nombre de la iglesia",
       "churchPosition": "Cargo en la iglesia",
-      "preferredLanguage": "Idioma preferido"
+      "preferredLanguage": "Idioma preferido",
+      "studentNumber": "Número de estudiante",
+      "enrolledSemester": "Semestre de matrícula"
     },
     "language": {
       "none": "Seleccione un idioma",
@@ -112,6 +114,7 @@
     "errors": {
       "notConfigured": "El almacenamiento del perfil no está configurado. Configure las variables de Supabase.",
       "nameRequired": "El nombre es obligatorio.",
+      "invalidSemester": "El semestre de matrícula debe ser un número entero.",
       "unauthorized": "Inicie sesión de nuevo.",
       "saveFailed": "No se pudo guardar el perfil.",
       "avatarRequired": "Seleccione una foto para subir.",
@@ -168,6 +171,8 @@
       "church_name": "Nombre de la iglesia",
       "church_position": "Cargo en la iglesia",
       "preferred_language": "Idioma preferido",
+      "student_number": "Número de estudiante",
+      "enrolled_semester": "Semestre de matrícula",
       "updatedAt": "Actualizado"
     },
     "roles": {
@@ -185,6 +190,7 @@
       "required": "El nombre, correo y contraseña son obligatorios.",
       "nameRequired": "El nombre es obligatorio.",
       "invalidRole": "Seleccione un rol válido.",
+      "invalidSemester": "El semestre de matrícula debe ser un número entero.",
       "saveFailed": "No se pudo guardar el usuario.",
       "createFailed": "No se pudo crear el usuario."
     },
@@ -326,6 +332,8 @@
       "status": "Estado",
       "pass": "Aprobado",
       "gradeYear": "Año académico",
+      "studentNumber": "Número de estudiante",
+      "enrolledSemester": "Semestre de matrícula",
       "academicStatus": "Estado académico",
       "details": "Detalles"
     },
@@ -385,6 +393,7 @@
     "fields": {
       "student": "Estudiante", "gradeYear": "Año académico", "year": "Año",
       "semester": "Semestre", "term": "Período", "status": "Estado",
+      "studentNumber": "Número de estudiante", "enrolledSemester": "Semestre de matrícula",
       "entrance": "Ingreso", "graduate": "Graduación",
       "changeReason": "Motivo del cambio", "leaveStart": "Inicio de licencia",
       "leaveEnd": "Fin de licencia", "advisor": "Asesor", "actions": "Acciones"

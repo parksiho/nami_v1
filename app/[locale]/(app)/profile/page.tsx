@@ -25,6 +25,8 @@ const demoProfile: Profile = {
   church_position: null,
   preferred_language: null,
   avatar_path: null,
+  student_number: null,
+  enrolled_semester: null,
   created_at: '',
   updated_at: '',
 }

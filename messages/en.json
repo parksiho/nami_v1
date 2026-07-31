@@ -101,7 +101,9 @@
       "gender": "Gender",
       "churchName": "Church name",
       "churchPosition": "Church position",
-      "preferredLanguage": "Preferred language"
+      "preferredLanguage": "Preferred language",
+      "studentNumber": "Student number",
+      "enrolledSemester": "Enrolled semester"
     },
     "language": {
       "none": "Select a language",
@@ -112,6 +114,7 @@
     "errors": {
       "notConfigured": "Profile storage is not configured. Set Supabase environment variables.",
       "nameRequired": "Name is required.",
+      "invalidSemester": "Enrolled semester must be an integer.",
       "unauthorized": "Please log in again.",
       "saveFailed": "Could not save the profile.",
       "avatarRequired": "Choose a photo to upload.",
@@ -168,6 +171,8 @@
       "church_name": "Church name",
       "church_position": "Church position",
       "preferred_language": "Preferred language",
+      "student_number": "Student number",
+      "enrolled_semester": "Enrolled semester",
       "updatedAt": "Updated"
     },
     "roles": {
@@ -185,6 +190,7 @@
       "required": "Name, email, and password are required.",
       "nameRequired": "Name is required.",
       "invalidRole": "Select a valid role.",
+      "invalidSemester": "Enrolled semester must be an integer.",
       "saveFailed": "Could not save the user.",
       "createFailed": "Could not create the user."
     },
@@ -326,6 +332,8 @@
       "status": "Status",
       "pass": "Passed",
       "gradeYear": "Year level",
+      "studentNumber": "Student number",
+      "enrolledSemester": "Enrolled semester",
       "academicStatus": "Academic status",
       "details": "Details"
     },
@@ -385,6 +393,7 @@
     "fields": {
       "student": "Student", "gradeYear": "Year level", "year": "Year",
       "semester": "Semester", "term": "Term", "status": "Status",
+      "studentNumber": "Student number", "enrolledSemester": "Enrolled semester",
       "entrance": "Entrance", "graduate": "Graduation",
       "changeReason": "Change reason", "leaveStart": "Leave start",
       "leaveEnd": "Leave end", "advisor": "Advisor", "actions": "Actions"

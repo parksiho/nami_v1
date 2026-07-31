@@ -15,6 +15,8 @@ export type Profile = {
   church_position: string | null
   preferred_language: string | null
   avatar_path: string | null
+  student_number: string | null
+  enrolled_semester: number | null
   created_at: string
   updated_at: string
 }
