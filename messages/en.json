@@ -158,6 +158,7 @@
       "professorCoursesHint": "Opens the admin course list filtered to professor ID {professorId}."
     },
     "fields": {
+      "photo": "Photo",
       "name": "Name",
       "email": "Email",
       "password": "Temporary password",

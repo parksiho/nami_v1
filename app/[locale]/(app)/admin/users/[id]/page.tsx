@@ -2,9 +2,11 @@ import { notFound } from 'next/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { EditAdminUserForm } from '@/components/admin/AdminUserForms'
 import { AdminEnrollmentForm } from '@/components/courses/AdminEnrollmentForm'
+import { ProfileAvatar } from '@/components/profile/ProfileAvatar'
 import { Link } from '@/i18n/navigation'
 import { UserRole } from '@/lib/domain/enums'
 import type { Profile } from '@/lib/domain/profile'
+import { getAvatarPublicUrl } from '@/lib/profile/avatar'
 import { isSupabaseConfigured } from '@/lib/supabase/env'
 import { createClient } from '@/lib/supabase/server'
 
@@ -44,6 +46,7 @@ export default async function AdminUserDetailPage({ params }: Props) {
   if (!data) notFound()
 
   const profile = data as Profile
+  const avatarUrl = getAvatarPublicUrl(supabase, profile.avatar_path)
   let courses: { id: string; name: string; year: number; semester: number }[] = []
   let existingCourseIds: string[] = []
   let enrollmentLoadError: string | null = null
@@ -69,7 +72,13 @@ export default async function AdminUserDetailPage({ params }: Props) {
   return (
     <main className="page-main admin-users">
       <Link href="/admin/users" className="admin-back">{t('backToList')}</Link>
-      <header className="admin-users__header">
+      <header className="admin-users__header admin-users__header--detail">
+        <ProfileAvatar
+          name={profile.name}
+          avatarUrl={avatarUrl}
+          size="lg"
+          className="admin-users__avatar"
+        />
         <div>
           <h1>{profile.name || t('unnamed')}</h1>
           <p>{profile.email || profile.id}</p>

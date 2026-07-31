@@ -474,12 +474,73 @@ body {
   margin: 0 auto;
 }
 
+.profile-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-avatar__fallback {
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.profile-avatar--sm {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.profile-avatar--sm .profile-avatar__fallback {
+  font-size: 0.75rem;
+}
+
+.profile-avatar--md {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.profile-avatar--md .profile-avatar__fallback {
+  font-size: 1rem;
+}
+
+.profile-avatar--lg {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.profile-avatar--lg .profile-avatar__fallback {
+  font-size: 1.5rem;
+}
+
 .admin-users__header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1.25rem;
+}
+
+.admin-users__header--detail {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.admin-users__avatar {
+  margin-right: 0.25rem;
 }
 
 .admin-users__header h1,

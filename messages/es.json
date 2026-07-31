@@ -158,6 +158,7 @@
       "professorCoursesHint": "Abre la lista de cursos filtrada por el ID de profesor {professorId}."
     },
     "fields": {
+      "photo": "Foto",
       "name": "Nombre",
       "email": "Correo electrónico",
       "password": "Contraseña temporal",
