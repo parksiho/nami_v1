@@ -3,19 +3,26 @@
 출처: http://sinil16.iptime.org:3333/
 수집일: 2026-07-31
 
+| 구분 | 건수 |
+| --- | --- |
+| 학생 | 83 |
+| 교수 | 16 |
+| 커리큘럼 | 14 |
+| 학적(수강·성적) | 178 |
+
 ---
 
 ## 1. 학생정보목록 (83명)
 
 | ID | 이름 | 성별 | 생년월일 | 국가 | 휴대전화 | 이메일 | 주소 | 교회 | 직분/직업 | 여권 | 학번 | 학기 | 등록일 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 50 | Abraham Décima | 남 | 1987-09-28 | Argentina | 1100000000 | 1234 | Bach 2289 | Dios es Nuestro Amparo Merlo | Merlo / Maestro de Jovenes | 33.178.431 | - | 0 | 2024-06-26 |
+| 50 | Abraham Décima | 남 | 1987-09-28 | Argentina | 1100000000 | 1234 | Bach 2289 | Dios es Nuestro Amparo Merlo | Merlo / Maestro de Jovenes | 33.178.431 | - | 졸업 | 2024-06-26 |
 | 51 | Daniel Marcelo Ibarra | 남 | 1965-09-07 | Argentina | 1131861548 | No | Las mimosas 890 / Diploma | Dios es Nuestro Amparo Merlo | Diáconiso, Trabajo c/ adictos | 17.564.641 | 202301005A | 4 | 2024-06-26 |
 | 52 | Felipe Lemos | 남 | 1991-05-03 | Argentina | 1128969488 | lemosnehemias35@gmail.com | Jose Bettinoti 1051 / Diploma | Dios es Nuestro Amparo Merlo | Evangelista | 47.549.073 | 202301006A | 4 | 2024-06-26 |
-| 53 | Carlos Gastón Avanzini | 남 | 1982-01-29 | Argentina | 1100000000 | 0000 | Don Segundo Sombra 1759, V, Luzuriaga | Grano de Trigo | - | - | - | 0 | 2024-06-26 |
+| 53 | Carlos Gastón Avanzini | 남 | 1982-01-29 | Argentina | 1100000000 | 0000 | Don Segundo Sombra 1759, V, Luzuriaga | Grano de Trigo | - | - | - | 졸업 | 2024-06-26 |
 | 54 | Gisela Fabiana Paredes | 여 | 1985-05-27 | Argentina | 1160485608 | gfparedes85@gmail.com | Evita 2360 / Monte Grande. | Jesucristo Coronado | Misionera | 31.461.719 | 202301010A | 4 | 2024-06-26 |
 | 55 | Lara Lourdes Rivero | 여 | 2004-09-30 | Argentina | 1162846926 | Lararivero132@gmail.com | Pedro Laurenz 280 | Dios es Nuestro Amparo Libertad | Danzora, Maestra de Apoyo escolar | 46.188.266 | 202301012A | 3 | 2024-06-26 |
-| 56 | Sandra Cristina Martínez | 여 | 1967-07-20 | Argentina | 1100000000 | 0000 | Huraturé 395 | Dios es Nuestro Amparo Merlo | Lider | 18.345.916 | - | 0 | 2024-06-26 |
+| 56 | Sandra Cristina Martínez | 여 | 1967-07-20 | Argentina | 1100000000 | 0000 | Huraturé 395 | Dios es Nuestro Amparo Merlo | Lider | 18.345.916 | - | 졸업 | 2024-06-26 |
 | 57 | Silvia Alejandra Ponce | 여 | 1980-08-24 | United States | 1158232014 | silviaaponce80@gmail.com | Ernesto de la Carcova 1905 Altos de Merlo / Merlo | Elim | Merlo / Profesora de inglés | 28.384.860 | 202301018A | 4 | 2024-06-26 |
 | 58 | Laila Yasmin Arriola Maidana | 여 | 2003-06-07 | Argentina | 1100000000 | 0000 | Ezeiza | Herederos Del Reino | Cantante | 45.007.577 | - | 2 | 2024-06-26 |
 | 59 | Zuleimy Campos | - | 1983-03-16 | Argentina | 1130814787 | zuleimycampos5@gmail.com | alem 970  / Paso del Rey | Elim | Diáconisa, Lider | 96101496 | 202301019A | 4 | 2024-06-26 |
@@ -25,7 +32,7 @@
 | 63 | Claudio Agustin Fernandez | 남 | 1973-04-14 | Paraguay | 0983708801 | claudifernandez8@gmail.com | Ita paraguay / Ita paraguay | Cristo Vive | Pastor | 1.376.969 | 202001002P | 8 | 2024-06-26 |
 | 64 | José Quilla Calsina | 남 | 1994-05-18 | Bolivia | 1124047468 | jqc6064@gmail.com | Larrea 5076 / Tablada | Presencia de Dios | Lider de Jóvenes | 95.225.184 | 202001009A | 8 | 2024-06-26 |
 | 65 | Dario Fernando Rodríguez | 남 | 1991-04-25 | Argentina | 1168748926 | dariotenor@hotmail.com | Alvear 1270 | Jesucristo Coronado | Director de Coro | 35.764.105 | 202001003A | 7 | 2024-06-26 |
-| 66 | Santos Luis Perichón | 남 | 1968-11-24 | Argentina | 1100000000 | 0000 | - | 타교단 | Pastor | - | - | -1 | 2024-06-26 |
+| 66 | Santos Luis Perichón | 남 | 1968-11-24 | Argentina | 1100000000 | 0000 | - | 타교단 | Pastor | - | - | - | 2024-06-26 |
 | 67 | Elizabeth del Valle Costilla | 여 | 1975-03-07 | Argentina | 1155155931 | devallecostilla@gmail.com | - | Betel | Directora de EB | 24.432.960 | 202001003 | 6 | 2024-06-26 |
 | 68 | Graciela Noé | 여 | 1966-11-10 | Paraguay | 0982882737 | 0000 | - | Columna de Fuego | - | 1.201.700 | - | 4 | 2024-06-26 |
 | 69 | Andrea Belén Chamorro | 여 | 1991-05-20 | Argentina | 1158402303 | andreabelenchamorro28@gmail.com | Pedro chutro 1426 | Dios es Nuestro Amparo Libertad | Merlo / Maestra de Escuela biblica | 36.094.868 | 202201003A | 6 | 2024-06-26 |
@@ -36,57 +43,57 @@
 | 74 | Abril Nahiara Aquino Bogado | 여 | 2004-05-11 | Argentina | 1127761994 | aquinoabril429@gmail.com | caseros2567 | De la Cruz en Las Praderas | Cantante | 45.820.693 | 202201002A | 5 | 2024-06-26 |
 | 75 | Hugo Javier Lezcano | 남 | 1981-07-09 | Argentina | 1162908605 | hugo.javier.lezcano.upe@gmail.com | General Peñaloza 2532 maximo paz | De la Cruz | - | 28.867.213 | 202201010A | 5 | 2024-06-26 |
 | 76 | Wilson David Cardozo Portillo | 남 | 1998-02-16 | Paraguay | 971861204 | carodozow449@gmail.com | Acceso sur peguaho | Cristo Vive | - | 7.188.014 | 202201017P | 5 | 2024-06-26 |
-| 77 | Evelyn Carolina Torres Miranda | 여 | 1982-08-21 | Chile | 971754222 | 0000 | - | Unificada Metodista Pentecostal | Candidato misionero | - | - | -1 | 2024-06-26 |
+| 77 | Evelyn Carolina Torres Miranda | 여 | 1982-08-21 | Chile | 971754222 | 0000 | - | Unificada Metodista Pentecostal | Candidato misionero | - | - | - | 2024-06-26 |
 | 78 | Olga Vera de  Diaz | 여 | 1980-06-04 | Paraguay | 0983301037 | 0000 | - | EbenEzer | - | 3.435.173 | - | 3 | 2024-06-26 |
 | 79 | Carlos Alberto Cárcamo | 남 | 1978-05-03 | Argentina | 1163600055 | carloscarcamovi@gmail.com | Montiel 2720 | Dios es Nuestro Amparo Libertad | Libertad / Lider | 26.653.007 | 202201006A | 4 | 2024-06-26 |
 | 80 | Gerardo David Portillo Martínez | 남 | 1993-10-25 | Paraguay | 0856940 | prino.david93@gmail.com | Calle Yvapovo  / Ita, Barrio San Antonio | Cristo Vive | Maestro de Jovenes | 5264139 | 202301008P | 4 | 2024-06-26 |
 | 81 | Ana Ramirez Diaz | 여 | 1982-10-29 | Paraguay | 0984194163 | 0000 | - | Cristo Vive | - | 4.017.183 | - | 3 | 2024-06-26 |
 | 82 | Alex Adalberto Leimbacher Gonzalez | 남 | 1986-12-05 | Paraguay | 981362591 | alexleimbacher@gmail.com | Loma Pyta Asunción | Rio de la Vida | - | 4.247.855 | 202301003P | 4 | 2024-06-26 |
 | 83 | Ramon Diaz | 남 | 1979-08-31 | Paraguay | 0983301037 | 0000 | - | EbenEzer | - | 3.348.448 | - | 3 | 2024-06-26 |
-| 84 | Gabriela Elisa Fanego Silva | 여 | 1994-12-26 | Brazil (Brasil) | 994425536 | 0000 | - | Central Coreana | Paraguay / Lider | - | - | -1 | 2024-06-26 |
+| 84 | Gabriela Elisa Fanego Silva | 여 | 1994-12-26 | Brazil (Brasil) | 994425536 | 0000 | - | Central Coreana | Paraguay / Lider | - | - | - | 2024-06-26 |
 | 85 | Lidia Janet Cabral Aguero | 여 | 2004-04-23 | Paraguay | 972661432 | 0000 | - | Betel | Maestra | 5.948.842 | - | 2 | 2024-06-26 |
-| 86 | Leandro da Silva Barra | 남 | 1991-03-21 | Brazil (Brasil) | 991745627 | 0000 | - | Central Coreana | Lider | - | - | -1 | 2024-06-26 |
+| 86 | Leandro da Silva Barra | 남 | 1991-03-21 | Brazil (Brasil) | 991745627 | 0000 | - | Central Coreana | Lider | - | - | - | 2024-06-26 |
 | 87 | Nadia Fenandez | 여 | 2003-08-09 | Paraguay | 982322451 | 0000 | - | Cristo Vive | - | 5.742.997 | - | 2 | 2024-06-26 |
 | 88 | María Leoncia González | 여 | 1970-09-12 | Paraguay | 1157182502 | Gonzalezmarialeoncia@gmail.com | Moreno 4518 | Vida Nueva | Diáconisa | 93.638.280 | 202401007P | 2 | 2024-06-26 |
 | 89 | Javier Walter Pereyra | 남 | 1998-07-02 | Argentina | 1138971052 | Javierpereyra492@gmail.com | Arroyo Caraguata 406 | Grano de Trigo | Candidato a Misionero | 44.494.251 | 202401006A | 2 | 2024-06-26 |
 | 90 | Yesica Gisele Horisberger | 여 | 1990-11-12 | Argentina | 1122962572 | giselehorisberger14@gmail.com | Albarracin 1776 / Parque Chacabuco | Vida Nueva | Parque Chacabuco / Pastora, Danza | 36.797.314 | 202401011A | 2 | 2024-06-26 |
 | 91 | Alba Anahi Aguirre | 여 | 1992-03-02 | Argentina | 1137676247 | anahinw@gmail.com | Marco Avellaneda. 4492  / Lanús | Grano de Trigo | Maestra | 36.688.450 | 202401001A | 2 | 2024-06-26 |
 | 92 | Florencia Milagros Segovia | 여 | 2006-02-17 | Argentina | 1138155124 | florencia.milagros.segovia@gmail.com | 24 de junio 4437 / Lanús Oeste | CHOYA | Maestra | 47.132.248 | 202401005A | 2 | 2024-06-26 |
-| 93 | Raúl Antonio Gómez González | 남 | 1980-12-31 | Paraguay | 1100000000 | 0000 | - | De la Cruz en Las Praderas | Lider | - | - | -1 | 2024-06-26 |
+| 93 | Raúl Antonio Gómez González | 남 | 1980-12-31 | Paraguay | 1100000000 | 0000 | - | De la Cruz en Las Praderas | Lider | - | - | - | 2024-06-26 |
 | 94 | Patricia Gamarra | 여 | 1967-03-14 | Argentina | 1168461206 | patrigamarra.67@gmail.com | Independencia 1037 | Jesús Pan de Vida | Pastora | 18.148.282 | 202401008A | 2 | 2024-06-26 |
-| 95 | Samuel Sosa | 남 | 1997-08-09 | Paraguay | 1100000000 | 0000 | - | Cristo Vive | Lider de alabanza | - | - | -1 | 2024-06-26 |
-| 96 | Fabiana Chavez | 여 | 2001-02-27 | Paraguay | 1100000000 | 0000 | - | Esperanza | Maestra | - | - | -1 | 2024-06-26 |
-| 98 | Anastacio Rolon | 남 | 1963-07-26 | Paraguay | 1100000000 | 0000 | - | Gracia De Dios | Lider | - | - | -1 | 2024-06-26 |
-| 99 | Dana Diaz | 여 | 2006-09-06 | Paraguay | 1100000000 | 0000 | - | EbenEzer | - | - | - | -1 | 2024-06-26 |
-| 100 | Sergio Antonio Cañisales | 남 | 1988-10-19 | Argentina | 1128525572 | sergioacanisales210@gmail.com | - | Vida Nueva | Pastor | 34.123.468 | 202001001 | 0 | 2024-06-26 |
+| 95 | Samuel Sosa | 남 | 1997-08-09 | Paraguay | 1100000000 | 0000 | - | Cristo Vive | Lider de alabanza | - | - | - | 2024-06-26 |
+| 96 | Fabiana Chavez | 여 | 2001-02-27 | Paraguay | 1100000000 | 0000 | - | Esperanza | Maestra | - | - | - | 2024-06-26 |
+| 98 | Anastacio Rolon | 남 | 1963-07-26 | Paraguay | 1100000000 | 0000 | - | Gracia De Dios | Lider | - | - | - | 2024-06-26 |
+| 99 | Dana Diaz | 여 | 2006-09-06 | Paraguay | 1100000000 | 0000 | - | EbenEzer | - | - | - | - | 2024-06-26 |
+| 100 | Sergio Antonio Cañisales | 남 | 1988-10-19 | Argentina | 1128525572 | sergioacanisales210@gmail.com | - | Vida Nueva | Pastor | 34.123.468 | 202001001 | 졸업 | 2024-06-26 |
 | 101 | Luis Armando Sotelo | 남 | 1984-12-10 | Argentina | 1162849458 | 0000 | - | Dios es Nuestro Amparo Libertad | - | - | 202201007 | 4 | 2024-06-26 |
-| 102 | Antonella Mailen Martínez | 여 | 2003-07-08 | Argentina | 1155997510 | 0000 | - | De la Cruz | - | - | - | -1 | 2024-06-26 |
+| 102 | Antonella Mailen Martínez | 여 | 2003-07-08 | Argentina | 1155997510 | 0000 | - | De la Cruz | - | - | - | - | 2024-06-26 |
 | 103 | Gimenez Lopez Librada | 여 | 1978-06-28 | Paraguay | 985379281 | 0000 | - | Adoradores de Cristo Capellana | - | 3.019.949 | - | 1 | 2024-06-26 |
 | 104 | Rocio Mabel Servian Viveros | 남 | 2001-12-18 | Paraguay | 994991455 | 0000 | - | Betel | - | 6.067.477 | - | 1 | 2024-06-26 |
-| 105 | Alba Leodia Gonzalez Gomez | 여 | 1997-09-20 | Paraguay | 0992722117 | gonzalezgomezalbaloodia@gmail.com | - | Camino al Cielo | Maestra | - | - | -1 | 2024-06-26 |
-| 108 | Samuel Cardozo | 남 | 1995-09-09 | Paraguay | 0986782715 | 0000 | - | La gracia de Dios | - | - | - | -1 | 2024-06-27 |
+| 105 | Alba Leodia Gonzalez Gomez | 여 | 1997-09-20 | Paraguay | 0992722117 | gonzalezgomezalbaloodia@gmail.com | - | Camino al Cielo | Maestra | - | - | - | 2024-06-26 |
+| 108 | Samuel Cardozo | 남 | 1995-09-09 | Paraguay | 0986782715 | 0000 | - | La gracia de Dios | - | - | - | - | 2024-06-27 |
 | 109 | Viviana Ester Chamorro | 여 | 1987-03-01 | Argentina | 1125495623 | chamorroviviana990@gmail.com | - | Dios es Nuestro Amparo Libertad | - | 33.034.835 | 201207001 | 10 | 2024-06-27 |
 | 110 | Luz Marina Ibarra Candelo | 여 | 1991-03-04 | Argentina | 1123284761 | Luscesita_50cent@hotmail.com | - | Dios es Nuestro Amparo Merlo | - | 35.940.090 | 201507001 | 10 | 2024-06-28 |
 | 111 | Claudia Verónica Filipuzzi | 여 | 1978-11-21 | Argentina | 1133356539 | cristiangeogonzalez@gmail.com | - | Dios es Nuestro Amparo Merlo | - | 26.777.571 | 201607002 | 10 | 2024-06-28 |
-| 112 | Abigail Cecilia Cardozo Nuñez | 여 | 1997-06-18 | Paraguay | 0994445325 | 0000 | - | La Grica de Dios | - | - | - | -1 | 2024-06-28 |
-| 113 | Rosa Isabel Abed Ortega | 여 | 1958-08-14 | Paraguay | 0980421170 | 0000 | - | Vida Abundante | - | - | - | -1 | 2024-06-28 |
+| 112 | Abigail Cecilia Cardozo Nuñez | 여 | 1997-06-18 | Paraguay | 0994445325 | 0000 | - | La Grica de Dios | - | - | - | - | 2024-06-28 |
+| 113 | Rosa Isabel Abed Ortega | 여 | 1958-08-14 | Paraguay | 0980421170 | 0000 | - | Vida Abundante | - | - | - | - | 2024-06-28 |
 | 114 | Yanina Ana Belén Rechimont | 여 | 1993-04-07 | Argentina | 1123503416 | yaninarechimont@gmail.com | - | Grano de Trigo | - | 37.381.902 | 201801002 | 9 | 2024-06-28 |
 | 115 | Cristian Gastón González | 남 | 1976-06-18 | Argentina | 1558572043 | cristiangeogonzalez@gmail.com | - | Dios es Nuestro Amparo Merlo | - | 25.360.322 | 201607001 | 10 | 2024-06-28 |
-| 116 | Mariella Ferreira | 여 | 1966-01-31 | Uruguay | 096290519 | javimar1207@hotmail.com | - | Ministerio Semaul | - | - | - | -1 | 2024-06-28 |
-| 117 | Janet Rodríguez | 여 | 1964-11-20 | Uruguay | 094167048 | janetrodriguez016@icloud.com | - | Ministerio Semaul | - | - | - | -1 | 2024-06-28 |
+| 116 | Mariella Ferreira | 여 | 1966-01-31 | Uruguay | 096290519 | javimar1207@hotmail.com | - | Ministerio Semaul | - | - | - | - | 2024-06-28 |
+| 117 | Janet Rodríguez | 여 | 1964-11-20 | Uruguay | 094167048 | janetrodriguez016@icloud.com | - | Ministerio Semaul | - | - | - | - | 2024-06-28 |
 | 118 | Vicenta Dominga Nieva | 여 | 1975-01-26 | Argentina | 1150013245 | vickynieva848@gmail.com | - | Betel | - | 24.432.180 | 202001005 | 5 | 2024-06-28 |
-| 119 | Gedeon Gonzalez | 남 | 2002-01-30 | Paraguay | 0982611533 | gonzalezgedeon83@gmail.com | - | Vida Abundante | - | - | - | -1 | 2024-06-28 |
-| 120 | Osmar Cárdenas | 남 | 1985-02-05 | Paraguay | 0992424782 | 0000 | - | Camino al Cielo | - | - | - | -1 | 2024-06-28 |
-| 121 | Alberto Fernandes | 남 | 1990-11-14 | Paraguay | 0986568288 | 0000 | - | Camino al Cielo | - | - | - | -1 | 2024-06-28 |
-| 122 | Jossia Cabral | 여 | 1997-01-25 | Paraguay | 0994546157 | aaroncaag77@gmail.com | - | Betel(Paraguay) | - | - | - | -1 | 2024-06-28 |
-| 123 | Cristian Venancio Bienvenido Aquino Garelli | 남 | 1980-04-22 | Argentina | 1150535615 | 0000 | - | De la Cruz en Las Praderas | - | - | - | -1 | 2024-06-28 |
-| 125 | Jorge Fidel Fretes | 남 | 1971-04-24 | Paraguay | 0982198530 | 0000 | - | Jesús te llama | - | - | - | -1 | 2024-07-10 |
+| 119 | Gedeon Gonzalez | 남 | 2002-01-30 | Paraguay | 0982611533 | gonzalezgedeon83@gmail.com | - | Vida Abundante | - | - | - | - | 2024-06-28 |
+| 120 | Osmar Cárdenas | 남 | 1985-02-05 | Paraguay | 0992424782 | 0000 | - | Camino al Cielo | - | - | - | - | 2024-06-28 |
+| 121 | Alberto Fernandes | 남 | 1990-11-14 | Paraguay | 0986568288 | 0000 | - | Camino al Cielo | - | - | - | - | 2024-06-28 |
+| 122 | Jossia Cabral | 여 | 1997-01-25 | Paraguay | 0994546157 | aaroncaag77@gmail.com | - | Betel(Paraguay) | - | - | - | - | 2024-06-28 |
+| 123 | Cristian Venancio Bienvenido Aquino Garelli | 남 | 1980-04-22 | Argentina | 1150535615 | 0000 | - | De la Cruz en Las Praderas | - | - | - | - | 2024-06-28 |
+| 125 | Jorge Fidel Fretes | 남 | 1971-04-24 | Paraguay | 0982198530 | 0000 | - | Jesús te llama | - | - | - | - | 2024-07-10 |
 | 126 | Magna Beatrz Mendez | 여 | 1981-02-05 | Paraguay | 0981430241 | 0000 | - | Central Coreana | - | - | - | 1 | 2024-07-10 |
-| 127 | Diego Soto | 남 | 1984-09-23 | Paraguay | 0975334144 | 0000 | - | Gracia De Dios | - | - | - | -1 | 2024-07-10 |
-| 128 | Angel Arnaldo Palma Noblia | 남 | 1982-07-27 | Paraguay | 1100000000 | 0000 | - | Gracia De Dios | - | - | - | -1 | 2024-07-10 |
-| 129 | Martin Moises Maldonado Martínez | 남 | 1988-11-25 | Paraguay | 0982826197 | 0000 | - | Betel(Paraguay) | - | - | - | -1 | 2024-07-10 |
-| 130 | Carina Viviana Luggren | 여 | 1973-01-05 | Argentina | 1126892110 | 0000 | - | De la Cruz | - | - | - | -1 | 2024-07-10 |
-| 131 | Abigail Macarena Martínez | 여 | 1996-05-06 | Argentina | 1161375595 | 0000 | - | De la Cruz | - | - | - | -1 | 2024-07-10 |
+| 127 | Diego Soto | 남 | 1984-09-23 | Paraguay | 0975334144 | 0000 | - | Gracia De Dios | - | - | - | - | 2024-07-10 |
+| 128 | Angel Arnaldo Palma Noblia | 남 | 1982-07-27 | Paraguay | 1100000000 | 0000 | - | Gracia De Dios | - | - | - | - | 2024-07-10 |
+| 129 | Martin Moises Maldonado Martínez | 남 | 1988-11-25 | Paraguay | 0982826197 | 0000 | - | Betel(Paraguay) | - | - | - | - | 2024-07-10 |
+| 130 | Carina Viviana Luggren | 여 | 1973-01-05 | Argentina | 1126892110 | 0000 | - | De la Cruz | - | - | - | - | 2024-07-10 |
+| 131 | Abigail Macarena Martínez | 여 | 1996-05-06 | Argentina | 1161375595 | 0000 | - | De la Cruz | - | - | - | - | 2024-07-10 |
 | 132 | Leonardo Calderón Santos | 남 | 1971-11-06 | Bolivia | 1164064176 | leo.calderons2020@gmail.com | Las margaritas 1229 | Asamblea de Dios la Misión | Las Margartias 1229 / Pastor | 93.034.691 | 202407002A | 1 | 2024-07-15 |
 | 133 | Juan Bautista Pallares | 남 | 2006-04-21 | Argentina | 1137050171 | pallaresjuanbautista21@gmail.com | Granaderos 2340 | Dios es Nuestro Amparo Libertad | - | 47.190.814 | 202407001A | 1 | 2024-07-15 |
 | 134 | Mariana Carolina Puga Menes | 여 | 1991-12-09 | Uruguay | 1100000000 | 0000 | - | Semaul | Maestra de escuela biblica | - | - | 3 | 2024-07-15 |
@@ -136,3 +143,248 @@
 | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | 19 | 2024-07-12 |
 | 16 | 2020 | 2 | Griego 1 | 3 | Prof. Federico  Troche | 20 | 2024-07-12 |
 | 23 | 2007 | 1 | test | 1 | test1 kaka1 gogo | 30 | 2024-07-30 |
+
+---
+
+## 4. 학적정보목록 (178건)
+
+학생별 수강·성적 기록 (`/api/currisByStudents`). 합격(O/X)·점수·과목·담당교수 포함.
+
+| ID | 학생ID | 학생이름 | 학번 | 커리큘럼ID | 년도 | 학기 | 과목 | 학점 | 교수 | 합격 | 점수 | 등록일 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 51 | 51 | Daniel Marcelo Ibarra | 202301005A | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 07 | 2024-07-11 |
+| 76 | 51 | Daniel Marcelo Ibarra | 202301005A | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 07 | 2024-07-11 |
+| 118 | 51 | Daniel Marcelo Ibarra | 202301005A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 164 | 51 | Daniel Marcelo Ibarra | 202301005A | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 52 | 52 | Felipe Lemos | 202301006A | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 05 | 2024-07-11 |
+| 77 | 52 | Felipe Lemos | 202301006A | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 05 | 2024-07-11 |
+| 133 | 52 | Felipe Lemos | 202301006A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 165 | 52 | Felipe Lemos | 202301006A | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 53 | 54 | Gisela Fabiana Paredes | 202301010A | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 8 | 2024-07-11 |
+| 78 | 54 | Gisela Fabiana Paredes | 202301010A | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 134 | 54 | Gisela Fabiana Paredes | 202301010A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 166 | 54 | Gisela Fabiana Paredes | 202301010A | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 54 | 55 | Lara Lourdes Rivero | 202301012A | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 7 | 2024-07-11 |
+| 79 | 55 | Lara Lourdes Rivero | 202301012A | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 9 | 2024-07-11 |
+| 137 | 55 | Lara Lourdes Rivero | 202301012A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 167 | 55 | Lara Lourdes Rivero | 202301012A | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 55 | 57 | Silvia Alejandra Ponce | 202301018A | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 8 | 2024-07-11 |
+| 80 | 57 | Silvia Alejandra Ponce | 202301018A | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 135 | 57 | Silvia Alejandra Ponce | 202301018A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 171 | 57 | Silvia Alejandra Ponce | 202301018A | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 56 | 59 | Zuleimy Campos | 202301019A | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 9 | 2024-07-11 |
+| 81 | 59 | Zuleimy Campos | 202301019A | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 136 | 59 | Zuleimy Campos | 202301019A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 168 | 59 | Zuleimy Campos | 202301019A | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 35 | 60 | Alfredo Luis Rivero | 201801001 | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 5 | 2024-07-11 |
+| 25 | 60 | Alfredo Luis Rivero | 201801001 | 12 | 2022 | 2 | Santo Evangelio según San Lucas | 2 | Dr. Miqueas  Na | O | 10 | 2024-07-11 |
+| 60 | 60 | Alfredo Luis Rivero | 201801001 | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 9 | 2024-07-11 |
+| 85 | 60 | Alfredo Luis Rivero | 201801001 | 14 | 2022 | 2 | Teología e historia de la iglesia Santidad | 3 | Dr. Pablo SeunCheol Chun | O | 10 | 2024-07-12 |
+| 148 | 60 | Alfredo Luis Rivero | 201801001 | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 36 | 61 | Guillerma Portillo Gonzalez | 202001008P | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 6 | 2024-07-11 |
+| 27 | 61 | Guillerma Portillo Gonzalez | 202001008P | 12 | 2022 | 2 | Santo Evangelio según San Lucas | 2 | Dr. Miqueas  Na | O | 10 | 2024-07-11 |
+| 61 | 61 | Guillerma Portillo Gonzalez | 202001008P | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 9 | 2024-07-11 |
+| 87 | 61 | Guillerma Portillo Gonzalez | 202001008P | 14 | 2022 | 2 | Teología e historia de la iglesia Santidad | 3 | Dr. Pablo SeunCheol Chun | O | 10 | 2024-07-12 |
+| 102 | 61 | Guillerma Portillo Gonzalez | 202001008P | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 9 | 2024-07-12 |
+| 119 | 61 | Guillerma Portillo Gonzalez | 202001008P | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 149 | 61 | Guillerma Portillo Gonzalez | 202001008P | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 37 | 62 | Elisabeth Fanego de Oliveira | 202001004P | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 6 | 2024-07-11 |
+| 26 | 62 | Elisabeth Fanego de Oliveira | 202001004P | 12 | 2022 | 2 | Santo Evangelio según San Lucas | 2 | Dr. Miqueas  Na | O | 10 | 2024-07-11 |
+| 62 | 62 | Elisabeth Fanego de Oliveira | 202001004P | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 86 | 62 | Elisabeth Fanego de Oliveira | 202001004P | 14 | 2022 | 2 | Teología e historia de la iglesia Santidad | 3 | Dr. Pablo SeunCheol Chun | O | 10 | 2024-07-12 |
+| 96 | 62 | Elisabeth Fanego de Oliveira | 202001004P | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 9 | 2024-07-12 |
+| 109 | 62 | Elisabeth Fanego de Oliveira | 202001004P | 16 | 2020 | 2 | Griego 1 | 3 | Prof. Federico  Troche | O | 4 | 2024-07-12 |
+| 120 | 62 | Elisabeth Fanego de Oliveira | 202001004P | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 150 | 62 | Elisabeth Fanego de Oliveira | 202001004P | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 38 | 63 | Claudio Agustin Fernandez | 202001002P | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 5 | 2024-07-11 |
+| 63 | 63 | Claudio Agustin Fernandez | 202001002P | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 6 | 2024-07-11 |
+| 103 | 63 | Claudio Agustin Fernandez | 202001002P | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 6 | 2024-07-12 |
+| 121 | 63 | Claudio Agustin Fernandez | 202001002P | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 151 | 63 | Claudio Agustin Fernandez | 202001002P | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 40 | 64 | José Quilla Calsina | 202001009A | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 7 | 2024-07-11 |
+| 65 | 64 | José Quilla Calsina | 202001009A | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 122 | 64 | José Quilla Calsina | 202001009A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 153 | 64 | José Quilla Calsina | 202001009A | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 39 | 65 | Dario Fernando Rodríguez | 202001003A | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 7 | 2024-07-11 |
+| 29 | 65 | Dario Fernando Rodríguez | 202001003A | 12 | 2022 | 2 | Santo Evangelio según San Lucas | 2 | Dr. Miqueas  Na | O | 10 | 2024-07-11 |
+| 64 | 65 | Dario Fernando Rodríguez | 202001003A | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 89 | 65 | Dario Fernando Rodríguez | 202001003A | 14 | 2022 | 2 | Teología e historia de la iglesia Santidad | 3 | Dr. Pablo SeunCheol Chun | O | 10 | 2024-07-12 |
+| 99 | 65 | Dario Fernando Rodríguez | 202001003A | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 8 | 2024-07-12 |
+| 112 | 65 | Dario Fernando Rodríguez | 202001003A | 16 | 2020 | 2 | Griego 1 | 3 | Prof. Federico  Troche | O | 7 | 2024-07-12 |
+| 123 | 65 | Dario Fernando Rodríguez | 202001003A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 152 | 65 | Dario Fernando Rodríguez | 202001003A | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 28 | 67 | Elizabeth del Valle Costilla | 202001003 | 12 | 2022 | 2 | Santo Evangelio según San Lucas | 2 | Dr. Miqueas  Na | O | 10 | 2024-07-11 |
+| 88 | 67 | Elizabeth del Valle Costilla | 202001003 | 14 | 2022 | 2 | Teología e historia de la iglesia Santidad | 3 | Dr. Pablo SeunCheol Chun | O | 10 | 2024-07-12 |
+| 98 | 67 | Elizabeth del Valle Costilla | 202001003 | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 9 | 2024-07-12 |
+| 111 | 67 | Elizabeth del Valle Costilla | 202001003 | 16 | 2020 | 2 | Griego 1 | 3 | Prof. Federico  Troche | O | 8 | 2024-07-12 |
+| 41 | 69 | Andrea Belén Chamorro | 202201003A | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 6 | 2024-07-11 |
+| 66 | 69 | Andrea Belén Chamorro | 202201003A | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 124 | 69 | Andrea Belén Chamorro | 202201003A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 154 | 69 | Andrea Belén Chamorro | 202201003A | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 176 | 69 | Andrea Belén Chamorro | 202201003A | 20 | 2022 | 2 | Identidad del SETESS | 1 | Dr. Pablo SeunCheol Chun | X | 0 | 2024-07-24 |
+| 188 | 69 | Andrea Belén Chamorro | 202201003A | 21 | 2022 | 2 | Evangelio según San Juan | 2 | Alicia Maria Argalás | X | 0 | 2024-07-24 |
+| 42 | 70 | Roberto Alfredo Aquino Romero | 202201015P | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 6 | 2024-07-11 |
+| 67 | 70 | Roberto Alfredo Aquino Romero | 202201015P | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 125 | 70 | Roberto Alfredo Aquino Romero | 202201015P | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 155 | 70 | Roberto Alfredo Aquino Romero | 202201015P | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 177 | 70 | Roberto Alfredo Aquino Romero | 202201015P | 20 | 2022 | 2 | Identidad del SETESS | 1 | Dr. Pablo SeunCheol Chun | X | 0 | 2024-07-24 |
+| 189 | 70 | Roberto Alfredo Aquino Romero | 202201015P | 21 | 2022 | 2 | Evangelio según San Juan | 2 | Alicia Maria Argalás | X | 0 | 2024-07-24 |
+| 44 | 71 | Rosa Verónica Maidana | 202201010 | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 6 | 2024-07-11 |
+| 69 | 71 | Rosa Verónica Maidana | 202201010 | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 157 | 71 | Rosa Verónica Maidana | 202201010 | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 9 | 2024-07-22 |
+| 179 | 71 | Rosa Verónica Maidana | 202201010 | 20 | 2022 | 2 | Identidad del SETESS | 1 | Dr. Pablo SeunCheol Chun | X | 0 | 2024-07-24 |
+| 191 | 71 | Rosa Verónica Maidana | 202201010 | 21 | 2022 | 2 | Evangelio según San Juan | 2 | Alicia Maria Argalás | X | 0 | 2024-07-24 |
+| 46 | 72 | Nelson Arriola Ojeda | 202201012P | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 6 | 2024-07-11 |
+| 71 | 72 | Nelson Arriola Ojeda | 202201012P | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 9 | 2024-07-11 |
+| 126 | 72 | Nelson Arriola Ojeda | 202201012P | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 159 | 72 | Nelson Arriola Ojeda | 202201012P | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 182 | 72 | Nelson Arriola Ojeda | 202201012P | 20 | 2022 | 2 | Identidad del SETESS | 1 | Dr. Pablo SeunCheol Chun | X | 0 | 2024-07-24 |
+| 194 | 72 | Nelson Arriola Ojeda | 202201012P | 21 | 2022 | 2 | Evangelio según San Juan | 2 | Alicia Maria Argalás | X | 0 | 2024-07-24 |
+| 47 | 73 | Gladys Elisabeth Bogado | 202201009A | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 6 | 2024-07-11 |
+| 72 | 73 | Gladys Elisabeth Bogado | 202201009A | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 7 | 2024-07-11 |
+| 128 | 73 | Gladys Elisabeth Bogado | 202201009A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 160 | 73 | Gladys Elisabeth Bogado | 202201009A | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 180 | 73 | Gladys Elisabeth Bogado | 202201009A | 20 | 2022 | 2 | Identidad del SETESS | 1 | Dr. Pablo SeunCheol Chun | X | 0 | 2024-07-24 |
+| 192 | 73 | Gladys Elisabeth Bogado | 202201009A | 21 | 2022 | 2 | Evangelio según San Juan | 2 | Alicia Maria Argalás | X | 0 | 2024-07-24 |
+| 45 | 74 | Abril Nahiara Aquino Bogado | 202201002A | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 9 | 2024-07-11 |
+| 70 | 74 | Abril Nahiara Aquino Bogado | 202201002A | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 127 | 74 | Abril Nahiara Aquino Bogado | 202201002A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 158 | 74 | Abril Nahiara Aquino Bogado | 202201002A | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 181 | 74 | Abril Nahiara Aquino Bogado | 202201002A | 20 | 2022 | 2 | Identidad del SETESS | 1 | Dr. Pablo SeunCheol Chun | X | 0 | 2024-07-24 |
+| 193 | 74 | Abril Nahiara Aquino Bogado | 202201002A | 21 | 2022 | 2 | Evangelio según San Juan | 2 | Alicia Maria Argalás | X | 0 | 2024-07-24 |
+| 129 | 75 | Hugo Javier Lezcano | 202201010A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 183 | 75 | Hugo Javier Lezcano | 202201010A | 20 | 2022 | 2 | Identidad del SETESS | 1 | Dr. Pablo SeunCheol Chun | X | 0 | 2024-07-24 |
+| 195 | 75 | Hugo Javier Lezcano | 202201010A | 21 | 2022 | 2 | Evangelio según San Juan | 2 | Alicia Maria Argalás | X | 0 | 2024-07-24 |
+| 48 | 76 | Wilson David Cardozo Portillo | 202201017P | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 6 | 2024-07-11 |
+| 73 | 76 | Wilson David Cardozo Portillo | 202201017P | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 7 | 2024-07-11 |
+| 130 | 76 | Wilson David Cardozo Portillo | 202201017P | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 161 | 76 | Wilson David Cardozo Portillo | 202201017P | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 9 | 2024-07-22 |
+| 50 | 77 | Evelyn Carolina Torres Miranda | - | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 8 | 2024-07-11 |
+| 75 | 77 | Evelyn Carolina Torres Miranda | - | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 163 | 77 | Evelyn Carolina Torres Miranda | - | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 175 | 77 | Evelyn Carolina Torres Miranda | - | 20 | 2022 | 2 | Identidad del SETESS | 1 | Dr. Pablo SeunCheol Chun | X | 0 | 2024-07-24 |
+| 187 | 77 | Evelyn Carolina Torres Miranda | - | 21 | 2022 | 2 | Evangelio según San Juan | 2 | Alicia Maria Argalás | X | 0 | 2024-07-24 |
+| 132 | 79 | Carlos Alberto Cárcamo | 202201006A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 184 | 79 | Carlos Alberto Cárcamo | 202201006A | 20 | 2022 | 2 | Identidad del SETESS | 1 | Dr. Pablo SeunCheol Chun | X | 0 | 2024-07-24 |
+| 196 | 79 | Carlos Alberto Cárcamo | 202201006A | 21 | 2022 | 2 | Evangelio según San Juan | 2 | Alicia Maria Argalás | X | 0 | 2024-07-24 |
+| 49 | 80 | Gerardo David Portillo Martínez | 202301008P | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 7 | 2024-07-11 |
+| 74 | 80 | Gerardo David Portillo Martínez | 202301008P | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 131 | 80 | Gerardo David Portillo Martínez | 202301008P | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 162 | 80 | Gerardo David Portillo Martínez | 202301008P | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 105 | 81 | Ana Ramirez Diaz | - | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 7 | 2024-07-12 |
+| 138 | 82 | Alex Adalberto Leimbacher Gonzalez | 202301003P | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 139 | 88 | María Leoncia González | 202401007P | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 140 | 89 | Javier Walter Pereyra | 202401006A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 141 | 90 | Yesica Gisele Horisberger | 202401011A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 142 | 91 | Alba Anahi Aguirre | 202401001A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 143 | 92 | Florencia Milagros Segovia | 202401005A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 144 | 94 | Patricia Gamarra | 202401008A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 34 | 100 | Sergio Antonio Cañisales | 202001001 | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 7 | 2024-07-11 |
+| 30 | 100 | Sergio Antonio Cañisales | 202001001 | 12 | 2022 | 2 | Santo Evangelio según San Lucas | 2 | Dr. Miqueas  Na | O | 10 | 2024-07-11 |
+| 59 | 100 | Sergio Antonio Cañisales | 202001001 | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 7 | 2024-07-11 |
+| 90 | 100 | Sergio Antonio Cañisales | 202001001 | 14 | 2022 | 2 | Teología e historia de la iglesia Santidad | 3 | Dr. Pablo SeunCheol Chun | O | 10 | 2024-07-12 |
+| 101 | 100 | Sergio Antonio Cañisales | 202001001 | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 9 | 2024-07-12 |
+| 147 | 100 | Sergio Antonio Cañisales | 202001001 | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 43 | 101 | Luis Armando Sotelo | 202201007 | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 6 | 2024-07-11 |
+| 68 | 101 | Luis Armando Sotelo | 202201007 | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 9 | 2024-07-11 |
+| 156 | 101 | Luis Armando Sotelo | 202201007 | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 178 | 101 | Luis Armando Sotelo | 202201007 | 20 | 2022 | 2 | Identidad del SETESS | 1 | Dr. Pablo SeunCheol Chun | X | 0 | 2024-07-24 |
+| 190 | 101 | Luis Armando Sotelo | 202201007 | 21 | 2022 | 2 | Evangelio según San Juan | 2 | Alicia Maria Argalás | X | 0 | 2024-07-24 |
+| 185 | 102 | Antonella Mailen Martínez | - | 20 | 2022 | 2 | Identidad del SETESS | 1 | Dr. Pablo SeunCheol Chun | X | 0 | 2024-07-24 |
+| 16 | 106 | (삭제된 학생 106) | - | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 60 | 2024-06-27 |
+| 100 | 109 | Viviana Ester Chamorro | 201207001 | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 6 | 2024-07-12 |
+| 113 | 109 | Viviana Ester Chamorro | 201207001 | 16 | 2020 | 2 | Griego 1 | 3 | Prof. Federico  Troche | O | 7 | 2024-07-12 |
+| 92 | 110 | Luz Marina Ibarra Candelo | 201507001 | 14 | 2022 | 2 | Teología e historia de la iglesia Santidad | 3 | Dr. Pablo SeunCheol Chun | O | 10 | 2024-07-12 |
+| 22 | 111 | Claudia Verónica Filipuzzi | 201607002 | 12 | 2022 | 2 | Santo Evangelio según San Lucas | 2 | Dr. Miqueas  Na | O | 10 | 2024-07-11 |
+| 82 | 111 | Claudia Verónica Filipuzzi | 201607002 | 14 | 2022 | 2 | Teología e historia de la iglesia Santidad | 3 | Dr. Pablo SeunCheol Chun | O | 10 | 2024-07-12 |
+| 93 | 111 | Claudia Verónica Filipuzzi | 201607002 | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 7 | 2024-07-12 |
+| 106 | 111 | Claudia Verónica Filipuzzi | 201607002 | 16 | 2020 | 2 | Griego 1 | 3 | Prof. Federico  Troche | O | 9 | 2024-07-12 |
+| 57 | 112 | Abigail Cecilia Cardozo Nuñez | - | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 9 | 2024-07-11 |
+| 97 | 113 | Rosa Isabel Abed Ortega | - | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 7 | 2024-07-12 |
+| 110 | 113 | Rosa Isabel Abed Ortega | - | 16 | 2020 | 2 | Griego 1 | 3 | Prof. Federico  Troche | O | 4 | 2024-07-12 |
+| 33 | 114 | Yanina Ana Belén Rechimont | 201801002 | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 8 | 2024-07-11 |
+| 24 | 114 | Yanina Ana Belén Rechimont | 201801002 | 12 | 2022 | 2 | Santo Evangelio según San Lucas | 2 | Dr. Miqueas  Na | O | 10 | 2024-07-11 |
+| 58 | 114 | Yanina Ana Belén Rechimont | 201801002 | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-11 |
+| 84 | 114 | Yanina Ana Belén Rechimont | 201801002 | 14 | 2022 | 2 | Teología e historia de la iglesia Santidad | 3 | Dr. Pablo SeunCheol Chun | O | 10 | 2024-07-12 |
+| 95 | 114 | Yanina Ana Belén Rechimont | 201801002 | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 9 | 2024-07-12 |
+| 108 | 114 | Yanina Ana Belén Rechimont | 201801002 | 16 | 2020 | 2 | Griego 1 | 3 | Prof. Federico  Troche | O | 8 | 2024-07-12 |
+| 146 | 114 | Yanina Ana Belén Rechimont | 201801002 | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 9 | 2024-07-22 |
+| 23 | 115 | Cristian Gastón González | 201607001 | 12 | 2022 | 2 | Santo Evangelio según San Lucas | 2 | Dr. Miqueas  Na | O | 10 | 2024-07-11 |
+| 83 | 115 | Cristian Gastón González | 201607001 | 14 | 2022 | 2 | Teología e historia de la iglesia Santidad | 3 | Dr. Pablo SeunCheol Chun | O | 10 | 2024-07-12 |
+| 94 | 115 | Cristian Gastón González | 201607001 | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 7 | 2024-07-12 |
+| 107 | 115 | Cristian Gastón González | 201607001 | 16 | 2020 | 2 | Griego 1 | 3 | Prof. Federico  Troche | O | 7 | 2024-07-12 |
+| 31 | 118 | Vicenta Dominga Nieva | 202001005 | 12 | 2022 | 2 | Santo Evangelio según San Lucas | 2 | Dr. Miqueas  Na | O | 10 | 2024-07-11 |
+| 91 | 118 | Vicenta Dominga Nieva | 202001005 | 14 | 2022 | 2 | Teología e historia de la iglesia Santidad | 3 | Dr. Pablo SeunCheol Chun | O | 10 | 2024-07-12 |
+| 104 | 119 | Gedeon Gonzalez | - | 15 | 2020 | 2 | Primera epístola de San Juan | 2 | Mro. Pedro Kee Ahn Kang | O | 7 | 2024-07-12 |
+| 21 | 124 | (삭제된 학생 124) | - | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | X | 0 | 2024-07-06 |
+| 186 | 126 | Magna Beatrz Mendez | - | 21 | 2022 | 2 | Evangelio según San Juan | 2 | Alicia Maria Argalás | X | 0 | 2024-07-24 |
+| 32 | 131 | Abigail Macarena Martínez | - | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 7 | 2024-07-11 |
+| 145 | 131 | Abigail Macarena Martínez | - | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 10 | 2024-07-22 |
+| 117 | 132 | Leonardo Calderón Santos | 202407002A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 116 | 133 | Juan Bautista Pallares | 202407001A | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 174 | 134 | Mariana Carolina Puga Menes | - | 11 | 2023 | 2 | Culto Bíblico | 3 | Dr. Miqueas  Na | O | 6 | 2024-07-22 |
+| 173 | 134 | Mariana Carolina Puga Menes | - | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 10 | 2024-07-22 |
+| 172 | 134 | Mariana Carolina Puga Menes | - | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 9 | 2024-07-22 |
+| 169 | 135 | Bettina Milagros Ocampo Grosskopf | - | 13 | 2023 | 2 | Teoría y práctica del evangelismo | 4 | Dr. Kyung Han  kim | O | 9 | 2024-07-22 |
+| 115 | 135 | Bettina Milagros Ocampo Grosskopf | - | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 170 | 135 | Bettina Milagros Ocampo Grosskopf | - | 18 | 2023 | 2 | Estudio de Hebreos | 3 | Alicia Maria Argalás | O | 9 | 2024-07-22 |
+| 114 | 136 | Sandra Soledad Jaquet Sanabria | - | 17 | 2024 | 2 | Epístolas Pastorales | 3 | Alicia Maria Argalás | O | 10 | 2024-07-20 |
+| 197 | 136 | Sandra Soledad Jaquet Sanabria | - | 23 | 2007 | 1 | test | 1 | test1 kaka1 gogo | X | 0 | 2024-07-30 |
+
+### 학생별 수강 요약
+
+| 학생ID | 학생이름 | 학번 | 재학학기 | 수강과목수 | 합격 | 불합격 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 51 | Daniel Marcelo Ibarra | 202301005A | 4 | 4 | 4 | 0 |
+| 52 | Felipe Lemos | 202301006A | 4 | 4 | 4 | 0 |
+| 54 | Gisela Fabiana Paredes | 202301010A | 4 | 4 | 4 | 0 |
+| 55 | Lara Lourdes Rivero | 202301012A | 3 | 4 | 4 | 0 |
+| 57 | Silvia Alejandra Ponce | 202301018A | 4 | 4 | 4 | 0 |
+| 59 | Zuleimy Campos | 202301019A | 4 | 4 | 4 | 0 |
+| 60 | Alfredo Luis Rivero | 201801001 | 10 | 5 | 5 | 0 |
+| 61 | Guillerma Portillo Gonzalez | 202001008P | 10 | 7 | 7 | 0 |
+| 62 | Elisabeth Fanego de Oliveira | 202001004P | 10 | 8 | 8 | 0 |
+| 63 | Claudio Agustin Fernandez | 202001002P | 8 | 5 | 5 | 0 |
+| 64 | José Quilla Calsina | 202001009A | 8 | 4 | 4 | 0 |
+| 65 | Dario Fernando Rodríguez | 202001003A | 7 | 8 | 8 | 0 |
+| 67 | Elizabeth del Valle Costilla | 202001003 | 6 | 4 | 4 | 0 |
+| 69 | Andrea Belén Chamorro | 202201003A | 6 | 6 | 4 | 2 |
+| 70 | Roberto Alfredo Aquino Romero | 202201015P | 6 | 6 | 4 | 2 |
+| 71 | Rosa Verónica Maidana | 202201010 | 5 | 5 | 3 | 2 |
+| 72 | Nelson Arriola Ojeda | 202201012P | 5 | 6 | 4 | 2 |
+| 73 | Gladys Elisabeth Bogado | 202201009A | 5 | 6 | 4 | 2 |
+| 74 | Abril Nahiara Aquino Bogado | 202201002A | 5 | 6 | 4 | 2 |
+| 75 | Hugo Javier Lezcano | 202201010A | 5 | 3 | 1 | 2 |
+| 76 | Wilson David Cardozo Portillo | 202201017P | 5 | 4 | 4 | 0 |
+| 77 | Evelyn Carolina Torres Miranda | - | - | 5 | 3 | 2 |
+| 79 | Carlos Alberto Cárcamo | 202201006A | 4 | 3 | 1 | 2 |
+| 80 | Gerardo David Portillo Martínez | 202301008P | 4 | 4 | 4 | 0 |
+| 81 | Ana Ramirez Diaz | - | 3 | 1 | 1 | 0 |
+| 82 | Alex Adalberto Leimbacher Gonzalez | 202301003P | 4 | 1 | 1 | 0 |
+| 88 | María Leoncia González | 202401007P | 2 | 1 | 1 | 0 |
+| 89 | Javier Walter Pereyra | 202401006A | 2 | 1 | 1 | 0 |
+| 90 | Yesica Gisele Horisberger | 202401011A | 2 | 1 | 1 | 0 |
+| 91 | Alba Anahi Aguirre | 202401001A | 2 | 1 | 1 | 0 |
+| 92 | Florencia Milagros Segovia | 202401005A | 2 | 1 | 1 | 0 |
+| 94 | Patricia Gamarra | 202401008A | 2 | 1 | 1 | 0 |
+| 100 | Sergio Antonio Cañisales | 202001001 | 졸업 | 6 | 6 | 0 |
+| 101 | Luis Armando Sotelo | 202201007 | 4 | 5 | 3 | 2 |
+| 102 | Antonella Mailen Martínez | - | - | 1 | 0 | 1 |
+| 106 | (삭제된 학생 106) | - | - | 1 | 1 | 0 |
+| 109 | Viviana Ester Chamorro | 201207001 | 10 | 2 | 2 | 0 |
+| 110 | Luz Marina Ibarra Candelo | 201507001 | 10 | 1 | 1 | 0 |
+| 111 | Claudia Verónica Filipuzzi | 201607002 | 10 | 4 | 4 | 0 |
+| 112 | Abigail Cecilia Cardozo Nuñez | - | - | 1 | 1 | 0 |
+| 113 | Rosa Isabel Abed Ortega | - | - | 2 | 2 | 0 |
+| 114 | Yanina Ana Belén Rechimont | 201801002 | 9 | 7 | 7 | 0 |
+| 115 | Cristian Gastón González | 201607001 | 10 | 4 | 4 | 0 |
+| 118 | Vicenta Dominga Nieva | 202001005 | 5 | 2 | 2 | 0 |
+| 119 | Gedeon Gonzalez | - | - | 1 | 1 | 0 |
+| 124 | (삭제된 학생 124) | - | - | 1 | 0 | 1 |
+| 126 | Magna Beatrz Mendez | - | 1 | 1 | 0 | 1 |
+| 131 | Abigail Macarena Martínez | - | - | 2 | 2 | 0 |
+| 132 | Leonardo Calderón Santos | 202407002A | 1 | 1 | 1 | 0 |
+| 133 | Juan Bautista Pallares | 202407001A | 1 | 1 | 1 | 0 |
+| 134 | Mariana Carolina Puga Menes | - | 3 | 3 | 3 | 0 |
+| 135 | Bettina Milagros Ocampo Grosskopf | - | 2 | 3 | 3 | 0 |
+| 136 | Sandra Soledad Jaquet Sanabria | - | 1 | 2 | 1 | 1 |
