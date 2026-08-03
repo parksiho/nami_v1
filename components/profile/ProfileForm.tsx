@@ -6,6 +6,7 @@ import {
   updateProfile,
   type ProfileActionState,
 } from '@/app/[locale]/(app)/profile/actions'
+import { NationalitySelect } from '@/components/forms/NationalitySelect'
 import { AddressField } from '@/components/profile/AddressField'
 import { AvatarUpload } from '@/components/profile/AvatarUpload'
 import type { Profile } from '@/lib/domain/profile'
@@ -115,11 +116,10 @@ export function ProfileForm({ profile, addressCorpus, avatarUrl }: Props) {
           </div>
           <div className="profile-field">
             <label htmlFor="nationality">{t('fields.nationality')}</label>
-            <input
+            <NationalitySelect
               id="nationality"
               name="nationality"
-              defaultValue={value(profile.nationality)}
-              autoComplete="country-name"
+              defaultValue={profile.nationality}
             />
           </div>
           <AddressField

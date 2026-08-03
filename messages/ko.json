@@ -514,7 +514,8 @@
     "cancel": "취소",
     "search": "검색",
     "noData": "데이터가 없습니다",
-    "back": "뒤로"
+    "back": "뒤로",
+    "selectCountry": "국가 선택"
   },
   "legal": {
     "privacyLink": "개인정보 이용약관",

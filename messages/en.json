@@ -514,7 +514,8 @@
     "cancel": "Cancel",
     "search": "Search",
     "noData": "No data available",
-    "back": "Back"
+    "back": "Back",
+    "selectCountry": "Select a country"
   },
   "legal": {
     "privacyLink": "Privacy Policy",

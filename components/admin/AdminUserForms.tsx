@@ -7,6 +7,7 @@ import {
   updateAdminUser,
   type AdminUserActionState,
 } from '@/app/[locale]/(app)/admin/users/actions'
+import { NationalitySelect } from '@/components/forms/NationalitySelect'
 import { UserRole } from '@/lib/domain/enums'
 import type { Profile } from '@/lib/domain/profile'
 
@@ -82,7 +83,6 @@ export function EditAdminUserForm({ profile }: { profile: Profile }) {
     ['birth_date', profile.birth_date],
     ['occupation', profile.occupation],
     ['mobile', profile.mobile],
-    ['nationality', profile.nationality],
     ['address', profile.address],
     ['gender', profile.gender],
     ['church_name', profile.church_name],
@@ -103,6 +103,10 @@ export function EditAdminUserForm({ profile }: { profile: Profile }) {
             />
           </label>
         ))}
+        <label>
+          <span>{t('fields.nationality')}</span>
+          <NationalitySelect defaultValue={profile.nationality} />
+        </label>
         <label>
           <span>{t('fields.student_number')}</span>
           <input

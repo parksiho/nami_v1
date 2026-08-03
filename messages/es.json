@@ -514,7 +514,8 @@
     "cancel": "Cancelar",
     "search": "Buscar",
     "noData": "No hay datos disponibles",
-    "back": "Volver"
+    "back": "Volver",
+    "selectCountry": "Seleccionar país"
   },
   "legal": {
     "privacyLink": "Política de privacidad",
