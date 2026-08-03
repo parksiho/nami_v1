@@ -16,7 +16,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "Nami",
+  title: "SETESS 남미연합성결신학교",
   description: "Academic portal for seminary campus",
 };
 
