@@ -11,6 +11,7 @@ export default async function RegisterPage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale)
   const t = await getTranslations('auth')
+  const tLegal = await getTranslations('legal')
 
   return (
     <main className="page-main auth-page">
@@ -18,8 +19,13 @@ export default async function RegisterPage({ params }: Props) {
         title={t('register')}
         footer={
           <>
-            {t('hasAccount')}{' '}
-            <Link href="/login">{t('login')}</Link>
+            <p>
+              {t('hasAccount')}{' '}
+              <Link href="/login">{t('login')}</Link>
+            </p>
+            <p className="auth-links__legal">
+              <Link href="/privacy">{tLegal('privacyLink')}</Link>
+            </p>
           </>
         }
       >

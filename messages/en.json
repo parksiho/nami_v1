@@ -457,5 +457,57 @@
     "search": "Search",
     "noData": "No data available",
     "back": "Back"
+  },
+  "legal": {
+    "privacyLink": "Privacy Policy",
+    "privacy": {
+      "title": "Privacy Policy & Terms of Personal Information Use",
+      "description": "How SETESS (Union Theological Seminary of South America) collects and uses personal information in its academic portal.",
+      "lastUpdated": "August 3, 2026",
+      "lastUpdatedLabel": "Last updated: {date}",
+      "intro": "SETESS — Union Theological Seminary of South America (the \"School\") — respects the privacy of users of its academic portal (the \"Service\") and processes personal information lawfully and securely. This policy explains how personal information is collected, used, stored, and protected when you use the Service.",
+      "sections": {
+        "purpose": {
+          "heading": "1. Purpose of processing",
+          "body": "The School processes personal information for the following purposes:\n\n• Account registration, identity verification, and login authentication\n• Academic administration, including enrollment, course registration, and grades\n• Notices and academic operations communications\n• Service usage records and prevention of misuse\n• Responding to inquiries and meeting legal obligations"
+        },
+        "collection": {
+          "heading": "2. Personal information we collect",
+          "body": "To provide the Service, we may collect the following information:\n\n• Account information: name, email, password (stored in encrypted form)\n• Academic records: student ID, role (student, professor, admin), academic status, and related enrollment history\n• Course data: course registrations, teaching assignments, grades, and completion status\n• Service usage data: access timestamps, major change logs, and technical information about browser or device\n• Profile information: additional details users voluntarily provide or upload"
+        },
+        "usage": {
+          "heading": "3. How we use personal information",
+          "body": "Collected personal information is used only within the purposes described above. The School does not use personal information for other purposes without consent. If the purpose changes, we will provide notice or obtain consent as required."
+        },
+        "retention": {
+          "heading": "4. Retention period",
+          "body": "Personal information is retained only as long as needed for the stated purposes.\n\n• Account information: until account deletion or withdrawal\n• Academic and grade records: for the period required by applicable law and school regulations\n• Access and change logs: for a reasonable period for security and audit purposes\n\nWhere retention is legally required, records are kept separately for that period and securely destroyed afterward."
+        },
+        "sharing": {
+          "heading": "5. Sharing and processors",
+          "body": "The School does not provide personal information to third parties without prior consent, except when:\n\n• The user has consented in advance\n• Disclosure is required by law\n• Processing by essential infrastructure providers (such as cloud hosting or authentication services) is necessary to operate the Service\n\nWhen processing is entrusted to vendors, we require appropriate safeguards through contractual and operational controls."
+        },
+        "security": {
+          "heading": "6. Security measures",
+          "body": "To protect personal information against loss, theft, unauthorized disclosure, or alteration, the School implements measures such as:\n\n• Encryption of sensitive credentials such as passwords\n• Role-based access control\n• Protected transmission (for example, HTTPS)\n• Logging of access and significant changes"
+        },
+        "rights": {
+          "heading": "7. Your rights",
+          "body": "Users may exercise the following rights regarding their personal information:\n\n• Request access, correction, or deletion\n• Request restriction of processing (subject to legal or academic retention duties)\n• Update account details and change passwords\n\nRequests may be made through profile features in the Service or via the contact channel below."
+        },
+        "cookies": {
+          "heading": "8. Cookies and similar technologies",
+          "body": "The Service may use cookies or similar technologies to maintain login sessions, language preferences, and security. You can refuse cookies in your browser settings, but some features (such as staying signed in) may then be limited."
+        },
+        "changes": {
+          "heading": "9. Changes to this policy",
+          "body": "If this policy is updated, the School will announce the changes through a notice in the Service or by updating this page. Continued use of the Service after changes may be treated as acceptance of the updated policy."
+        },
+        "contact": {
+          "heading": "10. Contact",
+          "body": "For questions about personal information processing, or to request access, correction, or deletion, please contact the academic portal administrators at SETESS.\n\nOrganization: SETESS — Union Theological Seminary of South America\nService: Academic / registrar portal"
+        }
+      }
+    }
   }
 }
