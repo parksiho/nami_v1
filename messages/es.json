@@ -139,6 +139,17 @@
       "updated_desc": "Actualización: más reciente",
       "updated_asc": "Actualización: más antigua"
     },
+    "filters": {
+      "name": "Nombre",
+      "role": "Rol",
+      "anyRole": "Todos los roles",
+      "admissionYear": "Año de ingreso",
+      "anyAdmissionYear": "Todos los años de ingreso",
+      "admissionYearOption": "{year}",
+      "academicStatus": "Estado académico",
+      "anyAcademicStatus": "Todos los estados académicos",
+      "clear": "Borrar filtros"
+    },
     "notConfigured": "El almacenamiento de usuarios no está configurado. Configure las variables de Supabase.",
     "createTitle": "Crear usuario",
     "create": "Crear usuario",
@@ -193,7 +204,9 @@
       "email": "Correo electrónico",
       "password": "Contraseña temporal",
       "role": "Rol",
-      "status": "Estado",
+      "status": "Estado de cuenta",
+      "admissionYear": "Año de ingreso",
+      "academicStatus": "Estado académico",
       "birth_date": "Fecha de nacimiento",
       "occupation": "Ocupación",
       "mobile": "Móvil",
