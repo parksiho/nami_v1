@@ -17,6 +17,7 @@ export type Profile = {
   avatar_path: string | null
   student_number: string | null
   enrolled_semester: number | null
+  is_active: boolean
   created_at: string
   updated_at: string
 }

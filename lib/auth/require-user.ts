@@ -67,5 +67,11 @@ export async function requireUser(
     await redirectToLogin()
   }
 
-  return { user: authedUser, profile: profile as Profile }
+  const activeProfile = profile as Profile
+  if (activeProfile.is_active === false) {
+    await supabase.auth.signOut()
+    await redirectToLogin()
+  }
+
+  return { user: authedUser, profile: activeProfile }
 }

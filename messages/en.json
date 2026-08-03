@@ -36,6 +36,7 @@
       "notConfigured": "Authentication is not configured. Set Supabase environment variables.",
       "required": "Please fill in all fields.",
       "invalidCredentials": "Invalid email or password.",
+      "accountDisabled": "This account is disabled. Please contact an administrator.",
       "passwordMismatch": "Passwords do not match.",
       "generic": "Something went wrong. Please try again."
     },
@@ -133,6 +134,11 @@
     "description": "Search accounts and manage profile details and access roles.",
     "search": "Search",
     "searchPlaceholder": "Search by name",
+    "sortLabel": "Sort",
+    "sort": {
+      "updated_desc": "Updated: newest first",
+      "updated_asc": "Updated: oldest first"
+    },
     "notConfigured": "User storage is not configured. Set the Supabase environment variables.",
     "createTitle": "Create user",
     "create": "Create user",
@@ -147,6 +153,29 @@
     "next": "Next",
     "pageOf": "Page {page} of {pages}",
     "backToList": "Back to users",
+    "activate": "Enable",
+    "activating": "Enabling…",
+    "deactivate": "Disable",
+    "deactivating": "Disabling…",
+    "deactivateConfirm": "Disable this user? They will no longer be able to sign in.",
+    "delete": "Delete user",
+    "deleting": "Deleting…",
+    "deleteConfirm": "Delete this user? This cannot be undone.",
+    "status": {
+      "active": "Active",
+      "inactive": "Disabled"
+    },
+    "account": {
+      "title": "Account status",
+      "description": "Disabled users cannot sign in. Deleting permanently removes the account.",
+      "selfManaged": "You cannot delete or disable your own account from this screen."
+    },
+    "avatar": {
+      "title": "Profile photo",
+      "help": "JPG or PNG, up to 2 MB. Applies to student and professor profiles.",
+      "upload": "Upload photo",
+      "uploading": "Uploading…"
+    },
     "proxyEnroll": {
       "title": "Enroll student",
       "description": "Enroll this student in a selected course."
@@ -164,6 +193,7 @@
       "email": "Email",
       "password": "Temporary password",
       "role": "Role",
+      "status": "Status",
       "birth_date": "Date of birth",
       "occupation": "Occupation",
       "mobile": "Mobile",
@@ -194,11 +224,24 @@
       "invalidRole": "Select a valid role.",
       "invalidSemester": "Enrolled semester must be an integer.",
       "saveFailed": "Could not save the user.",
-      "createFailed": "Could not create the user."
+      "createFailed": "Could not create the user.",
+      "deleteFailed": "Could not delete the user.",
+      "notFound": "User not found.",
+      "cannotDeleteSelf": "You cannot delete your own account.",
+      "cannotChangeSelf": "You cannot disable your own account.",
+      "avatarRequired": "Choose a photo to upload.",
+      "avatarType": "Only JPG and PNG images are allowed.",
+      "avatarSize": "The photo must be 2 MB or smaller.",
+      "avatarUploadFailed": "Could not upload the photo.",
+      "avatarRole": "Profile photos can only be uploaded for students and professors."
     },
     "success": {
       "saved": "User profile saved.",
-      "created": "User created."
+      "created": "User created.",
+      "deleted": "User deleted.",
+      "activated": "User enabled.",
+      "deactivated": "User disabled.",
+      "avatarUploaded": "Profile photo updated."
     }
   },
   "adminCourses": {
