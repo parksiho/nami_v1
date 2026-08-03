@@ -2,6 +2,7 @@
   "app": {
     "brand": "Registrar",
     "university": "Union Theological Seminary of South America",
+    "siteTitle": "SETESS Union Theological Seminary of South America",
     "semester": "{year} · Semester {semester}"
   },
   "nav": {

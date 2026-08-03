@@ -2,6 +2,7 @@
   "app": {
     "brand": "학적부",
     "university": "남미연합신학교",
+    "siteTitle": "SETESS 남미연합성결신학교",
     "semester": "{year}년 {semester}학기"
   },
   "nav": {
