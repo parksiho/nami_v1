@@ -28,10 +28,23 @@ export async function signIn(
   }
 
   const supabase = await createClient()
-  const { error } = await supabase.auth.signInWithPassword({ email, password })
+  const { data, error } = await supabase.auth.signInWithPassword({ email, password })
 
   if (error) {
     return { error: t('errors.invalidCredentials') }
+  }
+
+  if (data.user) {
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('is_active')
+      .eq('id', data.user.id)
+      .maybeSingle()
+
+    if (profile && profile.is_active === false) {
+      await supabase.auth.signOut()
+      return { error: t('errors.accountDisabled') }
+    }
   }
 
   const locale = await getLocale()

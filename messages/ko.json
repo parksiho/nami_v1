@@ -36,6 +36,7 @@
       "notConfigured": "인증이 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
       "required": "모든 항목을 입력해 주세요.",
       "invalidCredentials": "이메일 또는 비밀번호가 올바르지 않습니다.",
+      "accountDisabled": "사용이 중지된 계정입니다. 관리자에게 문의하세요.",
       "passwordMismatch": "비밀번호가 일치하지 않습니다.",
       "generic": "문제가 발생했습니다. 다시 시도해 주세요."
     },
@@ -133,6 +134,11 @@
     "description": "계정을 검색하고 프로필 정보와 접근 역할을 관리합니다.",
     "search": "검색",
     "searchPlaceholder": "이름으로 검색",
+    "sortLabel": "정렬",
+    "sort": {
+      "updated_desc": "수정일 최근순",
+      "updated_asc": "수정일 오래된순"
+    },
     "notConfigured": "사용자 저장소가 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
     "createTitle": "사용자 생성",
     "create": "사용자 생성",
@@ -147,6 +153,29 @@
     "next": "다음",
     "pageOf": "{pages}페이지 중 {page}페이지",
     "backToList": "사용자 목록으로",
+    "activate": "사용함",
+    "activating": "활성화 중…",
+    "deactivate": "사용안함",
+    "deactivating": "비활성화 중…",
+    "deactivateConfirm": "이 사용자를 사용안함으로 설정할까요? 로그인할 수 없게 됩니다.",
+    "delete": "사용자 삭제",
+    "deleting": "삭제 중…",
+    "deleteConfirm": "이 사용자를 삭제할까요? 이 작업은 되돌릴 수 없습니다.",
+    "status": {
+      "active": "사용중",
+      "inactive": "사용안함"
+    },
+    "account": {
+      "title": "계정 상태",
+      "description": "사용안함으로 설정하면 로그인할 수 없습니다. 삭제는 계정을 영구 제거합니다.",
+      "selfManaged": "자신의 계정은 이 화면에서 삭제하거나 사용안함으로 설정할 수 없습니다."
+    },
+    "avatar": {
+      "title": "프로필 사진",
+      "help": "JPG 또는 PNG, 최대 2MB. 학생·교수 프로필에 적용됩니다.",
+      "upload": "사진 업로드",
+      "uploading": "업로드 중…"
+    },
     "proxyEnroll": {
       "title": "학생 대리 수강신청",
       "description": "이 학생을 선택한 강의에 수강신청 처리합니다."
@@ -164,6 +193,7 @@
       "email": "이메일",
       "password": "임시 비밀번호",
       "role": "역할",
+      "status": "상태",
       "birth_date": "생년월일",
       "occupation": "직업",
       "mobile": "휴대전화",
@@ -194,11 +224,24 @@
       "invalidRole": "올바른 역할을 선택해 주세요.",
       "invalidSemester": "재학학기는 정수로 입력해 주세요.",
       "saveFailed": "사용자를 저장하지 못했습니다.",
-      "createFailed": "사용자를 생성하지 못했습니다."
+      "createFailed": "사용자를 생성하지 못했습니다.",
+      "deleteFailed": "사용자를 삭제하지 못했습니다.",
+      "notFound": "사용자를 찾을 수 없습니다.",
+      "cannotDeleteSelf": "자신의 계정은 삭제할 수 없습니다.",
+      "cannotChangeSelf": "자신의 계정은 사용안함으로 설정할 수 없습니다.",
+      "avatarRequired": "업로드할 사진을 선택해 주세요.",
+      "avatarType": "JPG와 PNG 이미지만 업로드할 수 있습니다.",
+      "avatarSize": "사진은 2MB 이하여야 합니다.",
+      "avatarUploadFailed": "사진을 업로드하지 못했습니다.",
+      "avatarRole": "학생과 교수의 프로필 사진만 업로드할 수 있습니다."
     },
     "success": {
       "saved": "사용자 프로필이 저장되었습니다.",
-      "created": "사용자가 생성되었습니다."
+      "created": "사용자가 생성되었습니다.",
+      "deleted": "사용자가 삭제되었습니다.",
+      "activated": "사용함으로 설정되었습니다.",
+      "deactivated": "사용안함으로 설정되었습니다.",
+      "avatarUploaded": "프로필 사진이 변경되었습니다."
     }
   },
   "adminCourses": {

@@ -36,6 +36,7 @@
       "notConfigured": "La autenticación no está configurada. Configure las variables de Supabase.",
       "required": "Complete todos los campos.",
       "invalidCredentials": "Correo o contraseña incorrectos.",
+      "accountDisabled": "Esta cuenta está desactivada. Contacte a un administrador.",
       "passwordMismatch": "Las contraseñas no coinciden.",
       "generic": "Algo salió mal. Inténtelo de nuevo."
     },
@@ -133,6 +134,11 @@
     "description": "Busque cuentas y administre los datos del perfil y los roles de acceso.",
     "search": "Buscar",
     "searchPlaceholder": "Buscar por nombre",
+    "sortLabel": "Orden",
+    "sort": {
+      "updated_desc": "Actualización: más reciente",
+      "updated_asc": "Actualización: más antigua"
+    },
     "notConfigured": "El almacenamiento de usuarios no está configurado. Configure las variables de Supabase.",
     "createTitle": "Crear usuario",
     "create": "Crear usuario",
@@ -147,6 +153,29 @@
     "next": "Siguiente",
     "pageOf": "Página {page} de {pages}",
     "backToList": "Volver a usuarios",
+    "activate": "Activar",
+    "activating": "Activando…",
+    "deactivate": "Desactivar",
+    "deactivating": "Desactivando…",
+    "deactivateConfirm": "¿Desactivar este usuario? Ya no podrá iniciar sesión.",
+    "delete": "Eliminar usuario",
+    "deleting": "Eliminando…",
+    "deleteConfirm": "¿Eliminar este usuario? Esta acción no se puede deshacer.",
+    "status": {
+      "active": "Activo",
+      "inactive": "Desactivado"
+    },
+    "account": {
+      "title": "Estado de la cuenta",
+      "description": "Los usuarios desactivados no pueden iniciar sesión. Eliminar borra la cuenta de forma permanente.",
+      "selfManaged": "No puede eliminar ni desactivar su propia cuenta desde esta pantalla."
+    },
+    "avatar": {
+      "title": "Foto de perfil",
+      "help": "JPG o PNG, máximo 2 MB. Se aplica a perfiles de estudiantes y profesores.",
+      "upload": "Subir foto",
+      "uploading": "Subiendo…"
+    },
     "proxyEnroll": {
       "title": "Inscribir estudiante",
       "description": "Inscriba a este estudiante en el curso seleccionado."
@@ -164,6 +193,7 @@
       "email": "Correo electrónico",
       "password": "Contraseña temporal",
       "role": "Rol",
+      "status": "Estado",
       "birth_date": "Fecha de nacimiento",
       "occupation": "Ocupación",
       "mobile": "Móvil",
@@ -194,11 +224,24 @@
       "invalidRole": "Seleccione un rol válido.",
       "invalidSemester": "El semestre de matrícula debe ser un número entero.",
       "saveFailed": "No se pudo guardar el usuario.",
-      "createFailed": "No se pudo crear el usuario."
+      "createFailed": "No se pudo crear el usuario.",
+      "deleteFailed": "No se pudo eliminar el usuario.",
+      "notFound": "Usuario no encontrado.",
+      "cannotDeleteSelf": "No puede eliminar su propia cuenta.",
+      "cannotChangeSelf": "No puede desactivar su propia cuenta.",
+      "avatarRequired": "Seleccione una foto para subir.",
+      "avatarType": "Solo se permiten imágenes JPG y PNG.",
+      "avatarSize": "La foto debe ser de 2 MB o menos.",
+      "avatarUploadFailed": "No se pudo subir la foto.",
+      "avatarRole": "Solo se pueden subir fotos de perfil de estudiantes y profesores."
     },
     "success": {
       "saved": "Perfil de usuario guardado.",
-      "created": "Usuario creado."
+      "created": "Usuario creado.",
+      "deleted": "Usuario eliminado.",
+      "activated": "Usuario activado.",
+      "deactivated": "Usuario desactivado.",
+      "avatarUploaded": "Foto de perfil actualizada."
     }
   },
   "adminCourses": {

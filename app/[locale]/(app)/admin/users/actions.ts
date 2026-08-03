@@ -3,6 +3,7 @@
 import { createClient as createAdminClient } from '@supabase/supabase-js'
 import { revalidatePath } from 'next/cache'
 import { getLocale, getTranslations } from 'next-intl/server'
+import { redirect } from '@/i18n/navigation'
 import { requireRole } from '@/lib/auth/require-role'
 import { getServiceRoleEnv, isUserRole } from '@/lib/admin/users'
 import { writeChangeLog } from '@/lib/changelog/write'
@@ -18,6 +19,14 @@ import { createClient } from '@/lib/supabase/server'
 export type AdminUserActionState = {
   error?: string
   success?: string
+}
+
+function createServiceClient() {
+  const serviceEnv = getServiceRoleEnv()
+  if (!serviceEnv) return null
+  return createAdminClient(serviceEnv.url, serviceEnv.serviceRoleKey, {
+    auth: { autoRefreshToken: false, persistSession: false },
+  })
 }
 
 const PROFILE_FIELDS = [
@@ -88,9 +97,9 @@ export async function createAdminUser(
 ): Promise<AdminUserActionState> {
   const t = await getTranslations('adminUsers')
   const { user: actor } = await requireRole([UserRole.ADMIN])
-  const serviceEnv = getServiceRoleEnv()
+  const admin = createServiceClient()
 
-  if (!serviceEnv) return { error: t('createUnavailable') }
+  if (!admin) return { error: t('createUnavailable') }
 
   const email = String(formData.get('email') ?? '').trim()
   const password = String(formData.get('password') ?? '')
@@ -100,9 +109,6 @@ export async function createAdminUser(
   if (!email || !password || !name) return { error: t('errors.required') }
   if (!isUserRole(role)) return { error: t('errors.invalidRole') }
 
-  const admin = createAdminClient(serviceEnv.url, serviceEnv.serviceRoleKey, {
-    auth: { autoRefreshToken: false, persistSession: false },
-  })
   const { data, error } = await admin.auth.admin.createUser({
     email,
     password,
@@ -116,7 +122,7 @@ export async function createAdminUser(
 
   const { error: profileError } = await admin
     .from('profiles')
-    .update({ name, role, email })
+    .update({ name, role, email, is_active: true })
     .eq('id', data.user.id)
 
   if (profileError) {
@@ -139,6 +145,175 @@ export async function createAdminUser(
   const locale = await getLocale()
   revalidatePath(`/${locale}/admin/users`)
   return { success: t('success.created') }
+}
+
+export async function uploadAdminAvatar(
+  userId: string,
+  _previousState: AdminUserActionState,
+  formData: FormData,
+): Promise<AdminUserActionState> {
+  const t = await getTranslations('adminUsers')
+  const { user: actor } = await requireRole([UserRole.ADMIN])
+
+  if (!isSupabaseConfigured()) return { error: t('notConfigured') }
+
+  const file = formData.get('avatar')
+  if (!(file instanceof File) || file.size === 0) {
+    return { error: t('errors.avatarRequired') }
+  }
+  if (!['image/jpeg', 'image/png'].includes(file.type)) {
+    return { error: t('errors.avatarType') }
+  }
+  if (file.size > 2 * 1024 * 1024) {
+    return { error: t('errors.avatarSize') }
+  }
+
+  const supabase = await createClient()
+  const { data: profile, error: profileLookupError } = await supabase
+    .from('profiles')
+    .select('id, role')
+    .eq('id', userId)
+    .maybeSingle()
+
+  if (profileLookupError) return { error: profileLookupError.message }
+  if (!profile) return { error: t('errors.notFound') }
+  if (profile.role !== UserRole.STUDENT && profile.role !== UserRole.PROFESSOR) {
+    return { error: t('errors.avatarRole') }
+  }
+
+  const extension = file.type === 'image/png' ? 'png' : 'jpg'
+  const avatarPath = `${userId}/avatar.${extension}`
+  const { error: uploadError } = await supabase.storage
+    .from('avatars')
+    .upload(avatarPath, await file.arrayBuffer(), {
+      contentType: file.type,
+      upsert: true,
+    })
+
+  if (uploadError) {
+    return { error: uploadError.message || t('errors.avatarUploadFailed') }
+  }
+
+  const { error: profileError } = await supabase
+    .from('profiles')
+    .update({ avatar_path: avatarPath })
+    .eq('id', userId)
+
+  if (profileError) {
+    return { error: profileError.message || t('errors.avatarUploadFailed') }
+  }
+
+  try {
+    await writeChangeLog({
+      actorId: actor.id,
+      action: 'ADMIN_AVATAR_UPLOAD',
+      targetType: 'PROFILE',
+      targetId: userId,
+      summary: `Admin uploaded avatar for ${userId}`,
+    })
+  } catch (error) {
+    console.error('Admin avatar uploaded, but change log write failed.', error)
+  }
+
+  const locale = await getLocale()
+  revalidatePath(`/${locale}/admin/users`)
+  revalidatePath(`/${locale}/admin/users/${userId}`)
+  revalidatePath(`/${locale}/profile`)
+  return { success: t('success.avatarUploaded') }
+}
+
+export async function setAdminUserActive(
+  userId: string,
+  isActive: boolean,
+  previousState: AdminUserActionState,
+  formData: FormData,
+): Promise<AdminUserActionState> {
+  void previousState
+  void formData
+  const t = await getTranslations('adminUsers')
+  const { user: actor } = await requireRole([UserRole.ADMIN])
+
+  if (userId === actor.id) return { error: t('errors.cannotChangeSelf') }
+
+  const supabase = await createClient()
+  const { data: profile, error: lookupError } = await supabase
+    .from('profiles')
+    .select('id, is_active')
+    .eq('id', userId)
+    .maybeSingle()
+
+  if (lookupError) return { error: lookupError.message }
+  if (!profile) return { error: t('errors.notFound') }
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({ is_active: isActive })
+    .eq('id', userId)
+
+  if (error) return { error: error.message || t('errors.saveFailed') }
+
+  try {
+    await writeChangeLog({
+      actorId: actor.id,
+      action: isActive ? 'ADMIN_USER_ACTIVATE' : 'ADMIN_USER_DEACTIVATE',
+      targetType: 'PROFILE',
+      targetId: userId,
+      summary: `Admin set user ${userId} active=${isActive}`,
+    })
+  } catch (logError) {
+    console.error('User active flag updated, but change log write failed.', logError)
+  }
+
+  const locale = await getLocale()
+  revalidatePath(`/${locale}/admin/users`)
+  revalidatePath(`/${locale}/admin/users/${userId}`)
+  return {
+    success: isActive ? t('success.activated') : t('success.deactivated'),
+  }
+}
+
+export async function deleteAdminUser(
+  userId: string,
+  previousState: AdminUserActionState,
+  formData: FormData,
+): Promise<AdminUserActionState> {
+  void previousState
+  void formData
+  const t = await getTranslations('adminUsers')
+  const { user: actor } = await requireRole([UserRole.ADMIN])
+  const admin = createServiceClient()
+
+  if (!admin) return { error: t('createUnavailable') }
+  if (userId === actor.id) return { error: t('errors.cannotDeleteSelf') }
+
+  const { data: profile, error: lookupError } = await admin
+    .from('profiles')
+    .select('id, email, role')
+    .eq('id', userId)
+    .maybeSingle()
+
+  if (lookupError) return { error: lookupError.message }
+  if (!profile) return { error: t('errors.notFound') }
+
+  const { error } = await admin.auth.admin.deleteUser(userId)
+  if (error) return { error: error.message || t('errors.deleteFailed') }
+
+  try {
+    await writeChangeLog({
+      actorId: actor.id,
+      action: 'ADMIN_USER_DELETE',
+      targetType: 'PROFILE',
+      targetId: userId,
+      summary: `Admin deleted user ${profile.email ?? userId} (${profile.role})`,
+    })
+  } catch (logError) {
+    console.error('User deleted, but change log write failed.', logError)
+  }
+
+  const locale = await getLocale()
+  revalidatePath(`/${locale}/admin/users`)
+  redirect({ href: '/admin/users', locale })
+  return { success: t('success.deleted') }
 }
 
 export async function proxyEnrollStudent(

@@ -6,20 +6,38 @@ import {
   uploadAvatar,
   type ProfileActionState,
 } from '@/app/[locale]/(app)/profile/actions'
+import type { AdminUserActionState } from '@/app/[locale]/(app)/admin/users/actions'
 
-const initialState: ProfileActionState = {}
+type UploadState = ProfileActionState | AdminUserActionState
+
+type UploadAction = (
+  previousState: UploadState,
+  formData: FormData,
+) => Promise<UploadState>
+
+const initialState: UploadState = {}
 
 type Props = {
   avatarUrl: string | null
   name: string | null
+  action?: UploadAction
+  title?: string
+  help?: string
+  uploadLabel?: string
+  uploadingLabel?: string
 }
 
-export function AvatarUpload({ avatarUrl, name }: Props) {
+export function AvatarUpload({
+  avatarUrl,
+  name,
+  action = uploadAvatar,
+  title,
+  help,
+  uploadLabel,
+  uploadingLabel,
+}: Props) {
   const t = useTranslations('profile')
-  const [state, formAction, pending] = useActionState(
-    uploadAvatar,
-    initialState,
-  )
+  const [state, formAction, pending] = useActionState(action, initialState)
   const [validationError, setValidationError] = useState<string>()
 
   return (
@@ -33,8 +51,8 @@ export function AvatarUpload({ avatarUrl, name }: Props) {
         )}
       </div>
       <form action={formAction} className="avatar-upload__form">
-        <h2 id="avatar-upload-title">{t('photo')}</h2>
-        <p>{t('avatarHelp')}</p>
+        <h2 id="avatar-upload-title">{title ?? t('photo')}</h2>
+        <p>{help ?? t('avatarHelp')}</p>
         <input
           id="avatar"
           name="avatar"
@@ -68,7 +86,9 @@ export function AvatarUpload({ avatarUrl, name }: Props) {
           type="submit"
           disabled={pending || Boolean(validationError)}
         >
-          {pending ? t('uploading') : t('upload')}
+          {pending
+            ? (uploadingLabel ?? t('uploading'))
+            : (uploadLabel ?? t('upload'))}
         </button>
       </form>
     </section>

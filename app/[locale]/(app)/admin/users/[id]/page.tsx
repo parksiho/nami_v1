@@ -1,9 +1,12 @@
 import { notFound } from 'next/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { AdminUserAccountControls } from '@/components/admin/AdminUserAccountControls'
 import { EditAdminUserForm } from '@/components/admin/AdminUserForms'
 import { AdminEnrollmentForm } from '@/components/courses/AdminEnrollmentForm'
-import { ProfileAvatar } from '@/components/profile/ProfileAvatar'
+import { AvatarUpload } from '@/components/profile/AvatarUpload'
 import { Link } from '@/i18n/navigation'
+import { uploadAdminAvatar } from '@/app/[locale]/(app)/admin/users/actions'
+import { requireRole } from '@/lib/auth/require-role'
 import { UserRole } from '@/lib/domain/enums'
 import type { Profile } from '@/lib/domain/profile'
 import { getAvatarPublicUrl } from '@/lib/profile/avatar'
@@ -28,7 +31,10 @@ export default async function AdminUserDetailPage({ params }: Props) {
     )
   }
 
-  const supabase = await createClient()
+  const [{ user: actor }, supabase] = await Promise.all([
+    requireRole([UserRole.ADMIN]),
+    createClient(),
+  ])
   const { data, error } = await supabase
     .from('profiles')
     .select('*')
@@ -47,6 +53,8 @@ export default async function AdminUserDetailPage({ params }: Props) {
 
   const profile = data as Profile
   const avatarUrl = getAvatarPublicUrl(supabase, profile.avatar_path)
+  const canUploadAvatar =
+    profile.role === UserRole.STUDENT || profile.role === UserRole.PROFESSOR
   let courses: { id: string; name: string; year: number; semester: number }[] = []
   let existingCourseIds: string[] = []
   let enrollmentLoadError: string | null = null
@@ -73,17 +81,37 @@ export default async function AdminUserDetailPage({ params }: Props) {
     <main className="page-main admin-users">
       <Link href="/admin/users" className="admin-back">{t('backToList')}</Link>
       <header className="admin-users__header admin-users__header--detail">
-        <ProfileAvatar
-          name={profile.name}
-          avatarUrl={avatarUrl}
-          size="lg"
-          className="admin-users__avatar"
-        />
         <div>
           <h1>{profile.name || t('unnamed')}</h1>
           <p>{profile.email || profile.id}</p>
+          <p>
+            <span
+              className={
+                profile.is_active === false
+                  ? 'admin-status admin-status--inactive'
+                  : 'admin-status admin-status--active'
+              }
+            >
+              {profile.is_active === false
+                ? t('status.inactive')
+                : t('status.active')}
+            </span>
+          </p>
         </div>
       </header>
+      {canUploadAvatar ? (
+        <section className="admin-card">
+          <AvatarUpload
+            avatarUrl={avatarUrl}
+            name={profile.name}
+            action={uploadAdminAvatar.bind(null, profile.id)}
+            title={t('avatar.title')}
+            help={t('avatar.help')}
+            uploadLabel={t('avatar.upload')}
+            uploadingLabel={t('avatar.uploading')}
+          />
+        </section>
+      ) : null}
       {profile.role === UserRole.STUDENT || profile.role === UserRole.PROFESSOR ? (
         <section className="admin-card admin-context-links">
           <h2>{t('contextLinks.title')}</h2>
@@ -124,6 +152,11 @@ export default async function AdminUserDetailPage({ params }: Props) {
       <section className="admin-card">
         <EditAdminUserForm profile={profile} />
       </section>
+      <AdminUserAccountControls
+        userId={profile.id}
+        isActive={profile.is_active !== false}
+        canManage={profile.id !== actor.id}
+      />
       {profile.role === UserRole.STUDENT ? (
         <section className="admin-card">
           <h2>{t('proxyEnroll.title')}</h2>
