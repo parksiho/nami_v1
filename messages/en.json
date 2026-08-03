@@ -139,6 +139,17 @@
       "updated_desc": "Updated: newest first",
       "updated_asc": "Updated: oldest first"
     },
+    "filters": {
+      "name": "Name",
+      "role": "Role",
+      "anyRole": "All roles",
+      "admissionYear": "Admission year",
+      "anyAdmissionYear": "All admission years",
+      "admissionYearOption": "{year}",
+      "academicStatus": "Academic status",
+      "anyAcademicStatus": "All academic statuses",
+      "clear": "Clear filters"
+    },
     "notConfigured": "User storage is not configured. Set the Supabase environment variables.",
     "createTitle": "Create user",
     "create": "Create user",
@@ -193,7 +204,9 @@
       "email": "Email",
       "password": "Temporary password",
       "role": "Role",
-      "status": "Status",
+      "status": "Account status",
+      "admissionYear": "Admission year",
+      "academicStatus": "Academic status",
       "birth_date": "Date of birth",
       "occupation": "Occupation",
       "mobile": "Mobile",

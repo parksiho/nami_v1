@@ -139,6 +139,17 @@
       "updated_desc": "수정일 최근순",
       "updated_asc": "수정일 오래된순"
     },
+    "filters": {
+      "name": "이름",
+      "role": "역할",
+      "anyRole": "전체 역할",
+      "admissionYear": "입학연도",
+      "anyAdmissionYear": "전체 입학연도",
+      "admissionYearOption": "{year}년",
+      "academicStatus": "학적 상태",
+      "anyAcademicStatus": "전체 학적",
+      "clear": "조건 초기화"
+    },
     "notConfigured": "사용자 저장소가 설정되지 않았습니다. Supabase 환경 변수를 설정하세요.",
     "createTitle": "사용자 생성",
     "create": "사용자 생성",
@@ -193,7 +204,9 @@
       "email": "이메일",
       "password": "임시 비밀번호",
       "role": "역할",
-      "status": "상태",
+      "status": "계정 상태",
+      "admissionYear": "입학연도",
+      "academicStatus": "학적 상태",
       "birth_date": "생년월일",
       "occupation": "직업",
       "mobile": "휴대전화",
