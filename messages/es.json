@@ -2,6 +2,7 @@
   "app": {
     "brand": "Registro académico",
     "university": "Seminario Teológico Unión de Sudamérica",
+    "siteTitle": "SETESS Seminario Teológico Unión de Sudamérica",
     "semester": "{year} · Semestre {semester}"
   },
   "nav": {
@@ -457,5 +458,57 @@
     "search": "Buscar",
     "noData": "No hay datos disponibles",
     "back": "Volver"
+  },
+  "legal": {
+    "privacyLink": "Política de privacidad",
+    "privacy": {
+      "title": "Política de privacidad y términos de uso de datos personales",
+      "description": "Cómo SETESS (Seminario Teológico Unión de Sudamérica) recopila y utiliza la información personal en su portal académico.",
+      "lastUpdated": "3 de agosto de 2026",
+      "lastUpdatedLabel": "Última actualización: {date}",
+      "intro": "SETESS — Seminario Teológico Unión de Sudamérica (la \"Escuela\") — respeta la privacidad de los usuarios de su portal académico (el \"Servicio\") y trata la información personal de forma lícita y segura. Esta política explica cómo se recopila, utiliza, almacena y protege la información personal al usar el Servicio.",
+      "sections": {
+        "purpose": {
+          "heading": "1. Finalidad del tratamiento",
+          "body": "La Escuela trata la información personal con las siguientes finalidades:\n\n• Registro de cuenta, verificación de identidad y autenticación de acceso\n• Gestión académica, incluyendo matrícula, inscripción a cursos y calificaciones\n• Comunicaciones de avisos y operaciones académicas\n• Registro de uso del Servicio y prevención de usos indebidos\n• Atención de consultas y cumplimiento de obligaciones legales"
+        },
+        "collection": {
+          "heading": "2. Información personal que recopilamos",
+          "body": "Para prestar el Servicio, podemos recopilar la siguiente información:\n\n• Datos de cuenta: nombre, correo electrónico, contraseña (almacenada de forma cifrada)\n• Registros académicos: número de estudiante, rol (estudiante, profesor, administrador), estado académico e historial relacionado\n• Datos de cursos: inscripciones, asignaciones docentes, calificaciones y estado de finalización\n• Datos de uso: fechas de acceso, registros de cambios importantes e información técnica del navegador o dispositivo\n• Información de perfil: datos adicionales que el usuario proporcione o cargue de forma voluntaria"
+        },
+        "usage": {
+          "heading": "3. Uso de la información personal",
+          "body": "La información personal recopilada se utiliza únicamente dentro de las finalidades descritas. La Escuela no la utiliza para otros fines sin consentimiento. Si la finalidad cambia, se informará o se solicitará el consentimiento según corresponda."
+        },
+        "retention": {
+          "heading": "4. Período de conservación",
+          "body": "La información personal se conserva solo mientras sea necesaria para las finalidades indicadas.\n\n• Datos de cuenta: hasta la eliminación o baja de la cuenta\n• Registros académicos y calificaciones: durante el período exigido por la normativa aplicable y el reglamento escolar\n• Registros de acceso y cambios: por un período razonable con fines de seguridad y auditoría\n\nCuando la conservación sea legalmente obligatoria, los registros se mantendrán por ese período y luego se destruirán de forma segura."
+        },
+        "sharing": {
+          "heading": "5. Cesión y encargados del tratamiento",
+          "body": "La Escuela no proporciona información personal a terceros sin consentimiento previo, salvo cuando:\n\n• El usuario haya consentido previamente\n• La divulgación sea exigida por ley\n• Sea necesario el tratamiento por proveedores de infraestructura esenciales (como alojamiento en la nube o servicios de autenticación) para operar el Servicio\n\nCuando se encargue el tratamiento a proveedores, se exigen salvaguardas adecuadas mediante controles contractuales y operativos."
+        },
+        "security": {
+          "heading": "6. Medidas de seguridad",
+          "body": "Para proteger la información personal frente a pérdida, robo, divulgación no autorizada o alteración, la Escuela aplica medidas como:\n\n• Cifrado de credenciales sensibles como contraseñas\n• Control de acceso basado en roles\n• Transmisión protegida (por ejemplo, HTTPS)\n• Registro de accesos y cambios significativos"
+        },
+        "rights": {
+          "heading": "7. Derechos del usuario",
+          "body": "Los usuarios pueden ejercer los siguientes derechos sobre su información personal:\n\n• Solicitar acceso, corrección o eliminación\n• Solicitar la limitación del tratamiento (sujeto a obligaciones legales o de conservación académica)\n• Actualizar los datos de la cuenta y cambiar la contraseña\n\nLas solicitudes pueden realizarse mediante las funciones de perfil del Servicio o a través del canal de contacto indicado abajo."
+        },
+        "cookies": {
+          "heading": "8. Cookies y tecnologías similares",
+          "body": "El Servicio puede utilizar cookies o tecnologías similares para mantener sesiones de inicio de sesión, preferencias de idioma y seguridad. Puede rechazar las cookies en la configuración del navegador, aunque algunas funciones (como permanecer conectado) podrían verse limitadas."
+        },
+        "changes": {
+          "heading": "9. Cambios de esta política",
+          "body": "Si esta política se actualiza, la Escuela anunciará los cambios mediante un aviso en el Servicio o actualizando esta página. El uso continuado del Servicio después de los cambios puede considerarse como aceptación de la política actualizada."
+        },
+        "contact": {
+          "heading": "10. Contacto",
+          "body": "Para consultas sobre el tratamiento de información personal, o para solicitar acceso, corrección o eliminación, comuníquese con los administradores del portal académico de SETESS.\n\nInstitución: SETESS — Seminario Teológico Unión de Sudamérica\nServicio: Portal académico / registro"
+        }
+      }
+    }
   }
 }
