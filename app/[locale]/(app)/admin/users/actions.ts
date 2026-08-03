@@ -5,6 +5,7 @@ import { revalidatePath } from 'next/cache'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { redirect } from '@/i18n/navigation'
 import { requireRole } from '@/lib/auth/require-role'
+import { purgeProfileDependencies } from '@/lib/admin/delete-user'
 import { getServiceRoleEnv, isUserRole } from '@/lib/admin/users'
 import { writeChangeLog } from '@/lib/changelog/write'
 import { canEnroll } from '@/lib/courses/enroll'
@@ -288,26 +289,42 @@ export async function deleteAdminUser(
 
   const { data: profile, error: lookupError } = await admin
     .from('profiles')
-    .select('id, email, role')
+    .select('id, email, role, avatar_path')
     .eq('id', userId)
     .maybeSingle()
 
   if (lookupError) return { error: lookupError.message }
   if (!profile) return { error: t('errors.notFound') }
 
-  const { error } = await admin.auth.admin.deleteUser(userId)
-  if (error) return { error: error.message || t('errors.deleteFailed') }
-
+  // Write audit row before cascading deletes remove related rows / auth user.
   try {
     await writeChangeLog({
       actorId: actor.id,
       action: 'ADMIN_USER_DELETE',
       targetType: 'PROFILE',
       targetId: userId,
-      summary: `Admin deleted user ${profile.email ?? userId} (${profile.role})`,
+      summary: `Admin deleting user ${profile.email ?? userId} (${profile.role})`,
     })
   } catch (logError) {
-    console.error('User deleted, but change log write failed.', logError)
+    console.error('Could not write pre-delete change log.', logError)
+  }
+
+  const purge = await purgeProfileDependencies(admin, userId)
+  if (purge.error) {
+    return { error: purge.error || t('errors.deleteFailed') }
+  }
+
+  if (profile.avatar_path) {
+    await admin.storage.from('avatars').remove([profile.avatar_path])
+  }
+
+  const { error } = await admin.auth.admin.deleteUser(userId)
+  if (error) {
+    const message = error.message || t('errors.deleteFailed')
+    if (/foreign key|violates foreign key/i.test(message)) {
+      return { error: t('errors.deleteBlockedByRelations') }
+    }
+    return { error: message }
   }
 
   const locale = await getLocale()

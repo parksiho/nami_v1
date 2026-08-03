@@ -160,7 +160,7 @@
     "deactivateConfirm": "Disable this user? They will no longer be able to sign in.",
     "delete": "Delete user",
     "deleting": "Deleting…",
-    "deleteConfirm": "Delete this user? This cannot be undone.",
+    "deleteConfirm": "Delete this user? Related courses, enrollments, academic records, and notices will also be removed. This cannot be undone.",
     "status": {
       "active": "Active",
       "inactive": "Disabled"
@@ -226,6 +226,7 @@
       "saveFailed": "Could not save the user.",
       "createFailed": "Could not create the user.",
       "deleteFailed": "Could not delete the user.",
+      "deleteBlockedByRelations": "This user still has related courses or academic records and could not be deleted.",
       "notFound": "User not found.",
       "cannotDeleteSelf": "You cannot delete your own account.",
       "cannotChangeSelf": "You cannot disable your own account.",

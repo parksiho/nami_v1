@@ -160,7 +160,7 @@
     "deactivateConfirm": "¿Desactivar este usuario? Ya no podrá iniciar sesión.",
     "delete": "Eliminar usuario",
     "deleting": "Eliminando…",
-    "deleteConfirm": "¿Eliminar este usuario? Esta acción no se puede deshacer.",
+    "deleteConfirm": "¿Eliminar este usuario? También se eliminarán cursos, matrículas, registros académicos y avisos relacionados. Esta acción no se puede deshacer.",
     "status": {
       "active": "Activo",
       "inactive": "Desactivado"
@@ -226,6 +226,7 @@
       "saveFailed": "No se pudo guardar el usuario.",
       "createFailed": "No se pudo crear el usuario.",
       "deleteFailed": "No se pudo eliminar el usuario.",
+      "deleteBlockedByRelations": "Este usuario aún tiene cursos o registros académicos relacionados y no pudo eliminarse.",
       "notFound": "Usuario no encontrado.",
       "cannotDeleteSelf": "No puede eliminar su propia cuenta.",
       "cannotChangeSelf": "No puede desactivar su propia cuenta.",
