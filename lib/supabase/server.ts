@@ -6,7 +6,8 @@ import { getSupabaseEnv } from '@/lib/supabase/env'
 
 export async function createClient() {
   if (isUiDemo()) {
-    return createDemoServerClient() as unknown as ReturnType<typeof createServerClient>
+    // Keep the real client's inferred return type for .from().select() results.
+    return createDemoServerClient() as never
   }
 
   const env = getSupabaseEnv()
