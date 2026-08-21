@@ -98,6 +98,10 @@ export function isUserRole(value: string): value is UserRoleValue {
 type ServiceRoleSource = Record<string, string | undefined>
 
 export function getServiceRoleEnv(source: ServiceRoleSource = process.env) {
+  if (source.NAMI_UI_DEMO === '1' || process.env.NAMI_UI_DEMO === '1') {
+    return { url: 'https://demo.local', serviceRoleKey: 'demo' }
+  }
+
   const url = source.NEXT_PUBLIC_SUPABASE_URL?.trim()
   const serviceRoleKey = source.SUPABASE_SERVICE_ROLE_KEY?.trim()
 

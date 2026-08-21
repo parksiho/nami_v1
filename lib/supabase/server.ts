@@ -1,8 +1,14 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
+import { isUiDemo } from '@/lib/supabase/env'
+import { createDemoServerClient } from '@/lib/demo/supabase'
 import { getSupabaseEnv } from '@/lib/supabase/env'
 
 export async function createClient() {
+  if (isUiDemo()) {
+    return createDemoServerClient() as unknown as ReturnType<typeof createServerClient>
+  }
+
   const env = getSupabaseEnv()
 
   if (!env) {

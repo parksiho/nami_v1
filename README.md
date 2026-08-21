@@ -138,5 +138,7 @@ where email = 'your-admin@example.com';
 
 - [DEPLOY.md](./DEPLOY.md) — 프로덕션 스모크 체크리스트
 - [docs/nami-user-guide.pdf](./docs/nami-user-guide.pdf) — 화면별 사용자 가이드
+- [docs/nami-screen-captures.pdf](./docs/nami-screen-captures.pdf) — 각 화면 캡처
 - PDF 재생성: `docs/user-guide/build-pdf.sh`
+- 화면 캡처 재생성: `NAMI_UI_DEMO=1 npm run dev` 후 `python3 docs/user-guide/capture-screens.py`
 - 설계: `docs/superpowers/specs/2026-07-30-nami-design.md`

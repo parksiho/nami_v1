@@ -3,8 +3,12 @@ export type SupabaseEnv = {
   anonKey: string
 }
 
+export function isUiDemo(): boolean {
+  return process.env.NAMI_UI_DEMO === '1'
+}
+
 export function isSupabaseConfigured(): boolean {
-  return getSupabaseEnv() !== null
+  return isUiDemo() || getSupabaseEnv() !== null
 }
 
 export function getSupabaseEnv(): SupabaseEnv | null {
