@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>SETESS 학적 포털 사용자 가이드</title>
+  <style>
+    @font-face {
+      font-family: "Noto Sans KR";
+      src: url("fonts/NotoSansKR-VF.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: block;
+    }
+
+    :root {
+      --navy: #16324f;
+      --navy-deep: #0e2238;
+      --gold: #c4a35a;
+      --gold-soft: #f4ead4;
+      --ink: #1f2933;
+      --muted: #52606d;
+      --line: #d9e2ec;
+      --paper: #f7f4ee;
+      --student: #1d6a63;
+      --professor: #3d4f8f;
+      --admin: #8a3b2b;
+      --public: #5b4b8a;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      color: var(--ink);
+      font-family: "Noto Sans KR", "WenQuanYi Micro Hei", sans-serif;
+      font-size: 11.5pt;
+      line-height: 1.55;
+      background: white;
+    }
+
+    @page {
+      size: A4;
+      margin: 16mm 15mm 18mm;
+    }
+
+    h1, h2, h3, h4 { font-weight: 700; color: var(--navy); margin: 0 0 0.4em; }
+    p { margin: 0 0 0.7em; }
+    ul, ol { margin: 0 0 0.8em; padding-left: 1.2em; }
+    li { margin: 0.18em 0; }
+    a { color: inherit; text-decoration: none; }
+
+    .cover {
+      min-height: 250mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18mm 8mm 10mm;
+      page-break-after: always;
+    }
+    .cover__mark {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      letter-spacing: 0.28em;
+      font-size: 9pt;
+      font-weight: 700;
+      padding: 6px 12px;
+    }
+    .cover h1 {
+      font-size: 34pt;
+      line-height: 1.25;
+      margin: 18mm 0 8mm;
+      color: var(--navy-deep);
+    }
+    .cover__lead {
+      font-size: 13pt;
+      color: var(--muted);
+      max-width: 140mm;
+    }
+    .cover__meta {
+      background: var(--navy);
+      color: white;
+      padding: 14px 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 18px;
+      font-size: 10pt;
+    }
+    .cover__meta span { color: var(--gold); display: block; font-size: 8.5pt; letter-spacing: 0.08em; }
+
+    .toc { page-break-after: always; }
+    .toc h2 { font-size: 18pt; margin-bottom: 8mm; border-bottom: 2px solid var(--gold); padding-bottom: 3mm; }
+    .toc-list { list-style: none; padding: 0; }
+    .toc-list > li { margin: 0 0 7px; display: flex; gap: 8px; align-items: baseline; }
+    .toc-list .num {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      font-size: 8.5pt;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 22px;
+    }
+    .toc-list .path { color: var(--muted); font-size: 9.5pt; margin-left: auto; font-family: ui-monospace, monospace; }
+    .toc-group {
+      margin: 10px 0 4px;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .chapter {
+      page-break-before: always;
+    }
+    .chapter__kicker {
+      color: var(--gold);
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      margin-bottom: 4px;
+    }
+    .chapter h2 { font-size: 20pt; margin-bottom: 4mm; }
+
+    .roles {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin: 8px 0 14px;
+    }
+    .role-card {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      border-top: 4px solid var(--gold);
+    }
+    .role-card h3 { font-size: 12pt; }
+    .role-card.student { border-top-color: var(--student); }
+    .role-card.professor { border-top-color: var(--professor); }
+    .role-card.admin { border-top-color: var(--admin); }
+
+    .screen {
+      border: 1px solid var(--line);
+      margin: 0 0 9mm;
+      page-break-inside: avoid;
+    }
+    .screen__head {
+      background: var(--navy);
+      color: white;
+      padding: 10px 14px 9px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .screen__head h3 { color: white; font-size: 13.5pt; margin: 0 0 2px; }
+    .screen__head p { margin: 0; color: #d9e2ec; font-size: 9.5pt; }
+    .badge {
+      display: inline-block;
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 2px 7px;
+      border-radius: 99px;
+      background: var(--gold);
+      color: var(--navy-deep);
+      margin-left: 4px;
+    }
+    .badge.student { background: #b7e1dc; color: #0f3f3b; }
+    .badge.professor { background: #c9d2f2; color: #24305c; }
+    .badge.admin { background: #f3c7bd; color: #5c2418; }
+    .badge.all { background: #e4daf7; color: #3d2f61; }
+    .badge.public { background: var(--gold-soft); color: #5a4316; }
+    .screen__body { padding: 12px 14px 14px; }
+    .path {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 8.5pt;
+      background: #0e2238;
+      color: #f4ead4;
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+    .screen__head .path { background: transparent; color: var(--gold); padding: 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 6px 0 10px;
+      font-size: 10pt;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 5px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: var(--paper); color: var(--navy); font-weight: 700; width: 28%; }
+
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 28px;
+      margin: 5px 0;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      font-size: 8.5pt;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 18px;
+    }
+
+    .note, .warn {
+      padding: 8px 10px;
+      margin: 8px 0 0;
+      font-size: 10pt;
+      border-left: 4px solid var(--gold);
+      background: var(--gold-soft);
+    }
+    .warn { border-left-color: var(--admin); background: #f8e8e4; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    footer.colophon {
+      margin-top: 12mm;
+      border-top: 1px solid var(--line);
+      padding-top: 6mm;
+      color: var(--muted);
+      font-size: 9.5pt;
+    }
+  </style>
+</head>
+<body>
+  <section class="cover">
+    <div>
+      <div class="cover__mark">SETESS · NAMI</div>
+      <h1>학적 포털<br />사용자 가이드</h1>
+      <p class="cover__lead">
+        남미연합성결신학교(SETESS) 학사·학적 포털의 화면을 역할별로 설명합니다.
+        각 화면의 목적, 들어갈 수 있는 사용자, 입력 항목, 사용 순서를 한 장씩 정리했습니다.
+      </p>
+    </div>
+    <div class="cover__meta">
+      <div><span>시스템</span>SETESS 학적부 포털 (Nami)</div>
+      <div><span>대상</span>학생 · 교수 · 관리자</div>
+      <div><span>기본 언어</span>한국어 (/ko) · 영어 · 스페인어</div>
+      <div><span>작성일</span>2026년 8월</div>
+    </div>
+  </section>
+
+  <section class="toc">
+    <h2>목차</h2>
+    <p class="toc-group">시작하기</p>
+    <ol class="toc-list">
+      <li><span class="num">0</span>역할 · 공통 화면 구성<span class="path">헤더 / 메뉴</span></li>
+    </ol>
+    <p class="toc-group">공개 화면</p>
+    <ol class="toc-list">
+      <li><span class="num">1</span>로그인<span class="path">/login</span></li>
+      <li><span class="num">2</span>회원가입<span class="path">/register</span></li>
+      <li><span class="num">3</span>개인정보 이용약관<span class="path">/privacy</span></li>
+    </ol>
+    <p class="toc-group">모든 로그인 사용자</p>
+    <ol class="toc-list">
+      <li><span class="num">4</span>홈<span class="path">/home</span></li>
+      <li><span class="num">5</span>프로필<span class="path">/profile</span></li>
+      <li><span class="num">6</span>비밀번호 변경<span class="path">/change-password</span></li>
+      <li><span class="num">7</span>공지사항<span class="path">/notices</span></li>
+      <li><span class="num">8</span>공지 상세<span class="path">/notices/[id]</span></li>
+    </ol>
+    <p class="toc-group">학생</p>
+    <ol class="toc-list">
+      <li><span class="num">9</span>수강신청<span class="path">/enroll</span></li>
+      <li><span class="num">10</span>내 성적<span class="path">/grades</span></li>
+      <li><span class="num">11</span>내 학적<span class="path">/enrollment</span></li>
+    </ol>
+    <p class="toc-group">교수</p>
+    <ol class="toc-list">
+      <li><span class="num">12</span>담당 강의<span class="path">/teaching</span></li>
+      <li><span class="num">13</span>강의 수강생·성적<span class="path">/teaching/[courseId]</span></li>
+      <li><span class="num">14</span>학생 학적 조회<span class="path">/teaching/students/[studentId]</span></li>
+    </ol>
+    <p class="toc-group">관리자</p>
+    <ol class="toc-list">
+      <li><span class="num">15</span>사용자 관리<span class="path">/admin/users</span></li>
+      <li><span class="num">16</span>사용자 상세<span class="path">/admin/users/[id]</span></li>
+      <li><span class="num">17</span>강의 관리<span class="path">/admin/courses</span></li>
+      <li><span class="num">18</span>강의 수정<span class="path">/admin/courses/[id]</span></li>
+      <li><span class="num">19</span>학적 관리<span class="path">/admin/enrollments</span></li>
+      <li><span class="num">20</span>학적 상세<span class="path">/admin/enrollments/[id]</span></li>
+      <li><span class="num">21</span>최근 변경<span class="path">/admin/change-logs</span></li>
+    </ol>
+  </section>
+
+  <section class="chapter">
+    <p class="chapter__kicker">CHAPTER 0</p>
+    <h2>역할과 공통 화면 구성</h2>
+    <p>
+      포털 주소의 기본 언어는 한국어입니다. 예: <span class="path">/ko/login</span>.
+      로그인하지 않은 사용자는 로그인 화면으로 이동하고, 로그인한 사용자는 홈으로 이동합니다.
+    </p>
+    <div class="roles">
+      <article class="role-card student">
+        <h3>학생</h3>
+        <p>수강신청, 성적 확인, 본인 학적 조회. 가입 시 기본 역할입니다.</p>
+      </article>
+      <article class="role-card professor">
+        <h3>교수</h3>
+        <p>담당 강의의 수강생 성적·이수 상태를 입력하고, 담당 학생의 학적을 조회합니다.</p>
+      </article>
+      <article class="role-card admin">
+        <h3>관리자</h3>
+        <p>사용자·강의·학적 기록을 생성·수정하고 공지와 변경 이력을 관리합니다.</p>
+      </article>
+    </div>
+    <p><strong>메뉴는 역할마다 다릅니다.</strong></p>
+    <table>
+      <thead>
+        <tr><th>메뉴</th><td>학생</td><td>교수</td><td>관리자</td></tr>
+      </thead>
+      <tbody>
+        <tr><th>홈 / 프로필 / 공지</th><td>○</td><td>○</td><td>○</td></tr>
+        <tr><th>수강신청 / 내 성적 / 내 학적</th><td>○</td><td>—</td><td>—</td></tr>
+        <tr><th>담당 강의</th><td>—</td><td>○</td><td>—</td></tr>
+        <tr><th>사용자 / 강의 / 학적 관리 / 최근 변경</th><td>—</td><td>—</td><td>○</td></tr>
+      </tbody>
+    </table>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>상단 헤더 · 프로필 메뉴</h3>
+          <p>모든 로그인 화면에 공통으로 표시됩니다.</p>
+        </div>
+        <span class="badge all">공통</span>
+      </div>
+      <div class="screen__body">
+        <p>왼쪽에는 <strong>학적부</strong>, 학교명(남미연합성결신학교), 현재 학년도·학기가 보입니다. 오른쪽에는 언어 전환과 내 이름 메뉴가 있습니다.</p>
+        <table>
+          <tr><th>언어 전환 (ko / en / es)</th><td>현재 화면을 유지한 채 표시 언어만 바꿉니다.</td></tr>
+          <tr><th>이름 이니셜 버튼</th><td>눌러서 하위 메뉴를 엽니다.</td></tr>
+          <tr><th>비밀번호 변경</th><td>비밀번호 변경 화면으로 이동합니다.</td></tr>
+          <tr><th>로그아웃</th><td>세션을 종료하고 로그인 화면으로 돌아갑니다.</td></tr>
+        </table>
+        <p class="note">권한이 없는 주소로 들어가면 해당 기능을 사용할 수 없습니다. 메뉴에 없는 화면은 역할에 맞지 않는 기능입니다.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="chapter">
+    <p class="chapter__kicker">CHAPTER 1 · 공개 화면</p>
+    <h2>로그인 전 화면</h2>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>1. 로그인</h3>
+          <p class="path">/ko/login</p>
+        </div>
+        <span class="badge public">공개</span>
+      </div>
+      <div class="screen__body">
+        <p>포털에 들어가기 위한 첫 화면입니다. 이미 발급받은 이메일과 비밀번호로 접속합니다.</p>
+        <table>
+          <tr><th>이메일</th><td>가입 시 사용한 이메일. 필수.</td></tr>
+          <tr><th>비밀번호</th><td>계정 비밀번호. 필수.</td></tr>
+          <tr><th>로그인 버튼</th><td>인증이 성공하면 홈으로 이동합니다.</td></tr>
+          <tr><th>회원가입 링크</th><td>계정이 없으면 가입 화면으로 이동합니다.</td></tr>
+          <tr><th>개인정보 이용약관</th><td>개인정보 처리 안내를 읽습니다.</td></tr>
+        </table>
+        <ol class="steps">
+          <li>이메일과 비밀번호를 입력합니다.</li>
+          <li><strong>로그인</strong>을 누릅니다.</li>
+          <li>홈 화면이 열리면 역할에 맞는 메뉴를 사용합니다.</li>
+        </ol>
+        <p class="warn">이메일·비밀번호가 틀리거나, 관리자가 계정을 <strong>사용안함</strong>으로 두면 로그인할 수 없습니다. 사용 중지 안내는 관리자에게 문의하세요.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>2. 회원가입</h3>
+          <p class="path">/ko/register</p>
+        </div>
+        <span class="badge public">공개</span>
+      </div>
+      <div class="screen__body">
+        <p>새 계정을 만듭니다. 가입 직후 역할은 <strong>학생</strong>입니다. 교수·관리자 권한은 관리자가 부여합니다.</p>
+        <table>
+          <tr><th>이름</th><td>포털에 표시될 이름. 필수.</td></tr>
+          <tr><th>이메일</th><td>로그인 ID로 사용됩니다. 필수.</td></tr>
+          <tr><th>비밀번호</th><td>새 비밀번호. 필수.</td></tr>
+          <tr><th>비밀번호 확인</th><td>위와 같아야 합니다. 필수.</td></tr>
+        </table>
+        <ol class="steps">
+          <li>이름, 이메일, 비밀번호를 입력합니다.</li>
+          <li>비밀번호 확인이 일치하는지 확인합니다.</li>
+          <li><strong>회원가입</strong>을 누릅니다.</li>
+          <li>안내가 나오면 이메일을 확인한 뒤 로그인합니다.</li>
+        </ol>
+        <p class="note">학교 정책에 따라 이메일 확인이 필요할 수 있습니다. 확인 메일이 오지 않으면 스팸함을 확인하거나 관리자에게 문의하세요.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>3. 개인정보 이용약관</h3>
+          <p class="path">/ko/privacy</p>
+        </div>
+        <span class="badge public">공개</span>
+      </div>
+      <div class="screen__body">
+        <p>로그인 없이 볼 수 있는 안내 문서입니다. 수집 항목, 이용 목적, 보유 기간, 이용자 권리, 문의처가 정리되어 있습니다.</p>
+        <p>로그인·회원가입 화면 하단의 <strong>개인정보 이용약관</strong> 링크로 들어옵니다. 읽기 전용이며 입력 항목은 없습니다.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="chapter">
+    <p class="chapter__kicker">CHAPTER 2 · 공통</p>
+    <h2>모든 로그인 사용자 화면</h2>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>4. 홈</h3>
+          <p class="path">/ko/home</p>
+        </div>
+        <span class="badge all">학생 · 교수 · 관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>로그인 후 처음 열리는 화면입니다. 환영 문구, 한눈에 보기, 바로가기, 최근 공지가 표시됩니다.</p>
+        <table>
+          <tr><th>학생 요약</th><td>현재 학적 상태, 수강 중인 강의 수, <strong>내 학적 보기</strong> 버튼.</td></tr>
+          <tr><th>교수 요약</th><td>담당 강의 수, 성적 입력이 필요한 건수, <strong>담당 강의 관리</strong> 버튼.</td></tr>
+          <tr><th>관리자 요약</th><td>사용자·강의·학적 기록 수, <strong>사용자 관리</strong> 버튼, 최근 변경 5건.</td></tr>
+          <tr><th>바로가기</th><td>내 역할 메뉴 중 홈·공지를 제외한 주요 화면 링크.</td></tr>
+          <tr><th>공지</th><td>최근 공지 3건. 제목을 누르면 상세로 이동합니다.</td></tr>
+        </table>
+        <p class="note">성적 입력 필요는 점수가 비어 있거나, 수강 상태가 신청/수강 중인데 점수가 0인 경우를 셉니다.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>5. 프로필</h3>
+          <p class="path">/ko/profile</p>
+        </div>
+        <span class="badge all">학생 · 교수 · 관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>본인 개인정보와 교회 정보를 확인하고 수정합니다. 이메일은 로그인 계정이라 이 화면에서 바꿀 수 없습니다.</p>
+        <table>
+          <tr><th>프로필 사진</th><td>JPG 또는 PNG, 최대 2MB. <strong>사진 업로드</strong>로 바로 반영됩니다.</td></tr>
+          <tr><th>이름</th><td>필수. 헤더와 목록에 표시됩니다.</td></tr>
+          <tr><th>생년월일 / 직업 / 휴대전화</th><td>선택 입력.</td></tr>
+          <tr><th>학번 · 재학학기</th><td>학생만 표시됩니다.</td></tr>
+          <tr><th>국적</th><td>국가 목록에서 선택합니다.</td></tr>
+          <tr><th>주소</th><td>직접 입력하거나, 키워드로 기존 주소를 검색해 고릅니다.</td></tr>
+          <tr><th>성별 / 교회명 / 직분</th><td>선택 입력.</td></tr>
+          <tr><th>사용 언어</th><td>한국어, 영어, 스페인어 중 선호 언어.</td></tr>
+        </table>
+        <ol class="steps">
+          <li>사진을 바꾸려면 파일을 고르고 업로드합니다.</li>
+          <li>나머지 항목을 수정합니다. 이름은 반드시 남겨 둡니다.</li>
+          <li><strong>프로필 저장</strong>을 누릅니다.</li>
+        </ol>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>6. 비밀번호 변경</h3>
+          <p class="path">/ko/change-password</p>
+        </div>
+        <span class="badge all">학생 · 교수 · 관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>헤더의 이름 메뉴 → <strong>비밀번호 변경</strong>으로 들어옵니다. 로그인이 되어 있어야 합니다.</p>
+        <table>
+          <tr><th>새 비밀번호</th><td>앞으로 사용할 비밀번호.</td></tr>
+          <tr><th>비밀번호 확인</th><td>새 비밀번호와 같아야 합니다.</td></tr>
+        </table>
+        <ol class="steps">
+          <li>새 비밀번호를 두 칸에 동일하게 입력합니다.</li>
+          <li><strong>비밀번호 변경</strong>을 누릅니다.</li>
+          <li>완료되면 <strong>홈으로 돌아가기</strong>로 홈에 갑니다.</li>
+        </ol>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>7. 공지사항 목록</h3>
+          <p class="path">/ko/notices</p>
+        </div>
+        <span class="badge all">학생 · 교수 · 관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>학교 공지를 최신순으로 봅니다. 제목을 누르면 상세 화면으로 이동합니다.</p>
+        <p>관리자에게만 목록 아래에 <strong>공지 작성</strong> 폼이 보입니다. 제목과 내용을 입력하고 <strong>공지 등록</strong>을 누르면 새 공지가 올라갑니다.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>8. 공지 상세</h3>
+          <p class="path">/ko/notices/[id]</p>
+        </div>
+        <span class="badge all">학생 · 교수 · 관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>공지 제목, 등록일, 본문을 읽습니다. <strong>공지 목록으로</strong>로 돌아갑니다.</p>
+        <p>관리자는 같은 화면에서 제목·내용을 고친 뒤 <strong>변경사항 저장</strong>하거나, 확인 후 <strong>삭제</strong>할 수 있습니다. 삭제는 되돌릴 수 없습니다.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="chapter">
+    <p class="chapter__kicker">CHAPTER 3 · 학생</p>
+    <h2>학생 전용 화면</h2>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>9. 수강신청</h3>
+          <p class="path">/ko/enroll</p>
+        </div>
+        <span class="badge student">학생</span>
+      </div>
+      <div class="screen__body">
+        <p>개설된 강의를 표로 보고 신청합니다. 기간 제한 없이 열려 있는 강의에 언제든 신청할 수 있습니다.</p>
+        <table>
+          <tr><th>강의명 / 담당 교수</th><td>과목 이름과 교수 이름.</td></tr>
+          <tr><th>학기</th><td>예: 2026년 1학기.</td></tr>
+          <tr><th>학점</th><td>해당 강의 학점.</td></tr>
+          <tr><th>수강신청</th><td>아직 신청하지 않은 강의에 표시됩니다.</td></tr>
+          <tr><th>신청 완료</th><td>이미 신청한 강의. 다시 누를 수 없습니다.</td></tr>
+        </table>
+        <ol class="steps">
+          <li>원하는 강의 행의 <strong>수강신청</strong>을 누릅니다.</li>
+          <li>완료 메시지가 나오면 해당 행은 <strong>신청 완료</strong>로 바뀝니다.</li>
+          <li>성적·이수 결과는 <strong>내 성적</strong>에서 확인합니다.</li>
+        </ol>
+        <p class="warn">같은 강의를 두 번 신청할 수 없습니다. 취소는 이 화면에서 하지 않으며, 필요하면 관리자에게 요청하세요.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>10. 내 성적</h3>
+          <p class="path">/ko/grades</p>
+        </div>
+        <span class="badge student">학생</span>
+      </div>
+      <div class="screen__body">
+        <p>내가 신청한 강의의 수강 상태, 점수, 이수 여부를 확인하는 읽기 전용 화면입니다. 점수는 교수가 입력합니다.</p>
+        <table>
+          <tr><th>강의명 / 학기 / 학점</th><td>수강한 과목 정보.</td></tr>
+          <tr><th>상태</th><td>신청, 수강 중, 수료, 미수료, 취소.</td></tr>
+          <tr><th>점수</th><td>0–100. 아직 없으면 “-”.</td></tr>
+          <tr><th>이수 여부</th><td>이수 또는 미이수.</td></tr>
+        </table>
+        <p class="note">수강·성적 내역이 없으면 안내 문구만 보입니다. 먼저 수강신청을 완료하세요.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>11. 내 학적</h3>
+          <p class="path">/ko/enrollment</p>
+        </div>
+        <span class="badge student">학생</span>
+      </div>
+      <div class="screen__body">
+        <p>본인 학적 현황, 상태 변경 이력, 수강 강의를 한곳에서 봅니다. 수정은 할 수 없고 관리자가 기록을 남깁니다.</p>
+        <table>
+          <tr><th>현재 학적</th><td>학번, 재학학기, 학적 상태(입학·재학·휴학·제적·졸업), 학년, 연도/학기, 입학·졸업 정보.</td></tr>
+          <tr><th>학적 타임라인</th><td>상태 변경 시각, 이전→이후 상태, 변경 사유, 휴학 기간, 지도교수.</td></tr>
+          <tr><th>수강 강의</th><td>신청한 과목의 학기, 학점, 수강 상태, 점수, 이수.</td></tr>
+        </table>
+        <p class="note">학적 상태가 비어 있으면 아직 관리자가 학적 기록을 만들지 않은 것입니다.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="chapter">
+    <p class="chapter__kicker">CHAPTER 4 · 교수</p>
+    <h2>교수 전용 화면</h2>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>12. 담당 강의</h3>
+          <p class="path">/ko/teaching</p>
+        </div>
+        <span class="badge professor">교수</span>
+      </div>
+      <div class="screen__body">
+        <p>나에게 배정된 강의만 최신 학기순으로 보여 줍니다. 강의 생성은 관리자 화면에서 합니다.</p>
+        <table>
+          <tr><th>강의명</th><td>누르면 해당 강의의 수강생·성적 화면으로 이동합니다.</td></tr>
+          <tr><th>학기 / 학점</th><td>개설 연도·학기와 학점.</td></tr>
+        </table>
+        <p class="note">목록이 비어 있으면 아직 담당 강의가 없는 것입니다. 관리자에게 강의 배정을 요청하세요.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>13. 강의 수강생 · 성적 입력</h3>
+          <p class="path">/ko/teaching/[courseId]</p>
+        </div>
+        <span class="badge professor">교수</span>
+      </div>
+      <div class="screen__body">
+        <p>선택한 강의의 수강생 명단에서 점수와 수강 상태를 저장합니다. 본인 담당 강의가 아니면 열 수 없습니다.</p>
+        <table>
+          <tr><th>학생</th><td>이름. 누르면 해당 학생의 학적 조회 화면으로 갑니다.</td></tr>
+          <tr><th>이메일</th><td>학생 연락용 이메일.</td></tr>
+          <tr><th>점수</th><td>0부터 100 사이 정수.</td></tr>
+          <tr><th>수강 상태</th><td>신청 / 수강 중 / 수료 / 미수료 / 취소.</td></tr>
+          <tr><th>이수</th><td>체크하면 이수로 기록됩니다.</td></tr>
+          <tr><th>저장</th><td>해당 학생 행만 저장합니다.</td></tr>
+        </table>
+        <ol class="steps">
+          <li>담당 강의 목록에서 과목 이름을 누릅니다.</li>
+          <li>학생별로 점수, 상태, 이수 여부를 입력합니다.</li>
+          <li>행의 <strong>저장</strong>을 누릅니다. 성공 메시지가 보이면 반영된 것입니다.</li>
+        </ol>
+        <p class="warn">점수는 0–100 정수만 허용됩니다. 범위를 벗어나면 저장되지 않습니다.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>14. 학생 학적 조회</h3>
+          <p class="path">/ko/teaching/students/[studentId]</p>
+        </div>
+        <span class="badge professor">교수</span>
+      </div>
+      <div class="screen__body">
+        <p>내 강의에 수강 신청한 학생의 학번, 재학학기, 학적 기록을 조회합니다. 수정 버튼은 없습니다.</p>
+        <table>
+          <tr><th>학번 / 재학학기</th><td>학생 프로필 정보.</td></tr>
+          <tr><th>학기 / 학년</th><td>학적 기록의 연도·학기와 학년.</td></tr>
+          <tr><th>학적 상태</th><td>입학, 재학, 휴학, 제적, 졸업.</td></tr>
+          <tr><th>세부 사항</th><td>입학·졸업 정보, 변경 사유, 휴학 기간.</td></tr>
+        </table>
+        <p class="warn">내 강의 수강생이 아닌 학생 ID로 접근하면 볼 수 없습니다.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="chapter">
+    <p class="chapter__kicker">CHAPTER 5 · 관리자</p>
+    <h2>관리자 화면</h2>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>15. 사용자 관리</h3>
+          <p class="path">/ko/admin/users</p>
+        </div>
+        <span class="badge admin">관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>학생·교수·관리자 계정을 찾고, 아래에서 새 사용자를 만듭니다. 이름을 누르면 상세 화면으로 갑니다.</p>
+        <table>
+          <tr><th>이름 검색</th><td>이름에 포함된 글자로 찾습니다.</td></tr>
+          <tr><th>역할</th><td>학생 / 교수 / 관리자 / 전체.</td></tr>
+          <tr><th>입학연도</th><td>학생 학적 기준 입학연도.</td></tr>
+          <tr><th>학적 상태</th><td>입학·재학·휴학·제적·졸업. 학생만 해당합니다.</td></tr>
+          <tr><th>정렬</th><td>수정일 최근순 또는 오래된순.</td></tr>
+          <tr><th>검색 / 조건 초기화</th><td>필터를 적용하거나 모두 지웁니다.</td></tr>
+        </table>
+        <p><strong>사용자 생성</strong> (목록 하단)</p>
+        <table>
+          <tr><th>이름 · 이메일 · 임시 비밀번호</th><td>모두 필수. 비밀번호는 6자 이상.</td></tr>
+          <tr><th>역할</th><td>학생, 교수, 관리자 중 선택.</td></tr>
+        </table>
+        <p class="warn">서버에 관리자용 키가 없으면 사용자 생성 칸이 비활성화됩니다. 이 경우 목록 조회·수정은 가능하지만 신규 계정은 만들 수 없습니다.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>16. 사용자 상세</h3>
+          <p class="path">/ko/admin/users/[id]</p>
+        </div>
+        <span class="badge admin">관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>한 사용자의 프로필, 계정 상태, (학생인 경우) 대리 수강신청을 처리합니다.</p>
+        <table>
+          <tr><th>프로필 사진</th><td>학생·교수만. JPG/PNG, 최대 2MB.</td></tr>
+          <tr><th>관련 관리자 화면</th><td>학생 → 해당 학생 학적 목록. 교수 → 해당 교수 강의 목록.</td></tr>
+          <tr><th>프로필 수정</th><td>이름, 생년월일, 직업, 전화, 주소, 성별, 교회, 직분, 국적, 언어, 역할, (학생) 학번·재학학기.</td></tr>
+          <tr><th>사용함 / 사용안함</th><td>사용안함이면 로그인할 수 없습니다. 확인 창이 뜹니다.</td></tr>
+          <tr><th>사용자 삭제</th><td>계정과 관련 강의·수강·학적·공지가 함께 삭제되며 되돌릴 수 없습니다.</td></tr>
+          <tr><th>학생 대리 수강신청</th><td>학생에게만 표시. 강의 선택 후 대신 신청합니다.</td></tr>
+        </table>
+        <p class="warn">자기 자신의 계정은 이 화면에서 사용안함으로 두거나 삭제할 수 없습니다. 실수로 잠기는 일을 막기 위한 제한입니다.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>17. 강의 관리</h3>
+          <p class="path">/ko/admin/courses</p>
+        </div>
+        <span class="badge admin">관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>개설 강의를 검색하고 생성합니다. 강의명을 누르면 수정 화면으로 갑니다.</p>
+        <table>
+          <tr><th>검색</th><td>강의명으로 찾습니다.</td></tr>
+          <tr><th>목록 열</th><td>강의명, 담당 교수, 연도, 학기, 학점, 수정/삭제.</td></tr>
+          <tr><th>삭제</th><td>확인 후 강의를 지웁니다.</td></tr>
+          <tr><th>교수 필터</th><td>사용자 상세에서 들어오면 해당 교수 강의만 보입니다. <strong>필터 해제</strong>로 전체 목록으로 돌아갑니다.</td></tr>
+        </table>
+        <p><strong>강의 생성</strong></p>
+        <table>
+          <tr><th>강의명</th><td>필수.</td></tr>
+          <tr><th>담당 교수</th><td>교수 역할 사용자만 선택할 수 있습니다.</td></tr>
+          <tr><th>연도 / 학기 / 학점</th><td>학기는 1학기 또는 2학기. 학점은 1 이상 정수.</td></tr>
+        </table>
+        <p class="note">교수 계정이 하나도 없으면 강의를 만들 수 없습니다. 먼저 사용자 관리에서 교수를 생성하세요.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>18. 강의 수정</h3>
+          <p class="path">/ko/admin/courses/[id]</p>
+        </div>
+        <span class="badge admin">관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>선택한 강의의 이름, 담당 교수, 연도, 학기, 학점을 고칩니다. 항목을 채운 뒤 <strong>변경사항 저장</strong>을 누릅니다. <strong>강의 목록으로</strong>로 돌아갑니다.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>19. 학적 관리</h3>
+          <p class="path">/ko/admin/enrollments</p>
+        </div>
+        <span class="badge admin">관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>학생별 학적 기록(입학·재학·휴학 등)을 만들고 목록에서 관리합니다. 수강신청과는 다른, <strong>학적 상태</strong> 기록입니다.</p>
+        <table>
+          <tr><th>목록</th><td>학생 이름, 학년, 연도/학기, 학적 상태, 삭제.</td></tr>
+          <tr><th>학생 이름</th><td>누르면 해당 기록의 상세·타임라인으로 갑니다.</td></tr>
+          <tr><th>학생 필터</th><td>사용자 상세에서 들어오면 그 학생 기록만 보입니다.</td></tr>
+        </table>
+        <p><strong>학적 기록 생성</strong></p>
+        <table>
+          <tr><th>학생</th><td>필수. 생성 후에는 학생을 바꿀 수 없습니다.</td></tr>
+          <tr><th>학년 / 연도 / 학기</th><td>연도·학기는 필수. 학기는 1 또는 2.</td></tr>
+          <tr><th>학적 상태</th><td>입학, 재학, 휴학, 제적, 졸업.</td></tr>
+          <tr><th>입학 정보 / 졸업 정보</th><td>필요 시 메모.</td></tr>
+          <tr><th>변경 사유</th><td>상태 변경 이유를 적습니다.</td></tr>
+          <tr><th>휴학 시작일 · 종료일</th><td>휴학일 때 기간을 넣습니다.</td></tr>
+          <tr><th>지도교수</th><td>지정하지 않아도 됩니다.</td></tr>
+        </table>
+        <p class="note">학생 계정이 없으면 학적 기록을 만들 수 없습니다.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>20. 학적 상세</h3>
+          <p class="path">/ko/admin/enrollments/[id]</p>
+        </div>
+        <span class="badge admin">관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>한 학적 기록을 수정하고, 그 학생의 전체 변경 이력과 수강 강의를 함께 봅니다.</p>
+        <table>
+          <tr><th>학적 기록 수정</th><td>생성 폼과 같은 항목. 학생은 변경할 수 없습니다. <strong>변경사항 저장</strong>.</td></tr>
+          <tr><th>학적 타임라인</th><td>상태 변경 시각, 이전→이후, 사유, 휴학 기간, 지도교수.</td></tr>
+          <tr><th>수강 강의</th><td>해당 학생이 신청한 과목의 상태·점수·이수.</td></tr>
+        </table>
+        <p class="note">학적 상태를 바꾸면 변경 이력이 타임라인에 쌓입니다. 학생의 <strong>내 학적</strong> 화면에도 같은 이력이 보입니다.</p>
+      </div>
+    </article>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>21. 최근 변경</h3>
+          <p class="path">/ko/admin/change-logs</p>
+        </div>
+        <span class="badge admin">관리자</span>
+      </div>
+      <div class="screen__body">
+        <p>사용자·강의·학적 등 주요 데이터의 변경을 감사 로그로 확인합니다. 수정할 수 없는 조회 화면입니다.</p>
+        <table>
+          <tr><th>일시</th><td>변경이 기록된 시각.</td></tr>
+          <tr><th>사용자</th><td>작업을 수행한 사람. 없으면 “알 수 없는 사용자”.</td></tr>
+          <tr><th>작업</th><td>시스템 동작 코드(생성, 수정, 삭제 등).</td></tr>
+          <tr><th>대상</th><td>바뀐 데이터 종류.</td></tr>
+          <tr><th>내용</th><td>사람이 읽기 쉬운 요약.</td></tr>
+        </table>
+        <p>하단의 이전·다음으로 페이지를 넘깁니다. 홈의 최근 변경은 여기서 전체 목록으로 이어집니다.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="chapter">
+    <p class="chapter__kicker">APPENDIX</p>
+    <h2>상태 값 · 자주 묻는 점</h2>
+    <div class="two-col">
+      <div>
+        <h3>학적 상태</h3>
+        <table>
+          <tr><th>입학</th><td>ADMISSION</td></tr>
+          <tr><th>재학</th><td>ENROLLED</td></tr>
+          <tr><th>휴학</th><td>LEAVE</td></tr>
+          <tr><th>제적</th><td>EXPELLED</td></tr>
+          <tr><th>졸업</th><td>GRADUATED</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3>수강 상태</h3>
+        <table>
+          <tr><th>신청</th><td>APPLIED</td></tr>
+          <tr><th>수강 중</th><td>IN_PROGRESS</td></tr>
+          <tr><th>수료</th><td>COMPLETED</td></tr>
+          <tr><th>미수료</th><td>FAILED</td></tr>
+          <tr><th>취소</th><td>CANCELLED</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <article class="screen">
+      <div class="screen__head">
+        <div>
+          <h3>문제 해결</h3>
+          <p>자주 만나는 안내 메시지</p>
+        </div>
+      </div>
+      <div class="screen__body">
+        <table>
+          <tr><th>이메일 또는 비밀번호가 올바르지 않습니다</th><td>입력값을 확인하거나, 계정이 사용안함인지 관리자에게 문의합니다.</td></tr>
+          <tr><th>사용이 중지된 계정입니다</th><td>관리자가 사용함으로 다시 켜 주어야 로그인됩니다.</td></tr>
+          <tr><th>저장소가 설정되지 않았습니다</th><td>시스템 환경(데이터베이스)이 연결되지 않은 상태입니다. 운영 담당자에게 알리세요.</td></tr>
+          <tr><th>메뉴가 다르게 보인다</th><td>역할(학생/교수/관리자)에 따라 메뉴가 달라집니다. 권한 변경은 관리자만 할 수 있습니다.</td></tr>
+          <tr><th>공지를 등록할 수 없다</th><td>공지 작성과 수정·삭제는 관리자만 가능합니다.</td></tr>
+        </table>
+      </div>
+    </article>
+
+    <footer class="colophon">
+      <p><strong>SETESS 남미연합성결신학교</strong> · 학적부 포털 사용자 가이드</p>
+      <p>이 문서는 포털 화면 구성(2026년 8월 기준)을 바탕으로 작성되었습니다. 기능이 바뀌면 해당 화면 설명을 함께 갱신하세요. PDF는 <span class="path">docs/user-guide</span>의 HTML을 인쇄해 만들 수 있습니다.</p>
+    </footer>
+  </section>
+</body>
+</html>

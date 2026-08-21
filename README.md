@@ -137,4 +137,6 @@ where email = 'your-admin@example.com';
 ## 관련 문서
 
 - [DEPLOY.md](./DEPLOY.md) — 프로덕션 스모크 체크리스트
+- [docs/nami-user-guide.pdf](./docs/nami-user-guide.pdf) — 화면별 사용자 가이드
+- PDF 재생성: `docs/user-guide/build-pdf.sh`
 - 설계: `docs/superpowers/specs/2026-07-30-nami-design.md`
