@@ -2,12 +2,36 @@
 
 import { getLocale, getTranslations } from 'next-intl/server'
 import { redirect } from '@/i18n/navigation'
+import {
+  getPasswordViolation,
+  passwordViolationKey,
+  weakPasswordMessageKey,
+  type PasswordMessageKey,
+} from '@/lib/auth/password'
 import { isSupabaseConfigured } from '@/lib/supabase/env'
 import { createClient } from '@/lib/supabase/server'
 
 export type AuthActionState = {
   error?: string
   success?: string
+}
+
+function passwordRuleError(
+  password: string,
+  t: Awaited<ReturnType<typeof getTranslations>>,
+): string | null {
+  const violation = getPasswordViolation(password)
+  if (!violation) return null
+  return t(`errors.${passwordViolationKey(violation)}`)
+}
+
+function weakPasswordError(
+  error: { code?: string; name?: string; message?: string; reasons?: string[] },
+  t: Awaited<ReturnType<typeof getTranslations>>,
+): string | null {
+  const key: PasswordMessageKey | null = weakPasswordMessageKey(error)
+  if (!key) return null
+  return t(`errors.${key}`)
 }
 
 export async function signIn(
@@ -58,10 +82,6 @@ export async function signUp(
 ): Promise<AuthActionState> {
   const t = await getTranslations('auth')
 
-  if (!isSupabaseConfigured()) {
-    return { error: t('errors.notConfigured') }
-  }
-
   const name = String(formData.get('name') ?? '').trim()
   const email = String(formData.get('email') ?? '').trim()
   const password = String(formData.get('password') ?? '')
@@ -75,6 +95,13 @@ export async function signUp(
     return { error: t('errors.passwordMismatch') }
   }
 
+  const ruleError = passwordRuleError(password, t)
+  if (ruleError) return { error: ruleError }
+
+  if (!isSupabaseConfigured()) {
+    return { error: t('errors.notConfigured') }
+  }
+
   const supabase = await createClient()
   const { data, error } = await supabase.auth.signUp({
     email,
@@ -83,7 +110,7 @@ export async function signUp(
   })
 
   if (error) {
-    return { error: error.message || t('errors.generic') }
+    return { error: weakPasswordError(error, t) || error.message || t('errors.generic') }
   }
 
   const locale = await getLocale()
@@ -102,10 +129,6 @@ export async function updatePassword(
 ): Promise<AuthActionState> {
   const t = await getTranslations('auth')
 
-  if (!isSupabaseConfigured()) {
-    return { error: t('errors.notConfigured') }
-  }
-
   const password = String(formData.get('password') ?? '')
   const confirmPassword = String(formData.get('confirmPassword') ?? '')
 
@@ -115,6 +138,13 @@ export async function updatePassword(
 
   if (password !== confirmPassword) {
     return { error: t('errors.passwordMismatch') }
+  }
+
+  const ruleError = passwordRuleError(password, t)
+  if (ruleError) return { error: ruleError }
+
+  if (!isSupabaseConfigured()) {
+    return { error: t('errors.notConfigured') }
   }
 
   const supabase = await createClient()
@@ -131,7 +161,7 @@ export async function updatePassword(
   const { error } = await supabase.auth.updateUser({ password })
 
   if (error) {
-    return { error: error.message || t('errors.generic') }
+    return { error: weakPasswordError(error, t) || error.message || t('errors.generic') }
   }
 
   return { success: t('success.passwordUpdated') }

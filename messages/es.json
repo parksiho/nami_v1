@@ -29,6 +29,7 @@
     "confirmPassword": "Confirmar contraseña",
     "newPassword": "Nueva contraseña",
     "changePassword": "Cambiar contraseña",
+    "passwordRequirements": "Al menos 8 caracteres, con letras y números.",
     "noAccount": "¿No tiene una cuenta?",
     "hasAccount": "¿Ya tiene una cuenta?",
     "backToHome": "Volver al inicio",
@@ -38,6 +39,9 @@
       "invalidCredentials": "Correo o contraseña incorrectos.",
       "accountDisabled": "Esta cuenta está desactivada. Contacte a un administrador.",
       "passwordMismatch": "Las contraseñas no coinciden.",
+      "passwordTooShort": "La contraseña debe tener al menos 8 caracteres.",
+      "passwordNeedsLetterAndDigit": "La contraseña debe incluir letras y números.",
+      "passwordRequirements": "La contraseña debe tener al menos 8 caracteres e incluir letras y números.",
       "generic": "Algo salió mal. Inténtelo de nuevo."
     },
     "success": {
