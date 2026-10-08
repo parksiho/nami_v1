@@ -29,6 +29,7 @@
     "confirmPassword": "비밀번호 확인",
     "newPassword": "새 비밀번호",
     "changePassword": "비밀번호 변경",
+    "passwordRequirements": "8자 이상이며, 영문과 숫자를 모두 포함해야 합니다.",
     "noAccount": "계정이 없으신가요?",
     "hasAccount": "이미 계정이 있으신가요?",
     "backToHome": "홈으로 돌아가기",
@@ -38,6 +39,9 @@
       "invalidCredentials": "이메일 또는 비밀번호가 올바르지 않습니다.",
       "accountDisabled": "사용이 중지된 계정입니다. 관리자에게 문의하세요.",
       "passwordMismatch": "비밀번호가 일치하지 않습니다.",
+      "passwordTooShort": "비밀번호는 8자 이상이어야 합니다.",
+      "passwordNeedsLetterAndDigit": "비밀번호에는 영문과 숫자가 모두 포함되어야 합니다.",
+      "passwordRequirements": "비밀번호는 8자 이상이어야 하며, 영문과 숫자를 모두 포함해야 합니다.",
       "generic": "문제가 발생했습니다. 다시 시도해 주세요."
     },
     "success": {

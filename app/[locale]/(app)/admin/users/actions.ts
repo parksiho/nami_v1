@@ -4,6 +4,11 @@ import { createClient as createAdminClient } from '@supabase/supabase-js'
 import { revalidatePath } from 'next/cache'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { redirect } from '@/i18n/navigation'
+import {
+  getPasswordViolation,
+  passwordViolationKey,
+  weakPasswordMessageKey,
+} from '@/lib/auth/password'
 import { requireRole } from '@/lib/auth/require-role'
 import { purgeProfileDependencies } from '@/lib/admin/delete-user'
 import { getServiceRoleEnv, isUserRole } from '@/lib/admin/users'
@@ -97,6 +102,7 @@ export async function createAdminUser(
   formData: FormData,
 ): Promise<AdminUserActionState> {
   const t = await getTranslations('adminUsers')
+  const tAuth = await getTranslations('auth')
   const { user: actor } = await requireRole([UserRole.ADMIN])
   const admin = createServiceClient()
 
@@ -110,6 +116,9 @@ export async function createAdminUser(
   if (!email || !password || !name) return { error: t('errors.required') }
   if (!isUserRole(role)) return { error: t('errors.invalidRole') }
 
+  const violation = getPasswordViolation(password)
+  if (violation) return { error: tAuth(`errors.${passwordViolationKey(violation)}`) }
+
   const { data, error } = await admin.auth.admin.createUser({
     email,
     password,
@@ -118,6 +127,8 @@ export async function createAdminUser(
   })
 
   if (error || !data.user) {
+    const weakKey = error ? weakPasswordMessageKey(error) : null
+    if (weakKey) return { error: tAuth(`errors.${weakKey}`) }
     return { error: error?.message || t('errors.createFailed') }
   }
 

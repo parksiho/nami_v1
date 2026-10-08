@@ -56,6 +56,9 @@ supabase link --project-ref <YOUR_PROJECT_REF>
 supabase db push
 ```
 
+운영 프로젝트 `qorbssjmmwxnrgimfohb` 는 마이그레이션 이력이 저장소와 어긋나 있습니다.
+`db push` 전에 [supabase/README.md](supabase/README.md) 의 repair 순서를 따르세요.
+
 ### B. SQL Editor
 
 Dashboard → **SQL Editor** → `supabase/migrations/20260730000000_init.sql` 전체 붙여넣기 → Run.

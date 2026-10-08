@@ -1,6 +1,6 @@
 'use client'
 
-import { useActionState } from 'react'
+import { startTransition, useActionState, useState, type FormEvent } from 'react'
 import { useTranslations } from 'next-intl'
 import {
   createAdminUser,
@@ -8,6 +8,7 @@ import {
   type AdminUserActionState,
 } from '@/app/[locale]/(app)/admin/users/actions'
 import { NationalitySelect } from '@/components/forms/NationalitySelect'
+import { getPasswordViolation, passwordViolationKey } from '@/lib/auth/password'
 import { UserRole } from '@/lib/domain/enums'
 import type { Profile } from '@/lib/domain/profile'
 
@@ -39,10 +40,26 @@ function RoleSelect({ defaultValue }: { defaultValue: string }) {
 
 export function CreateAdminUserForm() {
   const t = useTranslations('adminUsers')
+  const tAuth = useTranslations('auth')
   const [state, formAction, pending] = useActionState(createAdminUser, initialState)
+  const [clientError, setClientError] = useState<string | null>(null)
+
+  function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const violation = getPasswordViolation(String(formData.get('password') ?? ''))
+    if (violation) {
+      setClientError(tAuth(`errors.${passwordViolationKey(violation)}`))
+      return
+    }
+    setClientError(null)
+    startTransition(() => {
+      formAction(formData)
+    })
+  }
 
   return (
-    <form action={formAction} className="admin-form">
+    <form className="admin-form" method="post" onSubmit={onSubmit}>
       <div className="admin-form__grid">
         <label>
           <span>{t('fields.name')}</span>
@@ -54,14 +71,23 @@ export function CreateAdminUserForm() {
         </label>
         <label>
           <span>{t('fields.password')}</span>
-          <input name="password" type="password" minLength={6} autoComplete="new-password" required />
+          <input
+            name="password"
+            type="password"
+            autoComplete="new-password"
+            aria-describedby="admin-password-rules"
+            required
+          />
+          <p id="admin-password-rules" className="auth-hint">
+            {tAuth('passwordRequirements')}
+          </p>
         </label>
         <label>
           <span>{t('fields.role')}</span>
           <RoleSelect defaultValue={UserRole.STUDENT} />
         </label>
       </div>
-      <Message state={state} />
+      <Message state={clientError ? { error: clientError } : state} />
       <button type="submit" className="admin-button" disabled={pending}>
         {pending ? t('creating') : t('create')}
       </button>

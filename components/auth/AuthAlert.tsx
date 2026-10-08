@@ -4,5 +4,12 @@ type Props = {
 }
 
 export function AuthAlert({ message, variant }: Props) {
-  return <p className={variant === 'error' ? 'auth-error' : 'auth-success'}>{message}</p>
+  return (
+    <p
+      className={variant === 'error' ? 'auth-error' : 'auth-success'}
+      role={variant === 'error' ? 'alert' : 'status'}
+    >
+      {message}
+    </p>
+  )
 }

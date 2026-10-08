@@ -29,6 +29,7 @@
     "confirmPassword": "Confirm password",
     "newPassword": "New password",
     "changePassword": "Change password",
+    "passwordRequirements": "At least 8 characters, including letters and digits.",
     "noAccount": "Don't have an account?",
     "hasAccount": "Already have an account?",
     "backToHome": "Back to home",
@@ -38,6 +39,9 @@
       "invalidCredentials": "Invalid email or password.",
       "accountDisabled": "This account is disabled. Please contact an administrator.",
       "passwordMismatch": "Passwords do not match.",
+      "passwordTooShort": "Password must be at least 8 characters.",
+      "passwordNeedsLetterAndDigit": "Password must include both letters and digits.",
+      "passwordRequirements": "Password must be at least 8 characters and include both letters and digits.",
       "generic": "Something went wrong. Please try again."
     },
     "success": {
