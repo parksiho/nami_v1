@@ -4,7 +4,7 @@ import { redirect } from '@/i18n/navigation'
 import { demoProfileByRole } from '@/lib/demo/data'
 import { getDemoRole } from '@/lib/demo/mode'
 import type { Profile } from '@/lib/domain/profile'
-import { isSupabaseConfigured, isUiDemo } from '@/lib/supabase/env'
+import { isSupabaseConfigured } from '@/lib/supabase/env'
 import { createClient } from '@/lib/supabase/server'
 
 export type AuthContext = {
@@ -30,8 +30,9 @@ async function redirectToLogin(): Promise<never> {
 export async function requireUser(
   options: RequireUserOptions = {},
 ): Promise<AuthContext> {
-  if (isUiDemo()) {
-    const profile = demoProfileByRole(await getDemoRole())
+  const demoRole = await getDemoRole()
+  if (demoRole) {
+    const profile = demoProfileByRole(demoRole)
     return { user: { id: profile.id } as User, profile }
   }
 

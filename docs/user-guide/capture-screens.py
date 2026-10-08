@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Capture each Nami portal screen and build a screenshot PDF."""
+"""Capture each Nami portal screen and build a screenshot PDF.
+
+Requires a local dev server: NAMI_UI_DEMO=1 npm run dev
+Demo mode stays off in production (VERCEL_ENV=production, or NODE_ENV=production
+outside Vercel preview) even if the env var and nami_demo_role cookie are set.
+"""
 from __future__ import annotations
 
 import json

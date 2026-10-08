@@ -1,11 +1,11 @@
+import { isUiDemo } from '@/lib/demo/guard'
+
 export type SupabaseEnv = {
   url: string
   anonKey: string
 }
 
-export function isUiDemo(): boolean {
-  return process.env.NAMI_UI_DEMO === '1'
-}
+export { isUiDemo }
 
 export function isSupabaseConfigured(): boolean {
   return isUiDemo() || getSupabaseEnv() !== null
