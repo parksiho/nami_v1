@@ -137,4 +137,10 @@ where email = 'your-admin@example.com';
 ## 관련 문서
 
 - [DEPLOY.md](./DEPLOY.md) — 프로덕션 스모크 체크리스트
+- [docs/nami-user-guide.pdf](./docs/nami-user-guide.pdf) — 화면별 사용자 가이드
+- [docs/nami-screen-captures.pdf](./docs/nami-screen-captures.pdf) — 각 화면 캡처
+- PDF 재생성: `docs/user-guide/build-pdf.sh`
+- 화면 캡처 재생성: `NAMI_UI_DEMO=1 npm run dev` 후 `python3 docs/user-guide/capture-screens.py`
+  - 데모 모드(`lib/demo/guard.ts`의 `isUiDemo`)는 로컬 `next dev`(`NODE_ENV=development`)와 Vercel Preview(`VERCEL_ENV=preview`)에서만 켜집니다.
+  - Vercel Production(`VERCEL_ENV=production`)과, Preview가 아닌 `NODE_ENV=production`(`next start` 포함)에서는 `NAMI_UI_DEMO=1`과 `nami_demo_role` 쿠키가 있어도 인증 우회·가짜 Supabase·가짜 service role이 동작하지 않습니다. 이때 서버 로그에 오류가 한 번 남고, 실제 인증 경로를 그대로 탑니다.
 - 설계: `docs/superpowers/specs/2026-07-30-nami-design.md`

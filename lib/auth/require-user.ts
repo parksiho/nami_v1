@@ -1,6 +1,8 @@
 import type { User } from '@supabase/supabase-js'
 import { getLocale } from 'next-intl/server'
 import { redirect } from '@/i18n/navigation'
+import { demoProfileByRole } from '@/lib/demo/data'
+import { getDemoRole } from '@/lib/demo/mode'
 import type { Profile } from '@/lib/domain/profile'
 import { isSupabaseConfigured } from '@/lib/supabase/env'
 import { createClient } from '@/lib/supabase/server'
@@ -28,6 +30,12 @@ async function redirectToLogin(): Promise<never> {
 export async function requireUser(
   options: RequireUserOptions = {},
 ): Promise<AuthContext> {
+  const demoRole = await getDemoRole()
+  if (demoRole) {
+    const profile = demoProfileByRole(demoRole)
+    return { user: { id: profile.id } as User, profile }
+  }
+
   if (!isSupabaseConfigured()) {
     throw new Error(
       'requireUser called without Supabase env. Guard callers with isSupabaseConfigured().',

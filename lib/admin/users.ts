@@ -2,6 +2,7 @@ import {
   isAdminAcademicFilter,
   type AdminAcademicFilter,
 } from '@/lib/admin/user-academic'
+import { isUiDemo } from '@/lib/demo/guard'
 import { UserRole, type UserRole as UserRoleValue } from '@/lib/domain/enums'
 
 export const ADMIN_USER_PAGE_SIZE = 50
@@ -98,6 +99,10 @@ export function isUserRole(value: string): value is UserRoleValue {
 type ServiceRoleSource = Record<string, string | undefined>
 
 export function getServiceRoleEnv(source: ServiceRoleSource = process.env) {
+  if (isUiDemo(source)) {
+    return { url: 'https://demo.local', serviceRoleKey: 'demo' }
+  }
+
   const url = source.NEXT_PUBLIC_SUPABASE_URL?.trim()
   const serviceRoleKey = source.SUPABASE_SERVICE_ROLE_KEY?.trim()
 

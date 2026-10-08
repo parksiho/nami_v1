@@ -1,10 +1,14 @@
+import { isUiDemo } from '@/lib/demo/guard'
+
 export type SupabaseEnv = {
   url: string
   anonKey: string
 }
 
+export { isUiDemo }
+
 export function isSupabaseConfigured(): boolean {
-  return getSupabaseEnv() !== null
+  return isUiDemo() || getSupabaseEnv() !== null
 }
 
 export function getSupabaseEnv(): SupabaseEnv | null {
