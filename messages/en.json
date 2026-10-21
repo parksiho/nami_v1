@@ -86,6 +86,8 @@
     "description": "Review and update your personal and church information.",
     "photo": "Profile photo",
     "avatarHelp": "JPG or PNG, up to 2 MB.",
+    "choosePhoto": "Choose photo",
+    "noFileSelected": "No file selected",
     "upload": "Upload photo",
     "uploading": "Uploading…",
     "save": "Save profile",
@@ -185,7 +187,9 @@
       "title": "Profile photo",
       "help": "JPG or PNG, up to 2 MB. Applies to student and professor profiles.",
       "upload": "Upload photo",
-      "uploading": "Uploading…"
+      "uploading": "Uploading…",
+      "choosePhoto": "Choose photo",
+      "noFileSelected": "No file selected"
     },
     "proxyEnroll": {
       "title": "Enroll student",

@@ -25,6 +25,8 @@ type Props = {
   help?: string
   uploadLabel?: string
   uploadingLabel?: string
+  chooseLabel?: string
+  emptyLabel?: string
 }
 
 export function AvatarUpload({
@@ -35,10 +37,13 @@ export function AvatarUpload({
   help,
   uploadLabel,
   uploadingLabel,
+  chooseLabel,
+  emptyLabel,
 }: Props) {
   const t = useTranslations('profile')
   const [state, formAction, pending] = useActionState(action, initialState)
   const [validationError, setValidationError] = useState<string>()
+  const [fileName, setFileName] = useState<string | null>(null)
 
   return (
     <section className="avatar-upload" aria-labelledby="avatar-upload-title">
@@ -53,24 +58,35 @@ export function AvatarUpload({
       <form action={formAction} className="avatar-upload__form">
         <h2 id="avatar-upload-title">{title ?? t('photo')}</h2>
         <p>{help ?? t('avatarHelp')}</p>
-        <input
-          id="avatar"
-          name="avatar"
-          type="file"
-          accept="image/jpeg,image/png"
-          required
-          onChange={(event) => {
-            const file = event.target.files?.[0]
-            if (!file) return setValidationError(undefined)
-            if (!['image/jpeg', 'image/png'].includes(file.type)) {
-              return setValidationError(t('errors.avatarType'))
-            }
-            if (file.size > 2 * 1024 * 1024) {
-              return setValidationError(t('errors.avatarSize'))
-            }
-            setValidationError(undefined)
-          }}
-        />
+        <div className="avatar-file">
+          <input
+            id="avatar"
+            className="visually-hidden"
+            name="avatar"
+            type="file"
+            accept="image/jpeg,image/png"
+            required
+            aria-describedby="avatar-file-name"
+            onChange={(event) => {
+              const file = event.target.files?.[0]
+              setFileName(file?.name ?? null)
+              if (!file) return setValidationError(undefined)
+              if (!['image/jpeg', 'image/png'].includes(file.type)) {
+                return setValidationError(t('errors.avatarType'))
+              }
+              if (file.size > 2 * 1024 * 1024) {
+                return setValidationError(t('errors.avatarSize'))
+              }
+              setValidationError(undefined)
+            }}
+          />
+          <label className="profile-button profile-button--secondary avatar-file__button" htmlFor="avatar">
+            {chooseLabel ?? t('choosePhoto')}
+          </label>
+          <span id="avatar-file-name" className="avatar-file__name">
+            {fileName || (emptyLabel ?? t('noFileSelected'))}
+          </span>
+        </div>
         {validationError || state.error ? (
           <p className="profile-message profile-message--error" role="alert">
             {validationError ?? state.error}

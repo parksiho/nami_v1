@@ -60,7 +60,7 @@ export default async function EnrollPage({ params }: Props) {
       ) : courses.length === 0 ? (
         <p className="admin-notice">{t('noCourses')}</p>
       ) : (
-        <div className="admin-table-wrap">
+        <div className="admin-table-wrap enroll-table">
           <table className="admin-table">
             <thead>
               <tr>
@@ -78,11 +78,15 @@ export default async function EnrollPage({ params }: Props) {
                   : course.professor
                 return (
                   <tr key={course.id}>
-                    <td>{course.name}</td>
-                    <td>{professor?.name || t('unnamedProfessor')}</td>
-                    <td>{t('term', { year: course.year, semester: course.semester })}</td>
-                    <td>{course.credit}</td>
-                    <td>
+                    <td data-label={t('fields.course')}><span>{course.name}</span></td>
+                    <td data-label={t('fields.professor')}>
+                      <span>{professor?.name || t('unnamedProfessor')}</span>
+                    </td>
+                    <td data-label={t('fields.term')}>
+                      <span>{t('term', { year: course.year, semester: course.semester })}</span>
+                    </td>
+                    <td data-label={t('fields.credit')}><span>{course.credit}</span></td>
+                    <td className="enroll-table__action" data-label={t('fields.action')}>
                       <EnrollmentButton
                         courseId={course.id}
                         enrolled={existingCourseIds.includes(course.id)}
