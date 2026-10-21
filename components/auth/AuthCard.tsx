@@ -10,6 +10,7 @@ type Props = {
 export function AuthCard({ brand, title, children, footer }: Props) {
   return (
     <section className="auth-card">
+      <span className="auth-card__mark" aria-hidden="true">S</span>
       {brand ? <p className="auth-card__brand">{brand}</p> : null}
       <h1 className="auth-card__title">{title}</h1>
       {children}

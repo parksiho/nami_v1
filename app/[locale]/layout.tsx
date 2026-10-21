@@ -1,18 +1,34 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
+import { Newsreader, Noto_Sans_KR, Noto_Serif_KR, Source_Sans_3 } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 
 const sourceSans = Source_Sans_3({
-  variable: "--font-body",
-  subsets: ["latin"],
+  variable: "--font-source-sans",
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
 });
 
-const sourceSerif = Source_Serif_4({
-  variable: "--font-display",
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+});
+
+const notoSansKr = Noto_Sans_KR({
+  variable: "--font-noto-sans-kr",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
+});
+
+const notoSerifKr = Noto_Serif_KR({
+  variable: "--font-noto-serif-kr",
+  subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -42,7 +58,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html
       lang={locale}
-      className={`${sourceSans.variable} ${sourceSerif.variable}`}
+      className={`${sourceSans.variable} ${newsreader.variable} ${notoSansKr.variable} ${notoSerifKr.variable}`}
     >
       <body>
         <NextIntlClientProvider messages={messages}>

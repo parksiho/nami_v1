@@ -1,0 +1,31 @@
+/*
+ * SETESS registrar — “archival letterhead” tokens.
+ * Calm parchment field, ivory surfaces, oxblood for action,
+ * olive only for positive academic status.
+ * Latin display/body come from next/font variables on <html>.
+ * Hangul falls through to Noto Serif KR / Noto Sans KR.
+ */
+:root {
+  --ink: #1e1a16;
+  --ink-soft: #3c352e;
+  --muted: #5e574f;
+  --paper: #f3eee6;
+  --paper-2: #fbf8f3;
+  --paper-3: #ebe3d4;
+  --line: #e3d8c8;
+  --line-strong: #cfc3ae;
+  --accent: #6a2e36;
+  --accent-strong: #54242b;
+  --on-accent: #fbf8f3;
+  --bronze: #6e5830;
+  --positive: #245042;
+  --danger: #8c3342;
+  --radius: 0.8rem;
+  --radius-sm: 0.5rem;
+  --shadow: 0 1px 0 rgba(30, 26, 22, 0.04), 0 22px 44px -32px rgba(30, 26, 22, 0.55);
+  --measure: 76rem;
+  --gutter: clamp(1rem, 3vw, 2rem);
+  --font-display: var(--font-newsreader), var(--font-noto-serif-kr), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-source-sans), var(--font-noto-sans-kr), system-ui, sans-serif;
+  color-scheme: light;
+}

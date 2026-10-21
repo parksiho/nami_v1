@@ -32,11 +32,14 @@ export async function AppHeader({ profile }: Props) {
   return (
     <header className="site-header">
       <div className="site-header__brand">
-        <p className="site-header__title">{tApp('brand')}</p>
-        <p className="site-header__university">{tApp('university')}</p>
-        <p className="site-header__semester">
-          {tApp('semester', { year, semester })}
-        </p>
+        <span className="site-mark" aria-hidden="true">S</span>
+        <div className="site-header__identity">
+          <p className="site-header__university">{tApp('university')}</p>
+          <p className="site-header__title">{tApp('brand')}</p>
+          <p className="site-header__semester">
+            {tApp('semester', { year, semester })}
+          </p>
+        </div>
       </div>
       <div className="site-header__actions">
         <LocaleSwitcher />
