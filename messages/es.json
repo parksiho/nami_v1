@@ -86,6 +86,8 @@
     "description": "Revise y actualice su información personal y de la iglesia.",
     "photo": "Foto de perfil",
     "avatarHelp": "JPG o PNG, hasta 2 MB.",
+    "choosePhoto": "Elegir foto",
+    "noFileSelected": "Ningún archivo seleccionado",
     "upload": "Subir foto",
     "uploading": "Subiendo…",
     "save": "Guardar perfil",
@@ -185,7 +187,9 @@
       "title": "Foto de perfil",
       "help": "JPG o PNG, máximo 2 MB. Se aplica a perfiles de estudiantes y profesores.",
       "upload": "Subir foto",
-      "uploading": "Subiendo…"
+      "uploading": "Subiendo…",
+      "choosePhoto": "Elegir foto",
+      "noFileSelected": "Ningún archivo seleccionado"
     },
     "proxyEnroll": {
       "title": "Inscribir estudiante",

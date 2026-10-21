@@ -86,6 +86,8 @@
     "description": "개인 정보와 교회 정보를 확인하고 수정하세요.",
     "photo": "프로필 사진",
     "avatarHelp": "JPG 또는 PNG, 최대 2MB",
+    "choosePhoto": "사진 선택",
+    "noFileSelected": "선택된 파일 없음",
     "upload": "사진 업로드",
     "uploading": "업로드 중…",
     "save": "프로필 저장",
@@ -185,7 +187,9 @@
       "title": "프로필 사진",
       "help": "JPG 또는 PNG, 최대 2MB. 학생·교수 프로필에 적용됩니다.",
       "upload": "사진 업로드",
-      "uploading": "업로드 중…"
+      "uploading": "업로드 중…",
+      "choosePhoto": "사진 선택",
+      "noFileSelected": "선택된 파일 없음"
     },
     "proxyEnroll": {
       "title": "학생 대리 수강신청",

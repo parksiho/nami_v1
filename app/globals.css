@@ -929,10 +929,26 @@ h3 {
   accent-color: var(--accent);
 }
 
-.avatar-upload__form input[type="file"] {
+.avatar-file {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.75rem;
   max-width: 100%;
-  color: var(--ink-soft);
-  font-size: 0.9rem;
+}
+
+.avatar-file__button {
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.avatar-file__name {
+  min-width: 0;
+  max-width: 100%;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
 .admin-table a,
@@ -1468,5 +1484,106 @@ h3 {
   .profile-button,
   .admin-button {
     white-space: normal;
+  }
+
+  .enroll-table {
+    overflow: visible;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .enroll-table .admin-table,
+  .enroll-table tbody,
+  .enroll-table tr,
+  .enroll-table td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  .enroll-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .enroll-table tr {
+    margin: 0 0 0.85rem;
+    padding: 0.85rem 0 0.95rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper-2);
+  }
+
+  .enroll-table td {
+    display: grid;
+    grid-template-columns: minmax(6.5rem, 42%) minmax(0, 1fr);
+    gap: 0.35rem 0.75rem;
+    align-items: start;
+    padding: 0.4rem 1rem;
+    border: none;
+    background: transparent;
+  }
+
+  .enroll-table td::before {
+    content: attr(data-label);
+    color: var(--bronze);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .enroll-table td > span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .enroll-table td:first-child {
+    display: block;
+    padding-bottom: 0.55rem;
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-weight: 560;
+    letter-spacing: -0.02em;
+  }
+
+  .enroll-table td:first-child::before {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  .enroll-table td.enroll-table__action {
+    display: block;
+    padding-top: 0.7rem;
+  }
+
+  .enroll-table td.enroll-table__action::before {
+    content: none;
+  }
+
+  .enroll-table .course-action {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .enroll-table .admin-button {
+    width: 100%;
+    margin-top: 0;
+    white-space: normal;
+  }
+
+  .enroll-table tbody tr:hover td {
+    background: transparent;
   }
 }

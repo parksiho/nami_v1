@@ -109,6 +109,8 @@ export default async function AdminUserDetailPage({ params }: Props) {
             help={t('avatar.help')}
             uploadLabel={t('avatar.upload')}
             uploadingLabel={t('avatar.uploading')}
+            chooseLabel={t('avatar.choosePhoto')}
+            emptyLabel={t('avatar.noFileSelected')}
           />
         </section>
       ) : null}
